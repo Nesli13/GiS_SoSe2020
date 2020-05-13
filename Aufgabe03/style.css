@@ -25,17 +25,22 @@ body {
     margin-bottom: 0px;
     margin-top: 0px;
 }
-nav {
+nav{
     position: sticky;
-    top: 0;
-    margin-top: -15px;
-    background-color: black;
+    top: 50px;
     color: white;
-    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-    font-size: larger;
-    width: 300px;
-    height: 30px;
-    left: 60%;
-    padding-left: 10px;
-    border-radius: 0 0 10px 10px;
-    }
+    background-color: black;
+    margin-left: 70%;
+    border-radius: 3px;
+    width: 240px;
+}
+
+nav a{
+    margin: 15px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+nav a:hover{
+    color: rgb(126, 94, 123);
+}
