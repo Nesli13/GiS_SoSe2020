@@ -1,17 +1,27 @@
 body {
     background-image: url("bg.png");
 }
-nav {
-    position: sticky;
-    top: 0;
-    margin-top: -15px;
-    background-color: black;
+.halbkreis{
+    margin-top: -600px;
+    margin-left: 10%;
+    width: 1100px;
+    height: 1000px;
+    border-radius: 50%;
+    background-color: rgb(31, 161, 161);
+}
+
+.halbkreis h1{
     color: white;
-    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-    font-size: larger;
-    width: 300px;
-    height: 30px;
-    left: 60%;
-    padding-left: 10px;
-    border-radius: 0 0 10px 10px;
+    padding-top: 500px;
+    text-align: center;
+    font-size: 150px;
+    margin-bottom: 0px;
+}
+
+.halbkreis p{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
