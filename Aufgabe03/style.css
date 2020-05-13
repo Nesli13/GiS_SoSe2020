@@ -4,8 +4,8 @@ body {
 .halbkreis{
     margin-top: -600px;
     margin-left: 10%;
-    width: 800px;
-    height: 800px;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
     background-color: rgb(31, 161, 161);
 }
