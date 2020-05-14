@@ -7,7 +7,7 @@ body {
     margin-left: 10%;
     width: 900px;
     height: 900px;
-    border-radius: 0px 0px 800px 800px;
+    border-radius: 50%;
     background-color: rgb(31, 161, 161);
 }
 
