@@ -73,14 +73,7 @@ button {
     margin-left: 28%;
 }
 
-button:hover {
-    background-color: rgb(43, 26, 11);
-    color: white;
-    margin: 5px;
-    padding: 5px;
-    border: 5px solid rgb(43, 26, 11);
-    margin-left: 25%;
-}
+
 #footer {
     background-color: rgba(112, 161, 216, 0.719);
     color: rgba(138, 8, 8, 0.719);
