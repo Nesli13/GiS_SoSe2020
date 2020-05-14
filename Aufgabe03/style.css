@@ -3,12 +3,11 @@ body {
     font-family: sans-serif;
 }
 .halbkreis{
-    display: inline-block;
     margin-top: -600px;
     margin-left: 10%;
     width: 900px;
     height: 900px;
-    border-radius: 50%;
+    border-radius: 0px 0px 800px 800px;
     background-color: rgb(31, 161, 161);
 }
 
