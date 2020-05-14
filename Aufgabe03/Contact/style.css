@@ -56,14 +56,12 @@ nav a:hover {
 }
 
 form {
-    text-align: center;
     width: 790px;
     border: 5px solid rgb(43, 26, 11);
     margin-left: 25% ;
 }
 
 input, textarea {
-    text-align: center;
     border: 5px solid rgb(43, 26, 11);
     margin: 4px;
     padding: 4px;
