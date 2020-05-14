@@ -4,8 +4,7 @@ body {
 }
 .halbkreis{
     text-align: center;
-    margin-top: -600px;
-    margin-left: 10%;
+    margin: 0px 50px 75px 100px;
     width: 900px;
     height: 900px;
     border-radius: 50%;
