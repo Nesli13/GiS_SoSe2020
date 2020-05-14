@@ -3,6 +3,7 @@ body {
     font-family: sans-serif;
 }
 .halbkreis{
+    text-align: center;
     margin-top: -600px;
     margin-left: 10%;
     width: 900px;
