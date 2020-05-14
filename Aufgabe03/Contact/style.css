@@ -29,7 +29,6 @@ body {
 }
 nav{
     position: sticky;
-    position: -webkit-sticky; 
     top: 0px;
     color: white;
     background-color: black;
