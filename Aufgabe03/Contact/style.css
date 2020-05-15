@@ -65,7 +65,7 @@ form {
 }
 
 input, textarea {
-    text-align: center;
+    margin: auto ;
     border: 5px solid rgb(43, 26, 11);
     margin: 4px;
     padding: 4px;
