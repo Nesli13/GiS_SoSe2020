@@ -47,6 +47,7 @@ nav a {
     font-family: Arial, Helvetica, sans-serif;
 }
 nav a:hover {
+    position: sticky;
     color: rgb(55, 92, 99);
     font-weight: bolder;
 }
