@@ -41,12 +41,14 @@ nav{
 
 }
 nav a {
-    position: sticky;
     text-decoration: none;
     color:white;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+nav a:hover {
+    color: rgb(55, 92, 99);
+    font-weight: bolder;
+}
 #footer {
     background-color: rgba(112, 161, 216, 0.719);
     color: rgba(138, 8, 8, 0.719);
