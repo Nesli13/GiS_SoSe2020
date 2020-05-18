@@ -55,8 +55,8 @@ nav a:hover {
     font-weight: bolder;
 }
 .icon-bar {
-    width: 100%;
-    background-color:lightgray;
+    width: 50%;
+    background-color:black;
     overflow: auto;
   }
   
@@ -71,7 +71,7 @@ nav a:hover {
   }
   
   .icon-bar a:hover {
-    background-color:rosybrown;
+    background-color:white;
   }
 form {
     width: 600px;
