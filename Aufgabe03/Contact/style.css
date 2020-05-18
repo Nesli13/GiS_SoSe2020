@@ -54,15 +54,14 @@ nav a:hover {
     color: rgb(55, 92, 99);
     font-weight: bolder;
 }
-nav icons{
-    list-style: none;
-    display: inline-block;
-    background-color: white;
-    text-align: center;
-    padding: 0px;
+.icon {
+    margin-top:-340px;
+    margin-left: 110px;
+    height: 130px;
 }
-.icons a {
-    background-color: white;
+
+.icon a:hover{
+    opacity: 0.5;
 }
 form {
     width: 600px;
