@@ -63,14 +63,12 @@ nav a:hover {
     color: rgb(55, 92, 99);
     font-weight: bolder;
 }
-.icons {
-    margin-top:-340px;
-    margin-left: 110px;
-    height: 130px;
-}
-
-.icons a:hover{
-    opacity: 0.5;
+nav icons{
+    list-style: none;
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+    padding: 0px;
 }
 #footer {
     background-color: rgba(112, 161, 216, 0.719);
