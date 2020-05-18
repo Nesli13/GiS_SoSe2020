@@ -64,6 +64,7 @@ nav a:hover {
     font-weight: bolder;
 }
 .halbkreis img{
+    text-align: center;
     width: 30px;
     height: 30px;
     margin-left: 490px;
