@@ -54,15 +54,25 @@ nav a:hover {
     color: rgb(55, 92, 99);
     font-weight: bolder;
 }
-.icon {
-    margin-top:-340px;
-    margin-left: 110px;
-    height: 130px;
-}
-
-.icon a:hover{
-    opacity: 0.5;
-}
+.icon-bar {
+    width: 100%;
+    background-color:lightgray;
+    overflow: auto;
+  }
+  
+  .icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+  }
+  
+  .icon-bar a:hover {
+    background-color:rosybrown;
+  }
 form {
     width: 600px;
     height: 280px;  
