@@ -5,19 +5,19 @@ body{
 
 img[src="CandyShop"]{
     padding-top: 0px;
-    margin-top: 0px;
+    margin-top: 20px;
 
 }
 img[src="herz"]{
-    margin-top: 0px;
+    margin-top: 20px;
     padding-top: 0px;
 }
 img[src="wagen"]{
-    margin-top: 0px;
+    margin-top: 20px;
     padding-top: 0px;
 }
 img[src="menu"]{
-    margin-top: 0px;
+    margin-top: 20px;
     padding-top: 0px;
 }
 #header{
@@ -36,4 +36,18 @@ img[src="menu"]{
 .Container{
     display: flex;
     flex-direction: row;
+}
+h1{
+    font-size: 20px;
+    text-align: center;
+}
+h2{
+    font-size: 20px;
+}
+h3{
+    font-size: 10px;
+}
+p{
+    font-size: 10px;
+    color: lightgrey;
 }
