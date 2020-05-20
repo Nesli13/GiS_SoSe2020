@@ -39,14 +39,7 @@ img[src="menu"]{
     flex-direction: row;
    
 }
-.Container input[type=text]{
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-}
+
 ul{
     text-align: center;
     list-style-type: none;
@@ -61,11 +54,13 @@ li a{
     text-decoration: none;
     visibility: hidden;
 }
+/*Maus*/
 #Menüleiste:hover li a{
     visibility: visible;
     background-color: rgb(243, 128, 228);
 }
 }
+/*Überschriften*/
 h1{
     color: peru;
     font-size: 20px;
@@ -86,12 +81,13 @@ h4>em{
     color: plum;
 }
 
-
+/*Bilder*/
 .Produkte div img{
     height: 200;
     width: 200;
 
 }
+/*Button*/
 .Produkte input{
     width: 150px;
     margin: 5px;
