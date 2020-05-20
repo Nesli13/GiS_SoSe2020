@@ -83,3 +83,13 @@ li a{
     width: 200;
 
 }
+#footer {
+    background-color: rgba(235, 197, 94, 0.719);
+    color: rgba(223, 92, 17, 0.719);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-width: 10;
+    border-color:#070607;
+    border-style: solid;
+    border-radius: 20px;
+}
