@@ -36,7 +36,7 @@ img[src="menu"]{
 .Container{
     display: flex;
     flex-direction: row;
-    text-align: center;
+   
 }
 h1{
     font-size: 20px;
@@ -69,4 +69,7 @@ li a{
 #Menüleiste:hover li a{
     visibility: visible;
     background-color: white;
+}
+#Süßwaren{
+    text-align: center;
 }
