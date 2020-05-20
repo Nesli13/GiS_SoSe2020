@@ -116,5 +116,7 @@ h4>em{
     border-color:#070607;
     border-style: solid;
     border-radius: 10px;
+    width: 350%;
+    height: 150px;
     text-align: center;
 }
