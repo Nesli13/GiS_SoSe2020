@@ -76,3 +76,8 @@ li a{
 #Süßwaren{
     text-align: center;
 }
+.Produkte div img{
+    height: 200;
+    width: 200;
+
+}
