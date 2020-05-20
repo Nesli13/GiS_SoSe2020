@@ -70,10 +70,6 @@ li a{
 }
   
 #Menüleiste:hover li a{
-    width: 40px;
-    height: 40px;
-    margin-left: 450px;
-    margin-top: 90px;
     visibility: visible;
     background-color: rgb(243, 128, 228);
 }
