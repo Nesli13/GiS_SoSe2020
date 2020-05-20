@@ -27,6 +27,7 @@ img[src="menu"]{
     box-shadow: 0px 0px 10px rgb(179, 214, 238);
 }
 #suchen{
+    margin: auto;
     margin-left: 40px;
     margin-top: 20px;
     width: 100%;
@@ -54,20 +55,25 @@ p{
 }
 
 ul{
+    text-align: center;
     list-style-type: none;
     margin: 0px;
     padding: 0px;
     width: 100px;
-    text-align: center;
+    
 }
 li a{
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     display: block;
     text-decoration: none;
     visibility: hidden;
 }
   
 #Menüleiste:hover li a{
+    width: 40px;
+    height: 40px;
+    margin-left: 450px;
+    margin-top: 90px;
     visibility: visible;
     background-color: rgb(243, 128, 228);
 }
