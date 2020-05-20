@@ -64,3 +64,8 @@ li a{
     text-decoration: none;
     visibility: hidden;
 }
+  
+#Menüleiste:hover li a{
+    visibility: visible;
+    background-color: white;
+}
