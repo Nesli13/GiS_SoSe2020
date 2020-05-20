@@ -34,6 +34,7 @@ img[src="menu"]{
     height: 100px;
     padding: 24px;
     border-radius: 0px;
+    font-size: 20px;
 }
 .Container{
     display: flex;
@@ -64,7 +65,7 @@ li a{
 /*Überschriften*/
 h1{
     color: peru;
-    font-size: 20px;
+    font-size: 40px;
     text-align: center;
 }
 h2{
@@ -90,10 +91,11 @@ h4>em{
 }
 /*Button*/
 .Produkte input{
-    width: 150px;
+    width: 120px;
     margin: 5px;
     border-radius: 3px;
 }
+/*Box*/
 .Produkte{
     border: 2px solid rgb(139, 43, 176);
     box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
