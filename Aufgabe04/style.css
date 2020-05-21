@@ -119,22 +119,11 @@ li a{
 
 /*Smartphone*/
 @media screen and (max-width: 720px){
-    img[src="CandyShop"]{
-        padding-top: 0px;
-        margin-top: 10px;
-    
-    }
-    img[src="herz"]{
+    #Shop, #Herz, #Wagen, #Menü {
         margin-top: 10px;
         padding-top: 0px;
-    }
-    img[src="wagen"]{
-        margin-top: 10px;
-        padding-top: 0px;
-    }
-    img[src="menu"]{
-        margin-top: 10px;
-        padding-top: 0px;
+        height: 90px;
+        width: 80px;
     }
     #search{
         margin: auto;
@@ -148,8 +137,8 @@ li a{
     }
     /*Bilder*/
 .Produkte div img{
-    height: 100;
-    width: 100;
+    height: 90;
+    width: 90;
 
 }
 /*Button*/
