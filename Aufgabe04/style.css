@@ -123,8 +123,8 @@ li a{
     #Shop, #Herz, #Wagen, #Menü {
         margin-top: 0px;
         padding-top: 0px;
-        height: 90px;
-        width: 70px;
+        height: 80px;
+        width: 75px;
     }
     #search{
         margin: auto;
@@ -152,7 +152,7 @@ li a{
 .Produkte div{
     border: 2px solid rgb(139, 43, 176);
     box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
-    max-width: 200px;
+    max-width: 250px;
     max-height: 350px;
     display: inline-block;
     background: transparent;
