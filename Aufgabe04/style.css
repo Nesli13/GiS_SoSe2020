@@ -48,10 +48,11 @@ h4>em{
 
 /*Desktop*/
 @media screen and (min-width:720px){
-#Shop, #Herz, #Wagen {
-    margin: 20px;
+#Shop, #Herz, #Wagen, #Menü {
+    margin-top: 20px;
+    padding-top: 0px;
     height: 125px;
-    width: 100px;
+    width: 140px;
 }
 #search{
     margin: auto;
