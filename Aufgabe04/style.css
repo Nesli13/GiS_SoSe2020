@@ -66,8 +66,8 @@ h4>em{
 }
 /*Bilder*/
 .Produkte div img{
-    height: 200;
-    width: 200;
+    height: 350px;
+    width: 350px;
 
 }
 /*Button*/
@@ -120,7 +120,7 @@ li a{
 /*Smartphone*/
 @media screen and (max-width: 720px){
     #Shop, #Herz, #Wagen, #Menü {
-        margin-top: 10px;
+        margin-top: 0px;
         padding-top: 0px;
         height: 90px;
         width: 80px;
@@ -130,29 +130,29 @@ li a{
         margin-left: 0px;
         margin-top: 0px; 
         width: 100%;
-        height: 80px;
-        padding: 11px;
+        height: 90px;
+        padding: 9px;
         border-radius: 0px;
         font-size: 20px;
     }
     /*Bilder*/
 .Produkte div img{
-    height: 90;
-    width: 90;
+    height: 70px;
+    width: 70px;
 
 }
 /*Button*/
 .Produkte input{
     width: 100px;
-    margin: 5px;
+    margin: 2px;
     border-radius: 3px;
 }
 /*Box*/
 .Produkte div{
     border: 2px solid rgb(139, 43, 176);
     box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 200px;
+    max-height: 100px;
     display: inline-block;
     background: transparent;
     padding: 20px 60px 20px 20px;
