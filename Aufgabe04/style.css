@@ -129,16 +129,16 @@ li a{
         margin: auto;
         margin-left: 0px;
         margin-top: 0px; 
-        width: 50%;
-        height: 50px;
+        width: 40%;
+        height: 30px;
         padding: 9px;
         border-radius: 0px;
         font-size: 20px;
     }
     /*Bilder*/
 .Produkte div img{
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
 
 }
 /*Button*/
@@ -152,7 +152,7 @@ li a{
     border: 2px solid rgb(139, 43, 176);
     box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
     max-width: 200px;
-    max-height: 250px;
+    max-height: 350px;
     display: inline-block;
     background: transparent;
     padding: 20px 60px 20px 20px;
