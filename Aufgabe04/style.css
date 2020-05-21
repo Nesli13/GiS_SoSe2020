@@ -1,7 +1,52 @@
+/*Unverändert*/
 body{
     background-image: url("cottonnew.jpg");
     font-family: Arial, Helvetica, sans-serif;
 }
+#header{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(196, 233, 248);
+    box-shadow: 0px 0px 10px rgb(179, 214, 238);
+}
+/*Überschriften*/
+h1{
+    color: rgb(166, 63, 205);
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 8px #ff01c6;
+}
+h2{
+    font-size: 15px;
+}
+h3{
+    font-size: 15px;
+}
+p{
+    font-style: italic;
+    font-size: 15px;
+    color: rgb(37, 37, 37);
+}
+h4>em{
+    color: plum;
+}
+
+#footer {
+    background-color: rgba(235, 197, 94, 0.719);
+    color: rgba(223, 92, 17, 0.719);
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-width: 10;
+    border-color:#070607;
+    border-style: solid;
+    border-radius: 10px;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+
+
 @media screen and (min-width:720px){
 img[src="CandyShop"]{
     padding-top: 0px;
@@ -20,12 +65,6 @@ img[src="menu"]{
     margin-top: 20px;
     padding-top: 0px;
 }
-#header{
-    width: 100%;
-    height: 150px;
-    background-color: rgb(196, 233, 248);
-    box-shadow: 0px 0px 10px rgb(179, 214, 238);
-}
 #search{
     margin: auto;
     margin-left: 0px;
@@ -35,6 +74,31 @@ img[src="menu"]{
     padding: 11px;
     border-radius: 0px;
     font-size: 20px;
+}
+/*Bilder*/
+.Produkte div img{
+    height: 200;
+    width: 200;
+
+}
+/*Button*/
+.Produkte input{
+    width: 120px;
+    margin: 5px;
+    border-radius: 3px;
+}
+/*Box*/
+.Produkte div{
+    border: 2px solid rgb(139, 43, 176);
+    box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
+    max-width: 450px;
+    max-height: 450px;
+    display: inline-block;
+    background: transparent;
+    padding: 40px 80px 40px 40px;
+    margin: 0px 30px 30px 40px;
+    text-align: center;
+
 }
 .Container{
     display: flex;
@@ -62,37 +126,46 @@ li a{
     background-color: rgb(243, 128, 228);
 }
 }
-/*Überschriften*/
-h1{
-    color: rgb(166, 63, 205);
-    font-size: 40px;
-    text-align: center;
-    text-shadow: 2px 2px 8px #ff01c6;
-}
-h2{
-    font-size: 15px;
-}
-h3{
-    font-size: 15px;
-}
-p{
-    font-style: italic;
-    font-size: 15px;
-    color: rgb(37, 37, 37);
-}
-h4>em{
-    color: plum;
-}
 
-/*Bilder*/
+
+/*Smartphone*/
+@media screen and (max-width: 720px){
+    img[src="CandyShop"]{
+        padding-top: 0px;
+        margin-top: 10px;
+    
+    }
+    img[src="herz"]{
+        margin-top: 10px;
+        padding-top: 0px;
+    }
+    img[src="wagen"]{
+        margin-top: 10px;
+        padding-top: 0px;
+    }
+    img[src="menu"]{
+        margin-top: 10px;
+        padding-top: 0px;
+    }
+    #search{
+        margin: auto;
+        margin-left: 0px;
+        margin-top: 0px; 
+        width: 100%;
+        height: 80px;
+        padding: 11px;
+        border-radius: 0px;
+        font-size: 20px;
+    }
+    /*Bilder*/
 .Produkte div img{
-    height: 200;
-    width: 200;
+    height: 100;
+    width: 100;
 
 }
 /*Button*/
 .Produkte input{
-    width: 120px;
+    width: 100px;
     margin: 5px;
     border-radius: 3px;
 }
@@ -100,25 +173,39 @@ h4>em{
 .Produkte div{
     border: 2px solid rgb(139, 43, 176);
     box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
-    max-width: 450px;
-    max-height: 450px;
+    max-width: 300px;
+    max-height: 300px;
     display: inline-block;
     background: transparent;
-    padding: 40px 80px 40px 40px;
-    margin: 0px 30px 30px 40px;
+    padding: 20px 60px 20px 20px;
+    margin: 0px 30px 30px 30px;
     text-align: center;
 
 }
-#footer {
-    background-color: rgba(235, 197, 94, 0.719);
-    color: rgba(223, 92, 17, 0.719);
-    padding-bottom: 0px;
-    padding-top: 0px;
-    border-width: 10;
-    border-color:#070607;
-    border-style: solid;
-    border-radius: 10px;
-    width: 100%;
-    height: 150px;
-    text-align: center;
+    .Container{
+        display: flex;
+        flex-direction: row;
+       
+    }
+    
+    ul{
+        text-align: center;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        width: 100px;
+        
+    }
+    li a{
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        text-decoration: none;
+        visibility: hidden;
+    }
+    /*Maus*/
+    #Menüleiste:hover li a{
+        visibility: visible;
+        background-color: rgb(243, 128, 228);
+    }
 }
+
