@@ -49,7 +49,7 @@ h4>em{
 
 /*Desktop*/
 @media screen and (min-width:720px){
-#Shop, #Herz, #Wagen, #Menü {
+#Shop img [alt="CandyShop"], #Herz, #Wagen, #Menü {
     margin-top: 0px;
     padding-top: 0px;
     height: 100px;
