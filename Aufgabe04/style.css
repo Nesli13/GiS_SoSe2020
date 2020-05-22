@@ -31,15 +31,15 @@ p{
 h4>em{
     color: plum;
 }
-main>h3{
+div>h3{
     color: rebeccapurple;
 }
 .Produkte div~p {
     color: lightslategray;
 }
 img[alt=swipeup]{
-    width:150;
-    height: 150;
+    width:150px;
+    height: 150px;
     
 }
 #footer {
