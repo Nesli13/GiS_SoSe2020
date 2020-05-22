@@ -31,7 +31,17 @@ p{
 h4>em{
     color: plum;
 }
-
+main>h3{
+    color: rebeccapurple;
+}
+.Produkte div~p {
+    color: lightslategray;
+}
+img[alt=swipeup]{
+    width:150;
+    height: 150;
+    
+}
 #footer {
     background-color: rgba(235, 197, 94, 0.719);
     color: rgba(223, 92, 17, 0.719);
@@ -49,7 +59,7 @@ h4>em{
 
 /*Desktop*/
 @media screen and (min-width:720px){
-#Shop img [alt="CandyShop"], #Herz, #Wagen, #Menü {
+#Shop, #Herz, #Wagen, #Menü {
     margin-top: 0px;
     padding-top: 0px;
     height: 100px;
