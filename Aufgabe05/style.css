@@ -1,0 +1,210 @@
+/*Unverändert*/
+body{
+    background-image: url("cottonnew.jpg");
+    font-family: Arial, Helvetica, sans-serif;
+}
+#header{
+    width: 100%;
+    height: 130px;
+    background-color: rgb(196, 233, 248);
+    box-shadow: 0px 0px 10px rgb(179, 214, 238);
+}
+
+/*Überschriften*/
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(166, 63, 205);
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 8px #ff01c6;
+}
+h2{
+    font-size: 15px;
+}
+h3{
+    font-size: 15px;
+}
+p{
+    font-style: italic;
+    font-size: 15px;
+    color: rgb(37, 37, 37);
+}
+h4>em{
+    color: plum;
+}
+div>h3{
+    color: rebeccapurple;
+}
+.Produkte div~p {
+    color: lightslategray;
+}
+img[alt=swipeup]{
+    width:150px;
+    height: 150px;
+    
+}
+input:focus{
+    background-color: rgb(244, 222, 222);
+}
+#footer {
+    background-color: rgba(235, 197, 94, 0.719);
+    color: rgba(223, 92, 17, 0.719);
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-width: 1px;
+    border-color:#070607;
+    border-style: solid;
+    border-radius: 100px;
+    width: 100%;
+    height: 140px;
+    text-align: center;
+}
+
+
+/*Desktop*/
+@media screen and (min-width:720px){
+#Shop, #Herz, #Wagen, #Menü {
+    margin-top: 0px;
+    padding-top: 0px;
+    height: 100px;
+    width: 110px;
+}
+#search{
+    margin: auto;
+    margin-left: 0px;
+    margin-top: 1px; 
+    width: 100%;
+    height: 75px;
+    padding: 11px;
+    border-radius: 0px;
+    font-size: 20px;
+}
+/*Bilder*/
+.Produkte div img{
+    height: 340px;
+    width: 340px;
+
+}
+/*Button*/
+.Produkte input{
+    width: 120px;
+    margin: 5px;
+    border-radius: 0px;
+}
+/*Box*/
+.Produkte div{
+    border: 2px solid rgb(139, 43, 176);
+    box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
+    max-width: 450px;
+    max-height: 450px;
+    display: inline-block;
+    background: transparent;
+    padding: 40px 80px 40px 40px;
+    margin: 0px 30px 30px 40px;
+    text-align: center;
+
+}
+.Container{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+ul{
+    text-align: center;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 150px;
+    
+}
+li a{
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    text-decoration: none;
+    visibility: hidden;
+}
+/*Maus*/
+#Menüleiste:hover li a{
+    visibility: visible;
+    background-color: rgb(243, 128, 228);
+}
+}
+
+
+/*Smartphone*/
+@media screen and (max-width: 720px){
+    #Shop, #Herz, #Wagen, #Menü {
+        margin-top: 0px;
+        padding-top: 0px;
+        height: 80px;
+        width: 75px;
+    }
+    #search{
+        margin: auto;
+        margin-left: 0px;
+        margin-top: 0px; 
+        width: 50%;
+        height: 45px;
+        padding: 15px;
+        border-radius: 0px;
+        font-size: 10px;
+    }
+    /*Bilder*/
+.Produkte div img{
+    height: 90px;
+    width: 90px;
+
+}
+/*Button*/
+.Produkte input{
+    width: 100px;
+    margin: 2px;
+    border-radius: 0px;
+}
+/*Box*/
+.Produkte div{
+    border: 2px solid rgb(139, 43, 176);
+    box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
+    max-width: 250px;
+    max-height: 350px;
+    display: inline-block;
+    background: transparent;
+    padding: 20px 60px 20px 20px;
+    margin: 0px 30px 30px 30px;
+    text-align: center;
+
+}
+    .Container{
+        display: flex;
+        flex-direction: row;
+       
+    }
+    
+    ul{
+        text-align: center;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        width: 100px;
+        
+    }
+    li a{
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        text-decoration: none;
+        visibility: hidden;
+    }
+    /*Maus*/
+    #Menüleiste:hover li a{
+        visibility: visible;
+        background-color: rgb(243, 128, 228);
+    }
+    #header{
+        width: 100%;
+        height: 100px;
+        background-color: rgb(196, 233, 248);
+        box-shadow: 0px 0px 10px rgb(179, 214, 238);
+    }
+}
+
