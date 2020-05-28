@@ -107,6 +107,7 @@ input:focus{
 .Container{
     display: flex;
     flex-direction: row;
+    flex-wrap: auto;
    
 }
 
@@ -178,7 +179,7 @@ li a{
     .Container{
         display: flex;
         flex-direction: row;
-       
+        flex-wrap: auto;
     }
     
     ul{
