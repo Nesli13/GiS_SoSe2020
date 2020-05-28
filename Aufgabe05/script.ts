@@ -95,3 +95,10 @@ let scharf12: Scharfes = {
 };
 //Array
 let scharf: Scharfes[] = [scharff, scharf2, scharf3, scharf4, scharf5, scharf6, scharf7, scharf8, scharf9, scharf10, scharf11, scharf12];
+
+
+//Code
+/*for (let index: number = 0; index < süßigkeiten.length; index++) {
+    let Div: HTMLDivElement = document.createElement("div");
+    Div.id = "divNr" + index;
+}*/
