@@ -1,5 +1,6 @@
 "use strict";
 //# sourceMappingURL=script.js.map
+//Candy
 let candy1 = {
     img:"candy1.jpeg", name:"Reese's Peanut Butter Cups 42g", preis:"0,99 €", description:"(2,36 €/100g)"
 };
@@ -36,6 +37,9 @@ let candy11 = {
 let candy12 = {
     img:"candy12.jpg", name:"Yogurette 24er", preis:"3,19 €", description:"(10,63 €/1kg)"
 };
+//Array
+let Süßigkeiten= [ candy1, candy2, candy3, candy4, candy5, candy6, candy7, candy8, candy9, candy10, candy11, candy12];
+//Scharf
 let scharff = {
     img:"scharff.jpg", name:"Doritos Chilli Heatwave 70g", preis:"1,99 €", description:"(2,84 €/100g)"
 };
@@ -72,3 +76,5 @@ let scharf11 = {
 let scharf12 = {
     img:"scharf12.jpg", name:"NicNac's Hot 110g", preis:"1,49 €", description:"(1,35 €/100g)"
 };
+//Array
+let Scharf= [scharff, scharf2, scharf3, scharf4, scharf5, scharf6, scharf7, scharf8, scharf9, scharf10, scharf11, scharf12];
