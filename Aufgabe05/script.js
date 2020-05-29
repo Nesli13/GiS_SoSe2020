@@ -9,6 +9,12 @@ var Aufgabe05;
         let artikelSüßwaren = document.createElement("h1");
         artikelSüßwaren.innerHTML = "Süßwaren";
         artikelSüßwaren.setAttribute("id", "Süßwaren");
+        if (i == 0) {
+            artikelSüßwaren.innerHTML = "Süßwaren";
+        }
+        else {
+            artikelSüßwaren.innerHTML = " ";
+        }
         //Div
         let divCandy = document.createElement("div");
         divCandy.setAttribute("class", "Produkte");
