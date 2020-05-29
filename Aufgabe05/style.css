@@ -82,8 +82,8 @@ input:focus{
 }
 /*Bilder*/
 #liste div img{
-    height: 340px;
-    width: 340px;
+    height: 400px;
+    width: 400px;
 
 }
 /*Button*/
@@ -100,7 +100,7 @@ input:focus{
     max-height: 100000px;
     display: inline-block;
     background: transparent;
-    padding: 40px 80px 40px 40px;
+    padding: 40px 200px 40px 200px;
     margin: 0px 30px 30px 40px;
     text-align: center;
 
