@@ -41,6 +41,7 @@ var Aufgabe05;
         divCandy.appendChild(candyName);
         divCandy.appendChild(candyPreis);
         divCandy.appendChild(candybeschreibung);
+        divCandy.appendChild(button);
         document.getElementById("liste")?.appendChild(artikelSüßwaren);
         document.getElementById("liste")?.appendChild(divCandy);
     }
@@ -81,6 +82,7 @@ var Aufgabe05;
         artikelScharf.appendChild(scharfName);
         artikelScharf.appendChild(scharfPreis);
         artikelScharf.appendChild(scharfbeschreibung);
+        artikelScharf.appendChild(button);
         document.getElementById("liste")?.appendChild(artikel);
         document.getElementById("liste")?.appendChild(artikelScharf);
     }
