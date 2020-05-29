@@ -168,8 +168,8 @@ li a{
 #liste {
     border: 2px solid rgb(139, 43, 176);
     box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
-    max-width: 250px;
-    max-height: 350px;
+    max-width: 600px;
+    max-height: 10000px;
     display: inline-block;
     background: transparent;
     padding: 20px 60px 20px 20px;
