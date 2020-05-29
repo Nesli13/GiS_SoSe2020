@@ -69,7 +69,10 @@ var Aufgabe05;
         let scharfbeschreibung = document.createElement("p");
         scharfbeschreibung.innerHTML = scharf[i].beschreibung;
         //Button
-        /*let button: HTMLElement = document.createElement("button")*/
+        let button = document.createElement("input");
+        button.type = "button";
+        button.value = "Kaufen";
+        document.getElementById("liste")?.appendChild(button);
         // Alle Tags zu div Container
         artikelScharf.appendChild(imgScharf);
         artikelScharf.appendChild(scharfName);
