@@ -44,6 +44,7 @@ var Aufgabe05;
         divCandy.appendChild(button);
         document.getElementById("liste")?.appendChild(artikelSüßwaren);
         document.getElementById("liste")?.appendChild(divCandy);
+        document.getElementById("liste")?.appendChild(button);
     }
 })(Aufgabe05 || (Aufgabe05 = {}));
 (function (Aufgabe05) {
