@@ -32,7 +32,10 @@ var Aufgabe05;
         let candybeschreibung = document.createElement("p");
         candybeschreibung.innerHTML = süßigkeiten[i].beschreibung;
         //Button
-        /*let button: HTMLElement = document.createElement("button")*/
+        let button = document.createElement("input");
+        button.type = "button";
+        button.value = "Kaufen";
+        document.getElementById("liste")?.appendChild(button);
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
         divCandy.appendChild(candyName);

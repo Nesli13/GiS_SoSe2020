@@ -39,7 +39,10 @@ namespace Aufgabe05 {
         candybeschreibung.innerHTML = süßigkeiten[i].beschreibung;
 
         //Button
-        /*let button: HTMLElement = document.createElement("button")*/
+        let button: HTMLInputElement = document.createElement("input");
+        button.type = "button";
+        button.value = "Kaufen";
+        document.getElementById("liste")?.appendChild(button);
 
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
