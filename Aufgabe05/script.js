@@ -49,6 +49,12 @@ var Aufgabe05;
         artikel.innerHTML = "Extra Scharf";
         let artikelScharf = document.createElement("div");
         artikelScharf.setAttribute("id", "ExtraScharf");
+        if (i == 0) {
+            artikelScharf.innerHTML = "Extra Scharf";
+        }
+        else {
+            artikelScharf.innerHTML = " ";
+        }
         //Bild
         let imgScharf = document.createElement("img");
         imgScharf.setAttribute("src", scharf[i].img);
