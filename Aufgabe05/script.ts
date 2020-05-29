@@ -58,15 +58,17 @@ namespace Aufgabe05 {
         let artikel: HTMLElement = document.createElement("h1");
         artikel.innerHTML = "Extra Scharf";
 
+        if (i == 0) {
+            artikel.innerHTML = "Extra Scharf";
+
+        } else {
+            artikel.innerHTML = " ";
+        }
+
         let artikelScharf: HTMLElement = document.createElement("div");
         artikelScharf.setAttribute("id", "ExtraScharf");
 
-        if (i == 0) {
-            artikelScharf.innerHTML = "Extra Scharf";
-
-        } else {
-            artikelScharf.innerHTML = " ";
-        }
+        
         //Bild
         let imgScharf: HTMLElement = document.createElement("img");
         imgScharf.setAttribute("src", scharf[i].img);

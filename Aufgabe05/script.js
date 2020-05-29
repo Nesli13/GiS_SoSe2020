@@ -47,14 +47,14 @@ var Aufgabe05;
         //Überschrift
         let artikel = document.createElement("h1");
         artikel.innerHTML = "Extra Scharf";
-        let artikelScharf = document.createElement("div");
-        artikelScharf.setAttribute("id", "ExtraScharf");
         if (i == 0) {
-            artikelScharf.innerHTML = "Extra Scharf";
+            artikel.innerHTML = "Extra Scharf";
         }
         else {
-            artikelScharf.innerHTML = " ";
+            artikel.innerHTML = " ";
         }
+        let artikelScharf = document.createElement("div");
+        artikelScharf.setAttribute("id", "ExtraScharf");
         //Bild
         let imgScharf = document.createElement("img");
         imgScharf.setAttribute("src", scharf[i].img);
