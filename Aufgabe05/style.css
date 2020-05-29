@@ -2,6 +2,7 @@
 body{
     background-image: url("cottonnew.jpg");
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 #header{
     width: 100%;
@@ -95,8 +96,8 @@ input:focus{
 #liste {
     border: 2px solid rgb(139, 43, 176);
     box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
-    max-width: 450px;
-    max-height: 450px;
+    max-width: 800px;
+    max-height: 100000px;
     display: inline-block;
     background: transparent;
     padding: 40px 80px 40px 40px;
