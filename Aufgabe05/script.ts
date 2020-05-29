@@ -53,7 +53,7 @@ namespace Aufgabe05 {
 
         document.getElementById("liste")?.appendChild(artikelSüßwaren);
         document.getElementById("liste")?.appendChild(divCandy);
-        document.getElementById("liste")?.appendChild(button);
+        
     }
 }
 namespace Aufgabe05 {
