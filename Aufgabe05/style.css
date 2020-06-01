@@ -81,19 +81,19 @@ input:focus{
     font-size: 20px;
 }
 /*Bilder*/
-#liste div img{
+.Produkte div img{
     height: 340px;
     width: 340px;
 
 }
 /*Button*/
-#liste input{
+.Produkte input{
     width: 120px;
     margin: 5px;
     border-radius: 0px;
 }
 /*Box*/
-#liste div{
+.Produkte div{
     border: 2px solid rgb(139, 43, 176);
     box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
     max-width: 450px;
@@ -153,19 +153,19 @@ li a{
         font-size: 10px;
     }
     /*Bilder*/
-#liste div img{
+.Produkte div img{
     height: 90px;
     width: 90px;
 
 }
 /*Button*/
-#liste input{
+.Produkte input{
     width: 100px;
     margin: 2px;
     border-radius: 0px;
 }
 /*Box*/
-#liste div {
+.Produkte div {
     border: 2px solid rgb(139, 43, 176);
     box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
     max-width: 250px;
