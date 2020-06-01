@@ -1,4 +1,5 @@
 namespace Aufgabe05 {
+
     for (let i: number = 0; i < süßigkeiten.length; i++) {
         //Überschrift
         let artikelHoch: HTMLElement = document.createElement("h4");
@@ -16,25 +17,38 @@ namespace Aufgabe05 {
             artikelSüßwaren.innerHTML = " ";
         }
         
+        let artikel: HTMLElement = document.createElement("h1");
+        artikel.innerHTML = "Extra Scharf";
 
-        //Div
+        if (i == 0) {
+            artikel.innerHTML = "Extra Scharf";
+
+        } else {
+            artikel.innerHTML = " ";
+        }
+
+        let artikelScharf: HTMLElement = document.createElement("div");
+        artikelScharf.setAttribute("id", "ExtraScharf");
+
+
+        //Div Produkte --> Box
         let divCandy: HTMLElement = document.createElement("div");
         divCandy.setAttribute("class", "Produkte");
 
-        //Bild
+        //Bilder
         let imgCandy: HTMLElement = document.createElement("img");
         imgCandy.setAttribute("src", süßigkeiten[i].img);
         imgCandy.setAttribute("alt", süßigkeiten[i].alt);
         
-        //Name
+        //Name des Produkts
         let candyName: HTMLElement = document.createElement("h2");
         candyName.innerHTML = süßigkeiten[i].name;
 
-        //Preis
+        //Preis des Produkts
         let candyPreis: HTMLElement = document.createElement("h3");
-        candyPreis.innerHTML = süßigkeiten[i].preis;
+        candyPreis.innerHTML = süßigkeiten[i].preis + "€";
 
-        //Beschreibung
+        //Beschreibung --> alt
         let candybeschreibung: HTMLElement = document.createElement("p");
         candybeschreibung.innerHTML = süßigkeiten[i].beschreibung;
 
@@ -54,25 +68,6 @@ namespace Aufgabe05 {
         document.getElementById("liste")?.appendChild(artikelSüßwaren);
         document.getElementById("liste")?.appendChild(divCandy);
         
-    }
-}
-namespace Aufgabe05 {
-    for (let i: number = 0; i < scharf.length; i++) {
-        //Überschrift
-       
-        let artikel: HTMLElement = document.createElement("h1");
-        artikel.innerHTML = "Extra Scharf";
-
-        if (i == 0) {
-            artikel.innerHTML = "Extra Scharf";
-
-        } else {
-            artikel.innerHTML = " ";
-        }
-
-        let artikelScharf: HTMLElement = document.createElement("div");
-        artikelScharf.setAttribute("id", "ExtraScharf");
-
         
         //Bild
         let imgScharf: HTMLElement = document.createElement("img");
@@ -85,18 +80,13 @@ namespace Aufgabe05 {
 
         //Preis
         let scharfPreis: HTMLElement = document.createElement("h3");
-        scharfPreis.innerHTML = scharf[i].preis;
+        scharfPreis.innerHTML = scharf[i].preis + "€";
 
         //Beschreibung
         let scharfbeschreibung: HTMLElement = document.createElement("p");
         scharfbeschreibung.innerHTML = scharf[i].beschreibung;
 
-        //Button
-        let button: HTMLInputElement = document.createElement("input");
-        button.type = "button";
-        button.value = "Kaufen";
-        document.getElementById("liste")?.appendChild(button);
-
+       
         // Alle Tags zu div Container
         artikelScharf.appendChild(imgScharf);
         artikelScharf.appendChild(scharfName);

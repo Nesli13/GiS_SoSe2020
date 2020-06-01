@@ -15,20 +15,30 @@ var Aufgabe05;
         else {
             artikelSüßwaren.innerHTML = " ";
         }
-        //Div
+        let artikel = document.createElement("h1");
+        artikel.innerHTML = "Extra Scharf";
+        if (i == 0) {
+            artikel.innerHTML = "Extra Scharf";
+        }
+        else {
+            artikel.innerHTML = " ";
+        }
+        let artikelScharf = document.createElement("div");
+        artikelScharf.setAttribute("id", "ExtraScharf");
+        //Div Produkte --> Box
         let divCandy = document.createElement("div");
         divCandy.setAttribute("class", "Produkte");
-        //Bild
+        //Bilder
         let imgCandy = document.createElement("img");
         imgCandy.setAttribute("src", süßigkeiten[i].img);
         imgCandy.setAttribute("alt", süßigkeiten[i].alt);
-        //Name
+        //Name des Produkts
         let candyName = document.createElement("h2");
         candyName.innerHTML = süßigkeiten[i].name;
-        //Preis
+        //Preis des Produkts
         let candyPreis = document.createElement("h3");
-        candyPreis.innerHTML = süßigkeiten[i].preis;
-        //Beschreibung
+        candyPreis.innerHTML = süßigkeiten[i].preis + "€";
+        //Beschreibung --> alt
         let candybeschreibung = document.createElement("p");
         candybeschreibung.innerHTML = süßigkeiten[i].beschreibung;
         //Button
@@ -44,21 +54,6 @@ var Aufgabe05;
         divCandy.appendChild(button);
         document.getElementById("liste")?.appendChild(artikelSüßwaren);
         document.getElementById("liste")?.appendChild(divCandy);
-    }
-})(Aufgabe05 || (Aufgabe05 = {}));
-(function (Aufgabe05) {
-    for (let i = 0; i < scharf.length; i++) {
-        //Überschrift
-        let artikel = document.createElement("h1");
-        artikel.innerHTML = "Extra Scharf";
-        if (i == 0) {
-            artikel.innerHTML = "Extra Scharf";
-        }
-        else {
-            artikel.innerHTML = " ";
-        }
-        let artikelScharf = document.createElement("div");
-        artikelScharf.setAttribute("id", "ExtraScharf");
         //Bild
         let imgScharf = document.createElement("img");
         imgScharf.setAttribute("src", scharf[i].img);
@@ -68,15 +63,10 @@ var Aufgabe05;
         scharfName.innerHTML = scharf[i].name;
         //Preis
         let scharfPreis = document.createElement("h3");
-        scharfPreis.innerHTML = scharf[i].preis;
+        scharfPreis.innerHTML = scharf[i].preis + "€";
         //Beschreibung
         let scharfbeschreibung = document.createElement("p");
         scharfbeschreibung.innerHTML = scharf[i].beschreibung;
-        //Button
-        let button = document.createElement("input");
-        button.type = "button";
-        button.value = "Kaufen";
-        document.getElementById("liste")?.appendChild(button);
         // Alle Tags zu div Container
         artikelScharf.appendChild(imgScharf);
         artikelScharf.appendChild(scharfName);
