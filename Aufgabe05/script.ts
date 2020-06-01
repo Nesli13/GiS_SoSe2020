@@ -58,17 +58,8 @@ namespace Aufgabe05 {
         button.value = "Kaufen";
         document.getElementById("liste")?.appendChild(button);
 
-        // Alle Tags zu div Container
-        divCandy.appendChild(imgCandy);
-        divCandy.appendChild(candyName);
-        divCandy.appendChild(candyPreis);
-        divCandy.appendChild(candybeschreibung);
-        divCandy.appendChild(button);
-
-        document.getElementById("liste")?.appendChild(artikelSüßwaren);
-        document.getElementById("liste")?.appendChild(divCandy);
-        
-        
+       //Kategorie 2
+       
         //Bild
         let imgScharf: HTMLElement = document.createElement("img");
         imgScharf.setAttribute("src", scharf[i].img);
@@ -86,6 +77,24 @@ namespace Aufgabe05 {
         let scharfbeschreibung: HTMLElement = document.createElement("p");
         scharfbeschreibung.innerHTML = scharf[i].beschreibung;
 
+
+        //Button
+        let newbutton: HTMLInputElement = document.createElement("input");
+        button.type = "button";
+        button.value = "Kaufen";
+        document.getElementById("liste")?.appendChild(newbutton);
+
+       
+         // Alle Tags zu div Container
+        divCandy.appendChild(imgCandy);
+        divCandy.appendChild(candyName);
+        divCandy.appendChild(candyPreis);
+        divCandy.appendChild(candybeschreibung);
+        divCandy.appendChild(button);
+
+        document.getElementById("liste")?.appendChild(artikelSüßwaren);
+        document.getElementById("liste")?.appendChild(divCandy);
+        
        
         // Alle Tags zu div Container
         artikelScharf.appendChild(imgScharf);
@@ -96,5 +105,8 @@ namespace Aufgabe05 {
 
         document.getElementById("liste")?.appendChild(artikel);
         document.getElementById("liste")?.appendChild(artikelScharf);
+
+    
+        
     }
 }

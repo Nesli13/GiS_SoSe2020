@@ -46,14 +46,7 @@ var Aufgabe05;
         button.type = "button";
         button.value = "Kaufen";
         document.getElementById("liste")?.appendChild(button);
-        // Alle Tags zu div Container
-        divCandy.appendChild(imgCandy);
-        divCandy.appendChild(candyName);
-        divCandy.appendChild(candyPreis);
-        divCandy.appendChild(candybeschreibung);
-        divCandy.appendChild(button);
-        document.getElementById("liste")?.appendChild(artikelSüßwaren);
-        document.getElementById("liste")?.appendChild(divCandy);
+        //Kategorie 2
         //Bild
         let imgScharf = document.createElement("img");
         imgScharf.setAttribute("src", scharf[i].img);
@@ -67,6 +60,19 @@ var Aufgabe05;
         //Beschreibung
         let scharfbeschreibung = document.createElement("p");
         scharfbeschreibung.innerHTML = scharf[i].beschreibung;
+        //Button
+        let newbutton = document.createElement("input");
+        button.type = "button";
+        button.value = "Kaufen";
+        document.getElementById("liste")?.appendChild(newbutton);
+        // Alle Tags zu div Container
+        divCandy.appendChild(imgCandy);
+        divCandy.appendChild(candyName);
+        divCandy.appendChild(candyPreis);
+        divCandy.appendChild(candybeschreibung);
+        divCandy.appendChild(button);
+        document.getElementById("liste")?.appendChild(artikelSüßwaren);
+        document.getElementById("liste")?.appendChild(divCandy);
         // Alle Tags zu div Container
         artikelScharf.appendChild(imgScharf);
         artikelScharf.appendChild(scharfName);
