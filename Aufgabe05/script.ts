@@ -42,7 +42,7 @@ namespace Aufgabe05 {
         let button: HTMLInputElement = document.createElement("input");
         button.type = "button";
         button.value = "Kaufen";
-        document.getElementById("Produkte")?.appendChild(button);
+        document.getElementById("liste")?.appendChild(button);
 
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
@@ -51,8 +51,8 @@ namespace Aufgabe05 {
         divCandy.appendChild(candybeschreibung);
         divCandy.appendChild(button);
 
-        document.getElementById("Produkte")?.appendChild(artikelSüßwaren);
-        document.getElementById("Produkte")?.appendChild(divCandy);
+        document.getElementById("liste")?.appendChild(artikelSüßwaren);
+        document.getElementById("liste")?.appendChild(divCandy);
         
     }
 
@@ -94,7 +94,7 @@ namespace Aufgabe05 {
         let button: HTMLInputElement = document.createElement("input");
         button.type = "button";
         button.value = "Kaufen";
-        document.getElementById("Produkte")?.appendChild(button);
+        document.getElementById("liste")?.appendChild(button);
 
         // Alle Tags zu div Container
         artikelScharf.appendChild(imgScharf);
@@ -103,7 +103,7 @@ namespace Aufgabe05 {
         artikelScharf.appendChild(scharfbeschreibung);
         artikelScharf.appendChild(button);
 
-        document.getElementById("Produkte")?.appendChild(artikel);
-        document.getElementById("Produkte")?.appendChild(artikelScharf);
+        document.getElementById("liste")?.appendChild(artikel);
+        document.getElementById("liste")?.appendChild(artikelScharf);
     }
 }

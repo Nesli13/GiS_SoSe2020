@@ -35,15 +35,15 @@ var Aufgabe05;
         let button = document.createElement("input");
         button.type = "button";
         button.value = "Kaufen";
-        document.getElementById("Produkte")?.appendChild(button);
+        document.getElementById("liste")?.appendChild(button);
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
         divCandy.appendChild(candyName);
         divCandy.appendChild(candyPreis);
         divCandy.appendChild(candybeschreibung);
         divCandy.appendChild(button);
-        document.getElementById("Produkte")?.appendChild(artikelSüßwaren);
-        document.getElementById("Produkte")?.appendChild(divCandy);
+        document.getElementById("liste")?.appendChild(artikelSüßwaren);
+        document.getElementById("liste")?.appendChild(divCandy);
     }
     for (let i = 0; i < scharf.length; i++) {
         //Überschrift
@@ -74,15 +74,15 @@ var Aufgabe05;
         let button = document.createElement("input");
         button.type = "button";
         button.value = "Kaufen";
-        document.getElementById("Produkte")?.appendChild(button);
+        document.getElementById("liste")?.appendChild(button);
         // Alle Tags zu div Container
         artikelScharf.appendChild(imgScharf);
         artikelScharf.appendChild(scharfName);
         artikelScharf.appendChild(scharfPreis);
         artikelScharf.appendChild(scharfbeschreibung);
         artikelScharf.appendChild(button);
-        document.getElementById("Produkte")?.appendChild(artikel);
-        document.getElementById("Produkte")?.appendChild(artikelScharf);
+        document.getElementById("liste")?.appendChild(artikel);
+        document.getElementById("liste")?.appendChild(artikelScharf);
     }
 })(Aufgabe05 || (Aufgabe05 = {}));
 //# sourceMappingURL=script.js.map
