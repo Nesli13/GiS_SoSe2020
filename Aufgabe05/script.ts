@@ -1,5 +1,4 @@
 namespace Aufgabe05 {
-
     for (let i: number = 0; i < süßigkeiten.length; i++) {
         //Überschrift
         let artikelHoch: HTMLElement = document.createElement("h4");
@@ -17,6 +16,49 @@ namespace Aufgabe05 {
             artikelSüßwaren.innerHTML = " ";
         }
         
+
+        //Div
+        let divCandy: HTMLElement = document.createElement("div");
+        divCandy.setAttribute("class", "Produkte");
+
+        //Bild
+        let imgCandy: HTMLElement = document.createElement("img");
+        imgCandy.setAttribute("src", süßigkeiten[i].img);
+        imgCandy.setAttribute("alt", süßigkeiten[i].alt);
+        
+        //Name
+        let candyName: HTMLElement = document.createElement("h2");
+        candyName.innerHTML = süßigkeiten[i].name;
+
+        //Preis
+        let candyPreis: HTMLElement = document.createElement("h3");
+        candyPreis.innerHTML = süßigkeiten[i].preis + "€";
+
+        //Beschreibung
+        let candybeschreibung: HTMLElement = document.createElement("p");
+        candybeschreibung.innerHTML = süßigkeiten[i].beschreibung;
+
+        //Button
+        let button: HTMLInputElement = document.createElement("input");
+        button.type = "button";
+        button.value = "Kaufen";
+        document.getElementById("liste")?.appendChild(button);
+
+        // Alle Tags zu div Container
+        divCandy.appendChild(imgCandy);
+        divCandy.appendChild(candyName);
+        divCandy.appendChild(candyPreis);
+        divCandy.appendChild(candybeschreibung);
+        divCandy.appendChild(button);
+
+        document.getElementById("liste")?.appendChild(artikelSüßwaren);
+        document.getElementById("liste")?.appendChild(divCandy);
+        
+    }
+
+    for (let i: number = 0; i < scharf.length; i++) {
+        //Überschrift
+       
         let artikel: HTMLElement = document.createElement("h1");
         artikel.innerHTML = "Extra Scharf";
 
@@ -30,36 +72,7 @@ namespace Aufgabe05 {
         let artikelScharf: HTMLElement = document.createElement("div");
         artikelScharf.setAttribute("id", "ExtraScharf");
 
-
-        //Div Produkte --> Box
-        let divCandy: HTMLElement = document.createElement("div");
-        divCandy.setAttribute("class", "Produkte");
-
-        //Bilder
-        let imgCandy: HTMLElement = document.createElement("img");
-        imgCandy.setAttribute("src", süßigkeiten[i].img);
-        imgCandy.setAttribute("alt", süßigkeiten[i].alt);
         
-        //Name des Produkts
-        let candyName: HTMLElement = document.createElement("h2");
-        candyName.innerHTML = süßigkeiten[i].name;
-
-        //Preis des Produkts
-        let candyPreis: HTMLElement = document.createElement("h3");
-        candyPreis.innerHTML = süßigkeiten[i].preis + "€";
-
-        //Beschreibung --> alt
-        let candybeschreibung: HTMLElement = document.createElement("p");
-        candybeschreibung.innerHTML = süßigkeiten[i].beschreibung;
-
-        //Button
-        let button: HTMLInputElement = document.createElement("input");
-        button.type = "button";
-        button.value = "Kaufen";
-        document.getElementById("liste")?.appendChild(button);
-
-       //Kategorie 2
-       
         //Bild
         let imgScharf: HTMLElement = document.createElement("img");
         imgScharf.setAttribute("src", scharf[i].img);
@@ -77,25 +90,12 @@ namespace Aufgabe05 {
         let scharfbeschreibung: HTMLElement = document.createElement("p");
         scharfbeschreibung.innerHTML = scharf[i].beschreibung;
 
-
         //Button
-        let newbutton: HTMLInputElement = document.createElement("input");
+        let button: HTMLInputElement = document.createElement("input");
         button.type = "button";
         button.value = "Kaufen";
-        document.getElementById("liste")?.appendChild(newbutton);
+        document.getElementById("liste")?.appendChild(button);
 
-       
-         // Alle Tags zu div Container
-        divCandy.appendChild(imgCandy);
-        divCandy.appendChild(candyName);
-        divCandy.appendChild(candyPreis);
-        divCandy.appendChild(candybeschreibung);
-        divCandy.appendChild(button);
-
-        document.getElementById("liste")?.appendChild(artikelSüßwaren);
-        document.getElementById("liste")?.appendChild(divCandy);
-        
-       
         // Alle Tags zu div Container
         artikelScharf.appendChild(imgScharf);
         artikelScharf.appendChild(scharfName);
@@ -105,8 +105,5 @@ namespace Aufgabe05 {
 
         document.getElementById("liste")?.appendChild(artikel);
         document.getElementById("liste")?.appendChild(artikelScharf);
-
-    
-        
     }
 }

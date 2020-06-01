@@ -15,6 +15,38 @@ var Aufgabe05;
         else {
             artikelSüßwaren.innerHTML = " ";
         }
+        //Div
+        let divCandy = document.createElement("div");
+        divCandy.setAttribute("class", "Produkte");
+        //Bild
+        let imgCandy = document.createElement("img");
+        imgCandy.setAttribute("src", süßigkeiten[i].img);
+        imgCandy.setAttribute("alt", süßigkeiten[i].alt);
+        //Name
+        let candyName = document.createElement("h2");
+        candyName.innerHTML = süßigkeiten[i].name;
+        //Preis
+        let candyPreis = document.createElement("h3");
+        candyPreis.innerHTML = süßigkeiten[i].preis + "€";
+        //Beschreibung
+        let candybeschreibung = document.createElement("p");
+        candybeschreibung.innerHTML = süßigkeiten[i].beschreibung;
+        //Button
+        let button = document.createElement("input");
+        button.type = "button";
+        button.value = "Kaufen";
+        document.getElementById("liste")?.appendChild(button);
+        // Alle Tags zu div Container
+        divCandy.appendChild(imgCandy);
+        divCandy.appendChild(candyName);
+        divCandy.appendChild(candyPreis);
+        divCandy.appendChild(candybeschreibung);
+        divCandy.appendChild(button);
+        document.getElementById("liste")?.appendChild(artikelSüßwaren);
+        document.getElementById("liste")?.appendChild(divCandy);
+    }
+    for (let i = 0; i < scharf.length; i++) {
+        //Überschrift
         let artikel = document.createElement("h1");
         artikel.innerHTML = "Extra Scharf";
         if (i == 0) {
@@ -25,28 +57,6 @@ var Aufgabe05;
         }
         let artikelScharf = document.createElement("div");
         artikelScharf.setAttribute("id", "ExtraScharf");
-        //Div Produkte --> Box
-        let divCandy = document.createElement("div");
-        divCandy.setAttribute("class", "Produkte");
-        //Bilder
-        let imgCandy = document.createElement("img");
-        imgCandy.setAttribute("src", süßigkeiten[i].img);
-        imgCandy.setAttribute("alt", süßigkeiten[i].alt);
-        //Name des Produkts
-        let candyName = document.createElement("h2");
-        candyName.innerHTML = süßigkeiten[i].name;
-        //Preis des Produkts
-        let candyPreis = document.createElement("h3");
-        candyPreis.innerHTML = süßigkeiten[i].preis + "€";
-        //Beschreibung --> alt
-        let candybeschreibung = document.createElement("p");
-        candybeschreibung.innerHTML = süßigkeiten[i].beschreibung;
-        //Button
-        let button = document.createElement("input");
-        button.type = "button";
-        button.value = "Kaufen";
-        document.getElementById("liste")?.appendChild(button);
-        //Kategorie 2
         //Bild
         let imgScharf = document.createElement("img");
         imgScharf.setAttribute("src", scharf[i].img);
@@ -61,18 +71,10 @@ var Aufgabe05;
         let scharfbeschreibung = document.createElement("p");
         scharfbeschreibung.innerHTML = scharf[i].beschreibung;
         //Button
-        let newbutton = document.createElement("input");
+        let button = document.createElement("input");
         button.type = "button";
         button.value = "Kaufen";
-        document.getElementById("liste")?.appendChild(newbutton);
-        // Alle Tags zu div Container
-        divCandy.appendChild(imgCandy);
-        divCandy.appendChild(candyName);
-        divCandy.appendChild(candyPreis);
-        divCandy.appendChild(candybeschreibung);
-        divCandy.appendChild(button);
-        document.getElementById("liste")?.appendChild(artikelSüßwaren);
-        document.getElementById("liste")?.appendChild(divCandy);
+        document.getElementById("liste")?.appendChild(button);
         // Alle Tags zu div Container
         artikelScharf.appendChild(imgScharf);
         artikelScharf.appendChild(scharfName);
