@@ -1,4 +1,5 @@
 namespace Aufgabe05 {
+    
     for (let i: number = 0; i < süßigkeiten.length; i++) {
         //Überschrift
         let artikelHoch: HTMLElement = document.createElement("h4");

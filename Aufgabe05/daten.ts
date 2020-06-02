@@ -83,7 +83,6 @@ let scharf12: Süßigkeiten = {
     img: "scharf12.jpg", name: "NicNac's Hot 110g", preis: 1.49, beschreibung: "(1,35 €/100g)", alt: "NicNac"
 };
 //Array
-let scharf: Süßigkeiten[] = [ scharff, scharf2, scharf3, scharf4, scharf5, scharf6, scharf7, scharf8, scharf9, scharf10, scharf11, scharf12 ];
-let süßigkeiten: Süßigkeiten[] = [ candy1, candy2, candy3, candy4, candy5, candy6, candy7, candy8, candy9, candy10, candy11, candy12 ];
+let süßigkeiten: Süßigkeiten[] = [ candy1, candy2, candy3, candy4, candy5, candy6, candy7, candy8, candy9, candy10, candy11, candy12, scharff, scharf2, scharf3, scharf4, scharf5, scharf6, scharf7, scharf8, scharf9, scharf10, scharf11, scharf12 ];
 
 
