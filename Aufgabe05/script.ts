@@ -1,5 +1,6 @@
 namespace Aufgabe05 {
     
+   
     for (let i: number = 0; i < süßigkeiten.length; i++) {
         //Überschrift
         let artikelHoch: HTMLElement = document.createElement("h4");
@@ -17,7 +18,7 @@ namespace Aufgabe05 {
             artikelSüßwaren.innerHTML = " ";
         }
         
-
+    
         //Div
         let divCandy: HTMLElement = document.createElement("div");
         divCandy.setAttribute("class", "Produkte");
@@ -43,7 +44,7 @@ namespace Aufgabe05 {
         let button: HTMLInputElement = document.createElement("input");
         button.type = "button";
         button.value = "Kaufen";
-        document.getElementById("liste")?.appendChild(button);
+        candyPreis.appendChild(button);
 
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
@@ -57,5 +58,7 @@ namespace Aufgabe05 {
         
     }
 
-   
 }
+    
+    
+

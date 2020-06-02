@@ -35,7 +35,7 @@ var Aufgabe05;
         let button = document.createElement("input");
         button.type = "button";
         button.value = "Kaufen";
-        document.getElementById("liste")?.appendChild(button);
+        candyPreis.appendChild(button);
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
         divCandy.appendChild(candyName);
