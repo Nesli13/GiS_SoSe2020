@@ -56,54 +56,5 @@ namespace Aufgabe05 {
         
     }
 
-    for (let i: number = 0; i < scharf.length; i++) {
-        //Überschrift
-       
-        let artikel: HTMLElement = document.createElement("h1");
-        artikel.innerHTML = "Extra Scharf";
-
-        if (i == 0) {
-            artikel.innerHTML = "Extra Scharf";
-
-        } else {
-            artikel.innerHTML = " ";
-        }
-
-        let artikelScharf: HTMLElement = document.createElement("div");
-        artikelScharf.setAttribute("id", "ExtraScharf");
-
-        
-        //Bild
-        let imgScharf: HTMLElement = document.createElement("img");
-        imgScharf.setAttribute("src", scharf[i].img);
-        imgScharf.setAttribute("alt", scharf[i].alt);
-        
-        //Name
-        let scharfName: HTMLElement = document.createElement("h2");
-        scharfName.innerHTML = scharf[i].name;
-
-        //Preis
-        let scharfPreis: HTMLElement = document.createElement("h3");
-        scharfPreis.innerHTML = scharf[i].preis + "€";
-
-        //Beschreibung
-        let scharfbeschreibung: HTMLElement = document.createElement("p");
-        scharfbeschreibung.innerHTML = scharf[i].beschreibung;
-
-        //Button
-        let button: HTMLInputElement = document.createElement("input");
-        button.type = "button";
-        button.value = "Kaufen";
-        document.getElementById("liste")?.appendChild(button);
-
-        // Alle Tags zu div Container
-        artikelScharf.appendChild(imgScharf);
-        artikelScharf.appendChild(scharfName);
-        artikelScharf.appendChild(scharfPreis);
-        artikelScharf.appendChild(scharfbeschreibung);
-        artikelScharf.appendChild(button);
-
-        document.getElementById("liste")?.appendChild(artikel);
-        document.getElementById("liste")?.appendChild(artikelScharf);
-    }
+   
 }

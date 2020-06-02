@@ -45,44 +45,5 @@ var Aufgabe05;
         document.getElementById("liste")?.appendChild(artikelSüßwaren);
         document.getElementById("liste")?.appendChild(divCandy);
     }
-    for (let i = 0; i < scharf.length; i++) {
-        //Überschrift
-        let artikel = document.createElement("h1");
-        artikel.innerHTML = "Extra Scharf";
-        if (i == 0) {
-            artikel.innerHTML = "Extra Scharf";
-        }
-        else {
-            artikel.innerHTML = " ";
-        }
-        let artikelScharf = document.createElement("div");
-        artikelScharf.setAttribute("id", "ExtraScharf");
-        //Bild
-        let imgScharf = document.createElement("img");
-        imgScharf.setAttribute("src", scharf[i].img);
-        imgScharf.setAttribute("alt", scharf[i].alt);
-        //Name
-        let scharfName = document.createElement("h2");
-        scharfName.innerHTML = scharf[i].name;
-        //Preis
-        let scharfPreis = document.createElement("h3");
-        scharfPreis.innerHTML = scharf[i].preis + "€";
-        //Beschreibung
-        let scharfbeschreibung = document.createElement("p");
-        scharfbeschreibung.innerHTML = scharf[i].beschreibung;
-        //Button
-        let button = document.createElement("input");
-        button.type = "button";
-        button.value = "Kaufen";
-        document.getElementById("liste")?.appendChild(button);
-        // Alle Tags zu div Container
-        artikelScharf.appendChild(imgScharf);
-        artikelScharf.appendChild(scharfName);
-        artikelScharf.appendChild(scharfPreis);
-        artikelScharf.appendChild(scharfbeschreibung);
-        artikelScharf.appendChild(button);
-        document.getElementById("liste")?.appendChild(artikel);
-        document.getElementById("liste")?.appendChild(artikelScharf);
-    }
 })(Aufgabe05 || (Aufgabe05 = {}));
 //# sourceMappingURL=script.js.map
