@@ -81,19 +81,19 @@ input:focus{
     font-size: 20px;
 }
 /*Bilder*/
-#liste div img{
+#kategorie1 div img, #kategorie2 div img{
     height: 340px;
     width: 340px;
 
 }
 /*Button*/
-#liste input{
+#kategorie1 input, #kategorie2 input{
     width: 120px;
     margin: 5px;
     border-radius: 0px;
 }
 /*Box*/
-#liste div{
+#kategorie1 div, #kategorie2 div{
     border: 2px solid rgb(139, 43, 176);
     box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
     max-width: 450px;
