@@ -1,22 +1,8 @@
 namespace Aufgabe05 {
+    artikelGenerieren();
     
-   
+    function artikelGenerieren(): void {
     for (let i: number = 0; i < süßigkeiten.length; i++) {
-        //Überschrift
-        let artikelHoch: HTMLElement = document.createElement("h4");
-        artikelHoch.innerHTML = "Gönn dir doch mal was Gutes!";
-        artikelHoch.setAttribute ("id", "Hoch");
-
-        let artikelSüßwaren: HTMLElement = document.createElement("h1");
-        artikelSüßwaren.innerHTML = "Süßwaren";
-        artikelSüßwaren.setAttribute("id", "Süßwaren");
-
-        if (i == 0) {
-            artikelSüßwaren.innerHTML = "Süßwaren";
-
-        } else {
-            artikelSüßwaren.innerHTML = " ";
-        }
         
     
         //Div
@@ -53,12 +39,22 @@ namespace Aufgabe05 {
         divCandy.appendChild(candybeschreibung);
         divCandy.appendChild(button);
 
-        document.getElementById("liste")?.appendChild(artikelSüßwaren);
-        document.getElementById("liste")?.appendChild(divCandy);
+        switch (süßigkeiten[i].kategorie) {
+            case 1:
+                let getContainer1: HTMLElement = document.getElementById("kategorie1")!;
+                getContainer1.appendChild(divCandy);
+                break;
+                case 2:
+                    let getContainer2: HTMLElement = document.getElementById("kategorie2")!;
+                    getContainer2.appendChild(divCandy);
+                    break;
+                    default:
+                        break;
+        }
         
     }
 
 }
-    
+}
     
 
