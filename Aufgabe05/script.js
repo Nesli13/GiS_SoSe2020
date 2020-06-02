@@ -1,8 +1,8 @@
 "use strict";
 var Aufgabe05;
 (function (Aufgabe05) {
-    artikelGenerieren();
-    function artikelGenerieren() {
+    artikelErzeugen();
+    function artikelErzeugen() {
         for (let i = 0; i < süßigkeiten.length; i++) {
             //Div
             let divCandy = document.createElement("div");

@@ -1,7 +1,7 @@
 namespace Aufgabe05 {
-    artikelGenerieren();
+    artikelErzeugen();
     
-    function artikelGenerieren(): void {
+    function artikelErzeugen(): void {
     for (let i: number = 0; i < süßigkeiten.length; i++) {
         
     
