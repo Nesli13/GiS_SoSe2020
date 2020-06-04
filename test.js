@@ -1,7 +1,7 @@
 "use strict";
 var L06_Load;
 (function (L06_Load) {
-    window.addEventListener("load", handleLoad);
+    document.addEventListener("load", handleLoad);
     function handleLoad(_event) {
         console.log(_event);
     }
