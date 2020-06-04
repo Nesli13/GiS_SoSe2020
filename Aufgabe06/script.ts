@@ -31,7 +31,7 @@ namespace Aufgabe06 {
         button.type = "button";
         button.value = "Kaufen";
         candyPreis.appendChild(button);
-
+       
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
         divCandy.appendChild(candyName);
@@ -51,7 +51,7 @@ namespace Aufgabe06 {
                     default:
                         break;
         }
-        
+      
     }
 
 }
