@@ -31,8 +31,7 @@ namespace Aufgabe06 {
         button.type = "button";
         button.value = "Kaufen";
         candyPreis.appendChild(button);
-        document.getElementById(süßigkeiten[i].img)?.appendChild(button);
-        button.addEventListener("click", handleClick);
+        button.addEventListener("click", handleAddArticle);
        
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
@@ -54,42 +53,31 @@ namespace Aufgabe06 {
                         break;
         }
       
-        let summe: number = 0;
-        let anzahl: number = 0;
+        let wagenZähler: number = 0;
 
-        function handleClick(_event: Event): void {
+        let zählerAnzeiger: HTMLParagraphElement = document.createElement("p");
 
-        let clickedObject: HTMLElement = <HTMLElement>_event.target;
+        let wagenBlase: HTMLDivElement = document.createElement("div");
+        wagenBlase.id = "wagenBlase";
 
-        // Anzahl berechnen & anzeigen
-        anzahl++;
-        document.getElementById("zähler")!.innerHTML = anzahl.toString();
-        document.getElementById("zähler")!.setAttribute("style", "visibility: visible");
+        let gesammtWert: number = 0;
 
-        // Summe berechnen & ausgeben
-        let summeRechnen: string = clickedObject!.previousSibling?.firstChild?.nodeValue!;
-        summeRechnen = summeRechnen.replace( /,/, "." );
-        summe += parseFloat(summeRechnen);
-        summeRechnen = summe.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
-        console.log(summeRechnen);
+        function handleAddArticle(_event: Event): void {
+            if (wagenZähler >= 0) {
+                document.getElementById("zähler")?.appendChild(wagenBlase);
 
-    }
-        document.getElementById("Süßwaren")?.addEventListener("click", handleChooseClick);
-        document.getElementById("ExtraScharf")?.addEventListener("click", handleChooseClick);
-
-        function handleChooseClick(_event: Event): void {
+                wagenZähler++;
+                zählerAnzeiger.innerHTML = "" + wagenZähler;
+                document.getElementById("wagenBubble")?.appendChild(zählerAnzeiger);
         
-        let clickKategorie: HTMLElement = <HTMLElement>_event.target;
-        document.getElementById("kategorie1")!.setAttribute("style", "display:none");
-        document.getElementById("kategorie2")!.setAttribute("style", "display:none");
-
-        if (clickKategorie.id == "Süßwaren") {
-            document.getElementById("kategorie1")!.setAttribute("style", "visibility: visible");
+        
+                let indexButton: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("index")!;
+                let indexNr: number = parseInt(indexButton);
+                gesammtWert = gesammtWert + süßigkeiten[indexNr].preis;
+                console.log(gesammtWert);
+            }
         }
-        if (clickKategorie.id == "ExtraScharf") {
-            document.getElementById("kategorie2")!.setAttribute("style", "visibility: visbile");
-        }
-    }
+    
     }
 
 }

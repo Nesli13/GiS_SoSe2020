@@ -25,8 +25,7 @@ var Aufgabe06;
             button.type = "button";
             button.value = "Kaufen";
             candyPreis.appendChild(button);
-            document.getElementById(Aufgabe06.süßigkeiten[i].img)?.appendChild(button);
-            button.addEventListener("click", handleClick);
+            button.addEventListener("click", handleAddArticle);
             // Alle Tags zu div Container
             divCandy.appendChild(imgCandy);
             divCandy.appendChild(candyName);
@@ -45,32 +44,21 @@ var Aufgabe06;
                 default:
                     break;
             }
-            let summe = 0;
-            let anzahl = 0;
-            function handleClick(_event) {
-                let clickedObject = _event.target;
-                // Anzahl berechnen & anzeigen
-                anzahl++;
-                document.getElementById("zähler").innerHTML = anzahl.toString();
-                document.getElementById("zähler").setAttribute("style", "visibility: visible");
-                // Summe berechnen & ausgeben
-                let summeRechnen = clickedObject.previousSibling?.firstChild?.nodeValue;
-                summeRechnen = summeRechnen.replace(/,/, ".");
-                summe += parseFloat(summeRechnen);
-                summeRechnen = summe.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
-                console.log(summeRechnen);
-            }
-            document.getElementById("Süßwaren")?.addEventListener("click", handleChooseClick);
-            document.getElementById("ExtraScharf")?.addEventListener("click", handleChooseClick);
-            function handleChooseClick(_event) {
-                let clickKategorie = _event.target;
-                document.getElementById("kategorie1").setAttribute("style", "display:none");
-                document.getElementById("kategorie2").setAttribute("style", "display:none");
-                if (clickKategorie.id == "Süßwaren") {
-                    document.getElementById("kategorie1").setAttribute("style", "visibility: visible");
-                }
-                if (clickKategorie.id == "ExtraScharf") {
-                    document.getElementById("kategorie2").setAttribute("style", "visibility: visbile");
+            let wagenZähler = 0;
+            let zählerAnzeiger = document.createElement("p");
+            let wagenBlase = document.createElement("div");
+            wagenBlase.id = "wagenBlase";
+            let gesammtWert = 0;
+            function handleAddArticle(_event) {
+                if (wagenZähler >= 0) {
+                    document.getElementById("zähler")?.appendChild(wagenBlase);
+                    wagenZähler++;
+                    zählerAnzeiger.innerHTML = "" + wagenZähler;
+                    document.getElementById("wagenBubble")?.appendChild(zählerAnzeiger);
+                    let indexButton = _event.currentTarget.parentElement.getAttribute("index");
+                    let indexNr = parseInt(indexButton);
+                    gesammtWert = gesammtWert + Aufgabe06.süßigkeiten[indexNr].preis;
+                    console.log(gesammtWert);
                 }
             }
         }
