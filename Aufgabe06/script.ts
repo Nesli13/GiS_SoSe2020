@@ -31,6 +31,8 @@ namespace Aufgabe06 {
         button.type = "button";
         button.value = "Kaufen";
         candyPreis.appendChild(button);
+        document.getElementById(süßigkeiten[i].img)?.appendChild(button);
+        button.addEventListener("click", handleClick);
        
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
@@ -39,7 +41,7 @@ namespace Aufgabe06 {
         divCandy.appendChild(candybeschreibung);
         divCandy.appendChild(button);
 
-        switch (süßigkeiten[i].kategorie) {
+        switch (süßigkeiten[i].kategorien) {
             case 1:
                 let getContainer1: HTMLElement = document.getElementById("kategorie1")!;
                 getContainer1.appendChild(divCandy);
@@ -52,6 +54,26 @@ namespace Aufgabe06 {
                         break;
         }
       
+        let summe: number = 0;
+        let anzahl: number = 0;
+
+        function handleClick(_event: Event): void {
+
+        let clickedObject: HTMLElement = <HTMLElement>_event.target;
+
+        // Anzahl berechnen & anzeigen
+        anzahl++;
+        document.getElementById("zähler")!.innerHTML = anzahl.toString();
+        document.getElementById("zähler")!.setAttribute("style", "visibility: visible");
+
+        // Summe berechnen & ausgeben
+        let summeRechnen: string = clickedObject!.previousSibling?.firstChild?.nodeValue!;
+        summeRechnen = summeRechnen.replace( /,/, "." );
+        summe += parseFloat(summeRechnen);
+        summeRechnen = summe.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
+        console.log(summeRechnen);
+
+    }
     }
 
 }

@@ -25,13 +25,15 @@ var Aufgabe06;
             button.type = "button";
             button.value = "Kaufen";
             candyPreis.appendChild(button);
+            document.getElementById(Aufgabe06.süßigkeiten[i].img)?.appendChild(button);
+            button.addEventListener("click", handleClick);
             // Alle Tags zu div Container
             divCandy.appendChild(imgCandy);
             divCandy.appendChild(candyName);
             divCandy.appendChild(candyPreis);
             divCandy.appendChild(candybeschreibung);
             divCandy.appendChild(button);
-            switch (Aufgabe06.süßigkeiten[i].kategorie) {
+            switch (Aufgabe06.süßigkeiten[i].kategorien) {
                 case 1:
                     let getContainer1 = document.getElementById("kategorie1");
                     getContainer1.appendChild(divCandy);
@@ -42,6 +44,21 @@ var Aufgabe06;
                     break;
                 default:
                     break;
+            }
+            let summe = 0;
+            let anzahl = 0;
+            function handleClick(_event) {
+                let clickedObject = _event.target;
+                // Anzahl berechnen & anzeigen
+                anzahl++;
+                document.getElementById("zähler").innerHTML = anzahl.toString();
+                document.getElementById("zähler").setAttribute("style", "visibility: visible");
+                // Summe berechnen & ausgeben
+                let summeRechnen = clickedObject.previousSibling?.firstChild?.nodeValue;
+                summeRechnen = summeRechnen.replace(/,/, ".");
+                summe += parseFloat(summeRechnen);
+                summeRechnen = summe.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
+                console.log(summeRechnen);
             }
         }
     }
