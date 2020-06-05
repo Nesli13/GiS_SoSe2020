@@ -64,7 +64,7 @@ namespace Aufgabe06 {
 
         function handleAddArticle(_event: Event): void {
             if (wagenZähler >= 0) {
-                document.getElementById("zähler")?.appendChild(wagenBlase);
+                document.getElementById("artikelBlase")?.appendChild(wagenBlase);
 
                 wagenZähler++;
                 zählerAnzeiger.innerHTML = "" + wagenZähler;

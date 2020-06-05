@@ -51,7 +51,7 @@ var Aufgabe06;
             let gesammtWert = 0;
             function handleAddArticle(_event) {
                 if (wagenZähler >= 0) {
-                    document.getElementById("zähler")?.appendChild(wagenBlase);
+                    document.getElementById("artikelBlase")?.appendChild(wagenBlase);
                     wagenZähler++;
                     zählerAnzeiger.innerHTML = "" + wagenZähler;
                     document.getElementById("wagenBubble")?.appendChild(zählerAnzeiger);
