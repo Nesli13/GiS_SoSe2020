@@ -60,16 +60,16 @@ var Aufgabe06;
                 summeRechnen = summe.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
                 console.log(summeRechnen);
             }
-            document.getElementById("Süßigkeiten")?.addEventListener("click", handleChooseClick);
-            document.getElementById("Extra Scharf")?.addEventListener("click", handleChooseClick);
+            document.getElementById("Süßwaren")?.addEventListener("click", handleChooseClick);
+            document.getElementById("ExtraScharf")?.addEventListener("click", handleChooseClick);
             function handleChooseClick(_event) {
                 let clickKategorie = _event.target;
-                document.getElementById("Süßigkeiten").setAttribute("style", "display:none");
-                document.getElementById("Extra Scharf").setAttribute("style", "display:none");
-                if (clickKategorie.id == "Süßigkeiten") {
+                document.getElementById("Süßwaren").setAttribute("style", "display:none");
+                document.getElementById("ExtraScharf").setAttribute("style", "display:none");
+                if (clickKategorie.id == "Süßwaren") {
                     document.getElementById("kategorie1").setAttribute("style", "visibility: visible");
                 }
-                if (clickKategorie.id == "Extra Scharf") {
+                if (clickKategorie.id == "ExtraScharf") {
                     document.getElementById("kategorie2").setAttribute("style", "visibility: visbile");
                 }
             }
