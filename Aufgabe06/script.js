@@ -64,8 +64,8 @@ var Aufgabe06;
             document.getElementById("ExtraScharf")?.addEventListener("click", handleChooseClick);
             function handleChooseClick(_event) {
                 let clickKategorie = _event.target;
-                document.getElementById("Süßwaren").setAttribute("style", "display:none");
-                document.getElementById("ExtraScharf").setAttribute("style", "display:none");
+                document.getElementById("kategorie1").setAttribute("style", "display:none");
+                document.getElementById("kategorie2").setAttribute("style", "display:none");
                 if (clickKategorie.id == "Süßwaren") {
                     document.getElementById("kategorie1").setAttribute("style", "visibility: visible");
                 }
