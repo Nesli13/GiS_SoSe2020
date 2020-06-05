@@ -84,10 +84,10 @@ namespace Aufgabe06 {
         document.getElementById("Extra Scharf")!.setAttribute("style", "display:none");
 
         if (clickKategorie.id == "Süßigkeiten") {
-            document.getElementById("kategorien")!.setAttribute("style", "visibility: visible");
+            document.getElementById("kategorie1")!.setAttribute("style", "visibility: visible");
         }
         if (clickKategorie.id == "Extra Scharf") {
-            document.getElementById("kategorien: 2")!.setAttribute("style", "visibility: visbile");
+            document.getElementById("kategorie2")!.setAttribute("style", "visibility: visbile");
         }
     }
     }
