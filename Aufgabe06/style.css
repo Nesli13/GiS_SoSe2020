@@ -60,7 +60,21 @@ input:focus{
     height: 140px;
     text-align: center;
 }
+#wagenBubble{
+    background-color: rgb(102, 102, 102);
+    
+    border-radius: 50%;
+    margin-top: 20px;
+    width: 20px;
+    height: 20px;
+    margin-left: -15px;
+}
 
+#wagenBubble>p{
+    color: white;
+    text-align: center;
+    font-size: unset;
+}
 
 /*Desktop*/
 @media screen and (min-width:720px){
