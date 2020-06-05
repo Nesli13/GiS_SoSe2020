@@ -55,7 +55,7 @@ var Aufgabe06;
                     wagenZähler++;
                     zählerAnzeiger.innerHTML = "" + wagenZähler;
                     document.getElementById("wagenBubble")?.appendChild(zählerAnzeiger);
-                    let indexButton = _event.currentTarget.parentElement.getAttribute("index");
+                    let indexButton = _event.currentTarget.parentElement.getAttribute("i");
                     let indexNr = parseInt(indexButton);
                     gesammtWert = gesammtWert + Aufgabe06.süßigkeiten[indexNr].preis;
                     console.log(gesammtWert);
