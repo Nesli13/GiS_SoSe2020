@@ -1,4 +1,4 @@
-namespace Aufgabe06 {
+ namespace Aufgabe06 {
     artikelErzeugen();
     
     function artikelErzeugen(): void {
@@ -53,30 +53,41 @@ namespace Aufgabe06 {
                         break;
         }
       
-        let wagenZähler: number = 0;
+     //EINKAUFSWAGEN VARIABLEN
+        let wagenCounter: number = 0;
 
-        let zählerAnzeiger: HTMLParagraphElement = document.createElement("p");
-
-        let wagenBlase: HTMLDivElement = document.createElement("div");
-        wagenBlase.id = "wagenBlase";
-
+     //WagenCounter erstellen
+        let counterAnzeigen: HTMLParagraphElement = document.createElement("p");
+ 
+     //wagenBubbleDiv erstellen
+        let wagenBubble: HTMLDivElement = document.createElement("div");
+        wagenBubble.id = "wagenBubble";
+ 
+     //Werte Variable
         let gesammtWert: number = 0;
-
+ 
         function handleAddArticle(_event: Event): void {
-            if (wagenZähler >= 0) {
-                document.getElementById("artikelBlase")?.appendChild(wagenBlase);
-
-                wagenZähler++;
-                zählerAnzeiger.innerHTML = "" + wagenZähler;
-                document.getElementById("wagenBubble")?.appendChild(zählerAnzeiger);
         
+         //Blase erstellen bei min. 1 Artikel
+         if (wagenCounter >= 0) {
+             document.getElementById("artikelBlase")?.appendChild(wagenBubble);
+         }
+ 
+         //Zahl in Blase anzeigen
+         wagenCounter++;
+         counterAnzeigen.innerHTML = "" + wagenCounter;
+         document.getElementById("wagenBubble")?.appendChild(counterAnzeigen);
+ 
+         //Wert zusammen rechnen
+         let indexButton: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("index")!;
+         let indexNr: number = parseInt(indexButton);
+         gesammtWert = gesammtWert + süßigkeiten[indexNr].preis;
+         console.log(gesammtWert);
+     }
+ 
+ 
+            
         
-                let indexButton: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("i")!;
-                let indexNr: number = parseInt(indexButton);
-                gesammtWert = gesammtWert + süßigkeiten[indexNr].preis;
-                console.log(gesammtWert);
-            }
-        }
     
     }
 

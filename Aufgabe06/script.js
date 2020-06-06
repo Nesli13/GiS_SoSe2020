@@ -44,22 +44,29 @@ var Aufgabe06;
                 default:
                     break;
             }
-            let wagenZähler = 0;
-            let zählerAnzeiger = document.createElement("p");
-            let wagenBlase = document.createElement("div");
-            wagenBlase.id = "wagenBlase";
+            //EINKAUFSWAGEN VARIABLEN
+            let wagenCounter = 0;
+            //WagenCounter erstellen
+            let counterAnzeigen = document.createElement("p");
+            //wagenBubbleDiv erstellen
+            let wagenBubble = document.createElement("div");
+            wagenBubble.id = "wagenBubble";
+            //Werte Variable
             let gesammtWert = 0;
             function handleAddArticle(_event) {
-                if (wagenZähler >= 0) {
-                    document.getElementById("artikelBlase")?.appendChild(wagenBlase);
-                    wagenZähler++;
-                    zählerAnzeiger.innerHTML = "" + wagenZähler;
-                    document.getElementById("wagenBubble")?.appendChild(zählerAnzeiger);
-                    let indexButton = _event.currentTarget.parentElement.getAttribute("i");
-                    let indexNr = parseInt(indexButton);
-                    gesammtWert = gesammtWert + Aufgabe06.süßigkeiten[indexNr].preis;
-                    console.log(gesammtWert);
+                //Blase erstellen bei min. 1 Artikel
+                if (wagenCounter >= 0) {
+                    document.getElementById("artikelBlase")?.appendChild(wagenBubble);
                 }
+                //Zahl in Blase anzeigen
+                wagenCounter++;
+                counterAnzeigen.innerHTML = "" + wagenCounter;
+                document.getElementById("wagenBubble")?.appendChild(counterAnzeigen);
+                //Wert zusammen rechnen
+                let indexButton = _event.currentTarget.parentElement.getAttribute("index");
+                let indexNr = parseInt(indexButton);
+                gesammtWert = gesammtWert + Aufgabe06.süßigkeiten[indexNr].preis;
+                console.log(gesammtWert);
             }
         }
     }

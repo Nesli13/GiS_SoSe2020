@@ -71,7 +71,7 @@ input:focus{
 }
 
 #wagenBubble>p{
-    color: white;
+    color: rgb(177, 51, 51);
     text-align: center;
     font-size: unset;
 }
