@@ -78,9 +78,9 @@
          document.getElementById("wagenBubble")?.appendChild(zählerAnzeigen);
  
          //Gesammtwert
-         let indexButton: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("index")!;
-         let indexNr: number = parseInt(indexButton);
-         gesammtWert = gesammtWert + süßigkeiten[indexNr].preis;
+         let indexButton: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("i")!;
+         let i: number = parseInt(indexButton);
+         gesammtWert = gesammtWert + süßigkeiten[i].preis;
          console.log(gesammtWert);
      }
  
