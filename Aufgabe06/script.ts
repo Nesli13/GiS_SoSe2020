@@ -55,7 +55,7 @@
       
      //Teilaufgabe 1:
 
-        let einkaufswagenZähler: number = 0;
+        let wagenCounter: number = 0;
 
         let zählerAnzeigen: HTMLParagraphElement = document.createElement("p");
  
@@ -69,13 +69,13 @@
         function handleAddArticle(_event: Event): void {
         
          //Zähler wird ab 1 angezeigt
-         if (einkaufswagenZähler >= 0) {
+         if (wagenCounter >= 0) {
              document.getElementById("counterBlase")?.appendChild(wagenBubble);
          }
  
          //Zähler anzeigen
-         einkaufswagenZähler++;
-         zählerAnzeigen.innerHTML = "" + einkaufswagenZähler;
+         wagenCounter++;
+         zählerAnzeigen.innerHTML = "" + wagenCounter;
          document.getElementById("wagenBubble")?.appendChild(zählerAnzeigen);
  
          //Gesammtwert

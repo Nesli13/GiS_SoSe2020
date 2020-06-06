@@ -45,7 +45,7 @@ var Aufgabe06;
                     break;
             }
             //Teilaufgabe 1:
-            let einkaufswagenZähler = 0;
+            let wagenCounter = 0;
             let zählerAnzeigen = document.createElement("p");
             //wagenBubbleDiv erstellen
             let wagenBubble = document.createElement("div");
@@ -54,12 +54,12 @@ var Aufgabe06;
             let gesammtWert = 0;
             function handleAddArticle(_event) {
                 //Zähler wird ab 1 angezeigt
-                if (einkaufswagenZähler >= 0) {
+                if (wagenCounter >= 0) {
                     document.getElementById("counterBlase")?.appendChild(wagenBubble);
                 }
                 //Zähler anzeigen
-                einkaufswagenZähler++;
-                zählerAnzeigen.innerHTML = "" + einkaufswagenZähler;
+                wagenCounter++;
+                zählerAnzeigen.innerHTML = "" + wagenCounter;
                 document.getElementById("wagenBubble")?.appendChild(zählerAnzeigen);
                 //Gesammtwert
                 let indexButton = _event.currentTarget.parentElement.getAttribute("i");
