@@ -68,17 +68,17 @@ var Aufgabe06;
                 console.log(gesammtWert);
             }
             //Teilaufgabe 2:
-            document.getElementById("süßwaren")?.addEventListener("click", handleChooseCategory);
-            document.getElementById("extraScharf")?.addEventListener("click", handleChooseCategory);
+            document.getElementById("kategorie1")?.addEventListener("click", handleChooseCategory);
+            document.getElementById("kategorie2")?.addEventListener("click", handleChooseCategory);
             function handleChooseCategory(_event) {
                 let clickedCategory = _event.target;
-                document.getElementById("Süßwaren").setAttribute("style", "display: none");
-                document.getElementById("ExtraScharf").setAttribute("style", "display: none");
+                document.getElementById("kategorie1").setAttribute("style", "display: none");
+                document.getElementById("kategorie2").setAttribute("style", "display: none");
                 if (clickedCategory.id === "süßwaren") {
-                    document.getElementById("Süßwaren").setAttribute("style", "visibility: visible");
+                    document.getElementById("kategorie1").setAttribute("style", "visibility: visible");
                 }
                 if (clickedCategory.id === "extraScharf") {
-                    document.getElementById("ExtraScharf").setAttribute("style", "visibility: visible");
+                    document.getElementById("kategorie2").setAttribute("style", "visibility: visible");
                 }
             }
         }
