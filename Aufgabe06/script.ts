@@ -85,21 +85,21 @@
  
      //Teilaufgabe 2:
 
-        document.getElementById("Süßwaren" + "kategorie1")?.addEventListener("click", handleChooseCategory);
-        document.getElementById("ExtraScharf" + "kategorie2")?.addEventListener("click", handleChooseCategory);
+        document.getElementById("Süßwaren")?.addEventListener("click", handleChooseCategory);
+        document.getElementById("ExtraScharf" )?.addEventListener("click", handleChooseCategory);
     
         function handleChooseCategory(_event: Event): void {
 
         let clickedCategory: HTMLElement = <HTMLElement>_event.target;
         
-        document.getElementById("Süßwaren" + "kategorie1")!.setAttribute("style", "display: none");
-        document.getElementById("ExtraScharf" + "kategorie2")!.setAttribute("style", "display: none");    
+        document.getElementById("Süßwaren" )!.setAttribute("style", "display: none");
+        document.getElementById("ExtraScharf" )!.setAttribute("style", "display: none");    
         
         if (clickedCategory.id === "süßwaren") {
-            document.getElementById("Süßwaren" + "kategorie1")!.setAttribute("style", "visibility: visible");
+            document.getElementById("Süßwaren" )!.setAttribute("style", "visibility: visible");
         }
         if (clickedCategory.id === "extraScharf") {
-            document.getElementById("ExtraScharf" + "kategorie2")!.setAttribute("style", "visibility: visible");
+            document.getElementById("ExtraScharf" )!.setAttribute("style", "visibility: visible");
         }
         
 
