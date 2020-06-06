@@ -65,7 +65,6 @@
  
      //Werte Variable
         let gesammtWert: number = 0;
- 
         function addArtikel(_event: Event): void {
         
          //Zähler wird ab 1 angezeigt
@@ -79,7 +78,7 @@
          document.getElementById("wagenBubble")?.appendChild(zählerAnzeigen);
  
          //Gesammtwert
-         let indexButton: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("i")!;
+         let indexButton: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("index")!;
          let indexNr: number = parseInt(indexButton);
          gesammtWert = gesammtWert + süßigkeiten[indexNr].preis;
          console.log(gesammtWert);
