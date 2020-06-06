@@ -44,25 +44,24 @@ var Aufgabe06;
                 default:
                     break;
             }
-            //EINKAUFSWAGEN VARIABLEN
-            let wagenCounter = 0;
-            //WagenCounter erstellen
-            let counterAnzeigen = document.createElement("p");
+            //Teilaufgabe 1:
+            let einkaufswagenZähler = 0;
+            let zählerAnzeigen = document.createElement("p");
             //wagenBubbleDiv erstellen
             let wagenBubble = document.createElement("div");
             wagenBubble.id = "wagenBubble";
             //Werte Variable
             let gesammtWert = 0;
             function handleAddArticle(_event) {
-                //Blase erstellen bei min. 1 Artikel
-                if (wagenCounter >= 0) {
-                    document.getElementById("artikelBlase")?.appendChild(wagenBubble);
+                //Zähler wird ab 1 angezeigt
+                if (einkaufswagenZähler >= 0) {
+                    document.getElementById("counterBlase")?.appendChild(wagenBubble);
                 }
-                //Zahl in Blase anzeigen
-                wagenCounter++;
-                counterAnzeigen.innerHTML = "" + wagenCounter;
-                document.getElementById("wagenBubble")?.appendChild(counterAnzeigen);
-                //Wert zusammen rechnen
+                //Zähler anzeigen
+                einkaufswagenZähler++;
+                zählerAnzeigen.innerHTML = "" + einkaufswagenZähler;
+                document.getElementById("wagenBubble")?.appendChild(zählerAnzeigen);
+                //Gesammtwert
                 let indexButton = _event.currentTarget.parentElement.getAttribute("i");
                 let indexNr = parseInt(indexButton);
                 gesammtWert = gesammtWert + Aufgabe06.süßigkeiten[indexNr].preis;

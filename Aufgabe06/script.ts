@@ -53,11 +53,11 @@
                         break;
         }
       
-     //EINKAUFSWAGEN VARIABLEN
-        let wagenCounter: number = 0;
+     //Teilaufgabe 1:
 
-     //WagenCounter erstellen
-        let counterAnzeigen: HTMLParagraphElement = document.createElement("p");
+        let einkaufswagenZähler: number = 0;
+
+        let zählerAnzeigen: HTMLParagraphElement = document.createElement("p");
  
      //wagenBubbleDiv erstellen
         let wagenBubble: HTMLDivElement = document.createElement("div");
@@ -68,17 +68,17 @@
  
         function handleAddArticle(_event: Event): void {
         
-         //Blase erstellen bei min. 1 Artikel
-         if (wagenCounter >= 0) {
-             document.getElementById("artikelBlase")?.appendChild(wagenBubble);
+         //Zähler wird ab 1 angezeigt
+         if (einkaufswagenZähler >= 0) {
+             document.getElementById("counterBlase")?.appendChild(wagenBubble);
          }
  
-         //Zahl in Blase anzeigen
-         wagenCounter++;
-         counterAnzeigen.innerHTML = "" + wagenCounter;
-         document.getElementById("wagenBubble")?.appendChild(counterAnzeigen);
+         //Zähler anzeigen
+         einkaufswagenZähler++;
+         zählerAnzeigen.innerHTML = "" + einkaufswagenZähler;
+         document.getElementById("wagenBubble")?.appendChild(zählerAnzeigen);
  
-         //Wert zusammen rechnen
+         //Gesammtwert
          let indexButton: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("i")!;
          let indexNr: number = parseInt(indexButton);
          gesammtWert = gesammtWert + süßigkeiten[indexNr].preis;
