@@ -85,21 +85,21 @@
  
      //Teilaufgabe 2:
 
-        document.getElementById("kategorie1")?.addEventListener("click", handleChooseCategory);
-        document.getElementById("kategorie2")?.addEventListener("click", handleChooseCategory);
+        document.getElementById("Süßwaren" + "kategorie1")?.addEventListener("click", handleChooseCategory);
+        document.getElementById("ExtraScharf" + "kategorie2")?.addEventListener("click", handleChooseCategory);
     
         function handleChooseCategory(_event: Event): void {
 
         let clickedCategory: HTMLElement = <HTMLElement>_event.target;
         
-        document.getElementById("kategorie1")!.setAttribute("style", "display: none");
-        document.getElementById("kategorie2")!.setAttribute("style", "display: none");    
+        document.getElementById("Süßwaren" + "kategorie1")!.setAttribute("style", "display: none");
+        document.getElementById("ExtraScharf" + "kategorie2")!.setAttribute("style", "display: none");    
         
         if (clickedCategory.id === "süßwaren") {
-            document.getElementById("kategorie1")!.setAttribute("style", "visibility: visible");
+            document.getElementById("Süßwaren" + "kategorie1")!.setAttribute("style", "visibility: visible");
         }
         if (clickedCategory.id === "extraScharf") {
-            document.getElementById("kategorie2")!.setAttribute("style", "visibility: visible");
+            document.getElementById("ExtraScharf" + "kategorie2")!.setAttribute("style", "visibility: visible");
         }
         
 
