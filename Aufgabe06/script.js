@@ -68,8 +68,8 @@ var Aufgabe06;
                 console.log(gesammtWert);
             }
             //Teilaufgabe 2:
-            document.getElementById("Süßwaren")?.addEventListener("click", handleChooseCategory);
-            document.getElementById("ExtraScharf")?.addEventListener("click", handleChooseCategory);
+            document.getElementById("süßwaren")?.addEventListener("click", handleChooseCategory);
+            document.getElementById("extraScharf")?.addEventListener("click", handleChooseCategory);
             function handleChooseCategory(_event) {
                 let clickedCategory = _event.target;
                 document.getElementById("Süßwaren").setAttribute("style", "display: none");

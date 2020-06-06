@@ -85,8 +85,8 @@
  
      //Teilaufgabe 2:
 
-        document.getElementById("Süßwaren")?.addEventListener("click", handleChooseCategory);
-        document.getElementById("ExtraScharf" )?.addEventListener("click", handleChooseCategory);
+        document.getElementById("süßwaren")?.addEventListener("click", handleChooseCategory);
+        document.getElementById("extraScharf" )?.addEventListener("click", handleChooseCategory);
     
         function handleChooseCategory(_event: Event): void {
 
