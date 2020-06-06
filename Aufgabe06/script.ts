@@ -79,7 +79,7 @@
          document.getElementById("wagenBubble")?.appendChild(counterAnzeigen);
  
          //Wert zusammen rechnen
-         let indexButton: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("index")!;
+         let indexButton: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("i")!;
          let indexNr: number = parseInt(indexButton);
          gesammtWert = gesammtWert + süßigkeiten[indexNr].preis;
          console.log(gesammtWert);
