@@ -67,6 +67,20 @@ var Aufgabe06;
                 gesammtWert = gesammtWert + Aufgabe06.süßigkeiten[i].preis;
                 console.log(gesammtWert);
             }
+            //Teilaufgabe 2:
+            document.getElementById("süßwaren")?.addEventListener("click", handleChooseCategory);
+            document.getElementById("extraScharf")?.addEventListener("click", handleChooseCategory);
+            function handleChooseCategory(_event) {
+                let clickedCategory = _event.target;
+                document.getElementById("Süßwaren").setAttribute("style", "display: none");
+                document.getElementById("ExtraScharf").setAttribute("style", "display: none");
+                if (clickedCategory.id === "süßwaren") {
+                    document.getElementById("Süßwaren").setAttribute("style", "visibility: visible");
+                }
+                if (clickedCategory.id === "extraScharf") {
+                    document.getElementById("ExtraScharf").setAttribute("style", "visibility: visible");
+                }
+            }
         }
     }
 })(Aufgabe06 || (Aufgabe06 = {}));
