@@ -81,11 +81,44 @@ namespace Aufgabe06 {
          gesammtWert = gesammtWert + süßigkeiten[i].preis;
          console.log(gesammtWert);
      }
+     //Ein-/Ausblenden der verschiedenen Produkte
+        function handleCategoryClick(this: HTMLDivElement, _click: MouseEvent): void {
+            switch (this.getAttribute("id")) {
+            case "süßwarenB":
+            süßwaren();
+            break;
+            case "extraScharfB":
+            extraScharff();
+            break;
+        }
+
+            function süßwaren(): void {
+            (<HTMLElement>document.getElementById("Süßwaren")).style.display = "inline-grid";
+            (<HTMLElement>document.getElementById("ExtraScharf")).style.display = "none";
+
+        }
+
+            function extraScharff(): void {
+            (<HTMLElement>document.getElementById("Süßwaren")).style.display = "inline-grid";
+            (<HTMLElement>document.getElementById("ExtraScharf")).style.display = "none";
+        
+        }
+    }
+    //neue Varialbe + Verlinkung zu den Button
+        let süßwarenAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#süßwarenB");
+        süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
+
+        let extraScharfAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#außenpflanzenbutton");
+        extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
+        
+}
+
+
 
 
     }
 
 }
-}
+
     
 
