@@ -94,14 +94,14 @@ namespace Aufgabe06 {
         }
 
             function süßwaren(): void {
-            (<HTMLElement>document.getElementById("Süßwaren")).style.display = "inline-grid";
-            (<HTMLElement>document.getElementById("ExtraScharf")).style.display = "none";
+            (<HTMLElement>document.getElementById("kategorie1")).style.display = "inline-grid";
+            (<HTMLElement>document.getElementById("kategorie2")).style.display = "none";
 
         }
 
             function extraScharff(): void {
-            (<HTMLElement>document.getElementById("ExtraScharf")).style.display = "inline-grid";
-            (<HTMLElement>document.getElementById("Süßwaren")).style.display = "none";
+            (<HTMLElement>document.getElementById("kategorie2")).style.display = "inline-grid";
+            (<HTMLElement>document.getElementById("kategorie1")).style.display = "none";
         
         }
     }

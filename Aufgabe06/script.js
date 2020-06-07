@@ -78,12 +78,12 @@ var Aufgabe06;
                         break;
                 }
                 function süßwaren() {
-                    document.getElementById("Süßwaren").style.display = "inline-grid";
-                    document.getElementById("ExtraScharf").style.display = "none";
+                    document.getElementById("kategorie1").style.display = "inline-grid";
+                    document.getElementById("kategorie2").style.display = "none";
                 }
                 function extraScharff() {
-                    document.getElementById("ExtraScharf").style.display = "inline-grid";
-                    document.getElementById("Süßwaren").style.display = "none";
+                    document.getElementById("kategorie2").style.display = "inline-grid";
+                    document.getElementById("kategorie1").style.display = "none";
                 }
             }
             //neue Varialbe + Verlinkung zu den Button
