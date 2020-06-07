@@ -72,12 +72,12 @@ var Aufgabe06;
             candys.addEventListener("click", handleKatCandys);
             scharfes.addEventListener("click", handleKatScharf);
             function handleKatCandys(_event) {
-                document.getElementById("Süßwaren")?.setAttribute("style", "display: normal");
-                document.getElementById("ExtraScharf")?.setAttribute("style", "display: none");
+                document.getElementById("#Süßwaren")?.setAttribute("style", "display: normal");
+                document.getElementById("#ExtraScharf")?.setAttribute("style", "display: none");
             }
             function handleKatScharf(_evet) {
-                document.getElementById("Süßwaren")?.setAttribute("style", "display: none");
-                document.getElementById("ExtraScharf")?.setAttribute("style", "display: normal");
+                document.getElementById("#Süßwaren")?.setAttribute("style", "display: none");
+                document.getElementById("#ExtraScharf")?.setAttribute("style", "display: normal");
             }
         }
     }
