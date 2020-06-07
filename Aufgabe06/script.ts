@@ -1,4 +1,4 @@
-namespace Aufgabe05 {
+namespace Aufgabe06 {
     artikelErzeugen();
     
     function artikelErzeugen(): void {
@@ -31,6 +31,7 @@ namespace Aufgabe05 {
         button.type = "button";
         button.value = "Kaufen";
         candyPreis.appendChild(button);
+        button.addEventListener("click", handleAdd);
 
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
@@ -39,7 +40,7 @@ namespace Aufgabe05 {
         divCandy.appendChild(candybeschreibung);
         divCandy.appendChild(button);
 
-        switch (süßigkeiten[i].kategorie) {
+        switch (süßigkeiten[i].kategorien) {
             case 1:
                 let getContainer1: HTMLElement = document.getElementById("kategorie1")!;
                 getContainer1.appendChild(divCandy);
@@ -51,7 +52,37 @@ namespace Aufgabe05 {
                     default:
                         break;
         }
+        //Teilaufgabe 1:
+
+        let wagenCounter: number = 0;
+        let zählerAnzeigen: HTMLParagraphElement = document.createElement("p");
+ 
+     //wagenBubbleDiv erstellen
+        let wagenBubble: HTMLDivElement = document.createElement("div");
+        wagenBubble.id = "wagenBubble";
+ 
+     //Werte Variable
+        let gesammtWert: number = 0;
+        function handleAdd(_event: Event): void {
         
+         //Zähler wird ab 1 angezeigt
+         if (wagenCounter >= 0) {
+             document.getElementById("counterBlase")?.appendChild(wagenBubble);
+         }
+ 
+         //Zähler anzeigen
+         wagenCounter++;
+         zählerAnzeigen.innerHTML = "" + wagenCounter;
+         document.getElementById("wagenBubble")?.appendChild(zählerAnzeigen);
+ 
+         //Gesammtwert
+         let indexBtn: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("i")!;
+         let i: number = parseInt(indexBtn);
+         gesammtWert = gesammtWert + süßigkeiten[i].preis;
+         console.log(gesammtWert);
+     }
+
+
     }
 
 }
