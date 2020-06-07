@@ -30,7 +30,6 @@
         let button: HTMLInputElement = document.createElement("input");
         button.type = "button";
         button.value = "Kaufen";
-        candyPreis.appendChild(button);
         button.addEventListener("click", handleaddArticle);
        
         // Alle Tags zu div Container
