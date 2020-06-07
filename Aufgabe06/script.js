@@ -69,9 +69,9 @@ var Aufgabe06;
             }
             //Teilaufgabe 2:
             let candys = document.getElementById("süßwaren");
-            let scharf = document.getElementById("extraScharf");
+            let scharfes = document.getElementById("extraScharf");
             candys.addEventListener("click", handleKatCandys);
-            scharf.addEventListener("click", handleKatScharf);
+            scharfes.addEventListener("click", handleKatScharf);
             function handleKatCandys(_event) {
                 document.getElementById("Süßwaren")?.setAttribute("style", "display: normal");
                 document.getElementById("ExtraScharf")?.setAttribute("style", "display: none");

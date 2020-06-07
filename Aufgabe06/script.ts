@@ -86,10 +86,10 @@
      //Teilaufgabe 2:
 
         let candys: HTMLElement = document.getElementById("süßwaren") as HTMLElement;
-        let scharf: HTMLElement = document.getElementById("extraScharf") as HTMLElement;
+        let scharfes: HTMLElement = document.getElementById("extraScharf") as HTMLElement;
         
         candys.addEventListener("click", handleKatCandys);
-        scharf.addEventListener("click", handleKatScharf);
+        scharfes.addEventListener("click", handleKatScharf);
 
         function handleKatCandys(_event: Event): void {
         document.getElementById("Süßwaren")?.setAttribute("style", "display: normal");
