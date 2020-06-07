@@ -67,7 +67,7 @@ var Aufgabe06;
                 gesammtWert = gesammtWert + Aufgabe06.süßigkeiten[i].preis;
                 console.log(gesammtWert);
             }
-            //Ein-/Ausblenden der verschiedenen Produkte
+            //Ein-/Ausblenden der Produkte
             function handleCategoryClick(_click) {
                 switch (this.getAttribute("id")) {
                     case "süßwarenB":

@@ -53,15 +53,15 @@ namespace Aufgabe06 {
                         break;
         }
         //Teilaufgabe 1:
-
+        
         let wagenCounter: number = 0;
         let zählerAnzeigen: HTMLParagraphElement = document.createElement("p");
  
-     //wagenBubbleDiv erstellen
+        //wagenBubbleDiv erstellen
         let wagenBubble: HTMLDivElement = document.createElement("div");
         wagenBubble.id = "wagenBubble";
  
-     //Werte Variable
+        //Werte Variable
         let gesammtWert: number = 0;
         function handleAdd(_event: Event): void {
         
@@ -82,7 +82,7 @@ namespace Aufgabe06 {
          console.log(gesammtWert);
      }
       
-     //Ein-/Ausblenden der verschiedenen Produkte
+     //Ein-/Ausblenden der Produkte
         function handleCategoryClick(this: HTMLDivElement, _click: MouseEvent): void {
             switch (this.getAttribute("id")) {
             case "süßwarenB":
