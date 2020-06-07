@@ -1,36 +1,33 @@
  namespace Aufgabe06 {
-    artikelErzeugen();
     
-    function artikelErzeugen(): void {
-    for (let i: number = 0; i < süßigkeiten.length; i++) {
+    let aktuelleProdukte: string = "";
+    function artikelErzeugen(süßigkeiten: Süßigkeiten): void {
         
-    
         //Div
         let divCandy: HTMLElement = document.createElement("div");
         divCandy.setAttribute("class", "Produkte");
 
-        //Bild
+         //Bild
         let imgCandy: HTMLElement = document.createElement("img");
-        imgCandy.setAttribute("src", süßigkeiten[i].img);
-        imgCandy.setAttribute("alt", süßigkeiten[i].alt);
-        
-        //Name
+        imgCandy.setAttribute("src", süßigkeiten.img);
+        imgCandy.setAttribute("alt", süßigkeiten.alt);
+
+          //Name
         let candyName: HTMLElement = document.createElement("h2");
-        candyName.innerHTML = süßigkeiten[i].name;
+        candyName.innerHTML = süßigkeiten.name;
 
-        //Preis
+         //Preis
         let candyPreis: HTMLElement = document.createElement("h3");
-        candyPreis.innerHTML = süßigkeiten[i].preis + "€";
-
-        //Beschreibung
+        candyPreis.innerHTML = süßigkeiten.preis + "€";
+ 
+         //Beschreibung
         let candybeschreibung: HTMLElement = document.createElement("p");
-        candybeschreibung.innerHTML = süßigkeiten[i].beschreibung;
+        candybeschreibung.innerHTML = süßigkeiten.beschreibung;
 
-        //Button
+           //Button
         let button: HTMLInputElement = document.createElement("input");
         button.type = "button";
         button.value = "Kaufen";
-        button.addEventListener("click", handleaddArticle);
        
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
@@ -39,7 +36,8 @@
         divCandy.appendChild(candybeschreibung);
         divCandy.appendChild(button);
 
-        switch (süßigkeiten[i].kategorien) {
+
+        switch (süßigkeiten.kategorie) {
             case 1:
                 let getContainer1: HTMLElement = document.getElementById("kategorie1")!;
                 getContainer1.appendChild(divCandy);
@@ -51,54 +49,86 @@
                     default:
                         break;
         }
-      
-     //Teilaufgabe 1:
-
-        let wagenCounter: number = 0;
-        let zählerAnzeigen: HTMLParagraphElement = document.createElement("p");
- 
-     //wagenBubbleDiv erstellen
-        let wagenBubble: HTMLDivElement = document.createElement("div");
-        wagenBubble.id = "wagenBubble";
- 
-     //Werte Variable
-        let gesammtWert: number = 0;
-        function handleaddArticle(_event: Event): void {
+    }
+    function locationHashChanged() {
+         let produktListe = document.getElementById("kategorie1" + "kategorie2");
+         if (produktListe) {
+                produktListe.innerHTML = ""; }
+    
+            /*if (location.hash) {
+                aktuelleProdukte = location.hash.split("#")[1];
+                if (aktuelleProdukte == "home") {
+                    let artikelUeberschrift: HTMLElement = document.createElement("h2");
+                    artikelUeberschrift.innerHTML = "Süßwaren und Extra Scharf";
+                    document.getElementById("kategorie1" + "kategorie2")?.appendChild(artikelUeberschrift);
+                }
+                else {
+                    let artikelUeberschrift: HTMLElement = document.createElement("h2");
+                    artikelUeberschrift.innerHTML = aktuelleProdukte;
+                    document.getElementById("kategorie1" + "kategorie2")?.appendChild(artikelUeberschrift);
+                }
+            }*/
+        for (let i: number = 0; i < süßigkeiten.length; i++) {
         
-         //Zähler wird ab 1 angezeigt
-         if (wagenCounter >= 0) {
-             document.getElementById("counterBlase")?.appendChild(wagenBubble);
-         }
- 
-         //Zähler anzeigen
-         wagenCounter++;
-         zählerAnzeigen.innerHTML = "" + wagenCounter;
-         document.getElementById("wagenBubble")?.appendChild(zählerAnzeigen);
- 
-         //Gesammtwert
-         let indexBtn: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("i")!;
-         let i: number = parseInt(indexBtn);
-         gesammtWert = gesammtWert + süßigkeiten[i].preis;
-         console.log(gesammtWert);
-     }
- 
-     //Teilaufgabe 2:
+            if (aktuelleProdukte == süßigkeiten[i].kategorie) {
+                    artikelErzeugen(süßigkeiten[i]);
+                }
+                else if (aktuelleProdukte == "home") {
+                    artikelErzeugen(süßigkeiten[i]);
+                }
 
-        let candys: HTMLElement = document.getElementById("Süßwaren") as HTMLElement;
-        let scharfes: HTMLElement = document.getElementById("ExtraScharf") as HTMLElement;
-        
-        candys.addEventListener("click", handleKatCandys);
-        scharfes.addEventListener("click", handleKatScharf);
+        } 
+    }
 
-        function handleKatCandys(_event: Event): void {
-        document.getElementById("süßwaren")?.setAttribute("style", "display: normal");
-        document.getElementById("extraScharf")?.setAttribute("style", "display: none");
-     }
-        function handleKatScharf(_evet: Event): void {
-            document.getElementById("süßwaren")?.setAttribute("style", "display: none");
-            document.getElementById("extraScharf")?.setAttribute("style", "display: normal");     
-           }
-}
-}
-}
+    function pageLoad() {
+            
+    location.hash = "startseite";
+    aktuelleProdukte = "startseite";
+            // Artikelliste
+    if (location.hash) {
+                aktuelleProdukte = location.hash.split("#")[1];
+                if (aktuelleProdukte == "startseite") {
+                    let artikelUeberschrift: HTMLElement = document.createElement("h2");
+                    artikelUeberschrift.innerHTML = "Frische Blumen und Vasen";
+                    document.getElementById("artikelListe")?.appendChild(artikelUeberschrift);
+                }
+                else {
+                    let artikelUeberschrift: HTMLElement = document.createElement("h2");
+                    artikelUeberschrift.innerHTML = aktuelleProdukte;
+                    document.getElementById("artikelListe")?.appendChild(artikelUeberschrift);
+                }
+            }
+    for (let i: number = 0; i < süßigkeiten.length; i++) {
+                if (aktuelleProdukte == süßigkeiten[i].kategorien) {
+                    artikelErzeugen(süßigkeiten[i]);
+                }
+                else if (aktuelleProdukte == "home") {
+                    artikelErzeugen(süßigkeiten[i]);
+                }
+            }
+        }
 
+    window.onhashchange = locationHashChanged;  
+    window.onload = pageLoad;
+
+        //let warenkorbTotal: number = 0;
+    let artikelZaehler: number = 0;
+    let warenkorbTotal: number = 0;
+    function handleClick(_event: Event): void  {
+            artikelZaehler ++;
+            if (artikelZaehler >= 0) {
+                const blase = document.getElementById("divBlase");
+                if (blase) blase.innerHTML = "" + artikelZaehler;
+            }
+            let produktId: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("id")!;
+            
+            
+        // Summe der Preise  
+            for (let i: number = 0; i < süßigkeiten.length; i++) {
+                if (süßigkeiten[i].id == produktId) {
+                    warenkorbTotal = warenkorbTotal + süßigkeiten[i].preis; 
+                }
+            }
+            console.log("Aktuelle Warenkorb Summe: " + warenkorbTotal + "€");  
+        }}
+    
