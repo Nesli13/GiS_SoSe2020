@@ -67,75 +67,30 @@ var Aufgabe06;
                 gesammtWert = gesammtWert + Aufgabe06.süßigkeiten[i].preis;
                 console.log(gesammtWert);
             }
-            //Neues Menü
-            let menüKategorie = ["süßwaren", "extraScharf", "all"];
-            for (let index = 0; index < menüKategorie.length; index++) {
-                let liAnchor = document.createElement("a");
-                liAnchor.href = "#";
-                liAnchor.id = "anchor" + index;
-                if (menüKategorie[index] == "süßwaren") {
-                    liAnchor.innerHTML = "Süßwaren";
+            //Ein-/Ausblenden der verschiedenen Produkte
+            function handleCategoryClick(_click) {
+                switch (this.getAttribute("id")) {
+                    case "süßwarenB":
+                        süßwaren();
+                        break;
+                    case "extraScharfB":
+                        extraScharff();
+                        break;
                 }
-                else if (menüKategorie[index] == "extraScharf") {
-                    liAnchor.innerHTML = "extraScharf";
-                }
-                else {
-                    liAnchor.innerHTML = "Alles";
-                }
-                document.getElementById("süßwaren").appendChild(liAnchor);
-                liAnchor.addEventListener("click", handleClickMenu);
-            }
-            function handleClickMenu(_event) {
-                if (_event.currentTarget.getAttribute("id") == "anchor0") {
-                    document.getElementById("kategorie2").style.display = "none";
+                function süßwaren() {
+                    document.getElementById("Süßwaren").style.display = "inline-grid";
                     document.getElementById("ExtraScharf").style.display = "none";
-                    document.getElementById("kategorie1").style.display = "flex";
-                    document.getElementById("Süßwaren").style.display = "block";
                 }
-                else if (_event.currentTarget.getAttribute("id") == "anchor1") {
-                    document.getElementById("kategorie2").style.display = "flex";
-                    document.getElementById("ExtraScharf").style.display = "block";
-                    document.getElementById("flexID").style.display = "none";
-                    document.getElementById("Süßwaren").style.display = "none";
-                }
-                else {
-                    document.getElementById("kategorie2").style.display = "flex";
-                    document.getElementById("ExtraScharf").style.display = "block";
-                    document.getElementById("flexID").style.display = "flex";
-                    document.getElementById("Süßwaren").style.display = "block";
+                function extraScharff() {
+                    document.getElementById("Süßwaren").style.display = "inline-grid";
+                    document.getElementById("ExtraScharf").style.display = "none";
                 }
             }
-            /* //Ein-/Ausblenden der verschiedenen Produkte
-               function handleCategoryClick(this: HTMLDivElement, _click: MouseEvent): void {
-                   switch (this.getAttribute("id")) {
-                   case "süßwarenB":
-                   süßwaren();
-                   break;
-                   case "extraScharfB":
-                   extraScharff();
-                   break;
-               }
-       
-                   function süßwaren(): void {
-                   (<HTMLElement>document.getElementById("Süßwaren")).style.display = "inline-grid";
-                   (<HTMLElement>document.getElementById("ExtraScharf")).style.display = "none";
-       
-               }
-       
-                   function extraScharff(): void {
-                   (<HTMLElement>document.getElementById("Süßwaren")).style.display = "inline-grid";
-                   (<HTMLElement>document.getElementById("ExtraScharf")).style.display = "none";
-               
-               }
-           }
-           //neue Varialbe + Verlinkung zu den Button
-               let süßwarenAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#süßwarenB");
-               süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
-       
-               let extraScharfAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#außenpflanzenbutton");
-               extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
-               
-       }*/
+            //neue Varialbe + Verlinkung zu den Button
+            let süßwarenAnzeigen = document.querySelector("#süßwarenB");
+            süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
+            let extraScharfAnzeigen = document.querySelector("#außenpflanzenbutton");
+            extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
         }
     }
 })(Aufgabe06 || (Aufgabe06 = {}));

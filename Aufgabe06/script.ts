@@ -81,44 +81,8 @@ namespace Aufgabe06 {
          gesammtWert = gesammtWert + süßigkeiten[i].preis;
          console.log(gesammtWert);
      }
-            //Neues Menü
-        let menüKategorie: string[] = ["süßwaren", "extraScharf", "all"];
-        for (let index: number = 0; index < menüKategorie.length; index++) {
-            let liAnchor: HTMLAnchorElement = document.createElement("a");
-            liAnchor.href = "#";
-            liAnchor.id = "anchor" + index;
-            if (menüKategorie[index] == "süßwaren") {
-                liAnchor.innerHTML = "Süßwaren";
-            } else if (menüKategorie[index] == "extraScharf") {
-                liAnchor.innerHTML = "extraScharf";
-            } else {
-                liAnchor.innerHTML = "Alles";
-            }
-            (<HTMLElement>document.getElementById("süßwaren")).appendChild(liAnchor);
-            liAnchor.addEventListener("click", handleClickMenu);
-        }
-        function handleClickMenu(_event: Event): void {
-        if ((<HTMLAnchorElement>_event.currentTarget).getAttribute("id") == "anchor0") {
-    
-            (<HTMLDivElement>document.getElementById("kategorie2")).style.display = "none";
-            (<HTMLElement>document.getElementById("ExtraScharf")).style.display = "none";
-            (<HTMLDivElement>document.getElementById("kategorie1")).style.display = "flex";
-            (<HTMLElement>document.getElementById("Süßwaren")).style.display = "block";
-        } else if ((<HTMLAnchorElement>_event.currentTarget).getAttribute("id") == "anchor1") {
-
-            (<HTMLDivElement>document.getElementById("kategorie2")).style.display = "flex";
-            (<HTMLElement>document.getElementById("ExtraScharf")).style.display = "block";
-            (<HTMLDivElement>document.getElementById("flexID")).style.display = "none";
-            (<HTMLElement>document.getElementById("Süßwaren")).style.display = "none";
-        } else {
-            
-            (<HTMLDivElement>document.getElementById("kategorie2")).style.display = "flex";
-            (<HTMLElement>document.getElementById("ExtraScharf")).style.display = "block";
-            (<HTMLDivElement>document.getElementById("flexID")).style.display = "flex";
-            (<HTMLElement>document.getElementById("Süßwaren")).style.display = "block";
-        }
-    }
-     /* //Ein-/Ausblenden der verschiedenen Produkte
+      
+     //Ein-/Ausblenden der verschiedenen Produkte
         function handleCategoryClick(this: HTMLDivElement, _click: MouseEvent): void {
             switch (this.getAttribute("id")) {
             case "süßwarenB":
@@ -148,9 +112,6 @@ namespace Aufgabe06 {
         let extraScharfAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#außenpflanzenbutton");
         extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
         
-}*/
-
-
 
 
     }
