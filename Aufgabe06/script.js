@@ -82,8 +82,8 @@ var Aufgabe06;
                     document.getElementById("ExtraScharf").style.display = "none";
                 }
                 function extraScharff() {
-                    document.getElementById("Süßwaren").style.display = "inline-grid";
-                    document.getElementById("ExtraScharf").style.display = "none";
+                    document.getElementById("ExtraScharf").style.display = "inline-grid";
+                    document.getElementById("Süßwaren").style.display = "none";
                 }
             }
             //neue Varialbe + Verlinkung zu den Button

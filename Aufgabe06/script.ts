@@ -100,8 +100,8 @@ namespace Aufgabe06 {
         }
 
             function extraScharff(): void {
-            (<HTMLElement>document.getElementById("Süßwaren")).style.display = "inline-grid";
-            (<HTMLElement>document.getElementById("ExtraScharf")).style.display = "none";
+            (<HTMLElement>document.getElementById("ExtraScharf")).style.display = "inline-grid";
+            (<HTMLElement>document.getElementById("Süßwaren")).style.display = "none";
         
         }
     }
