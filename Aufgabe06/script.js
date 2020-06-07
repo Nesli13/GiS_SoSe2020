@@ -67,8 +67,8 @@ var Aufgabe06;
                 console.log(gesammtWert);
             }
             //Teilaufgabe 2:
-            let candys = document.getElementById("süßwaren");
-            let scharfes = document.getElementById("extraScharf");
+            let candys = document.getElementById("Süßwaren");
+            let scharfes = document.getElementById("ExtraScharf");
             candys.addEventListener("click", handleKatCandys);
             scharfes.addEventListener("click", handleKatScharf);
             function handleKatCandys(_event) {
