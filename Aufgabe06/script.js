@@ -89,7 +89,7 @@ var Aufgabe06;
             //neue Varialbe + Verlinkung zu den Button
             let süßwarenAnzeigen = document.querySelector("#süßwarenB");
             süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
-            let extraScharfAnzeigen = document.querySelector("#außenpflanzenbutton");
+            let extraScharfAnzeigen = document.querySelector("#extraScharfB");
             extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
         }
     }
