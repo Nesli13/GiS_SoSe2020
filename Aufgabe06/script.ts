@@ -64,10 +64,8 @@ namespace Aufgabe06 {
         //Werte Variable
         let gesammtWert: number = 0;
         function handleAdd(_event: Event): void {
-        
-         //Zähler wird ab 1 angezeigt
          if (wagenCounter >= 0) {
-             document.getElementById("counterBlase")?.appendChild(wagenBubble);
+            document.getElementById("counterBlase")?.appendChild(wagenBubble);
          }
  
          //Zähler anzeigen

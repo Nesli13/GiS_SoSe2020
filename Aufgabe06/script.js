@@ -53,7 +53,6 @@ var Aufgabe06;
             //Werte Variable
             let gesammtWert = 0;
             function handleAdd(_event) {
-                //Zähler wird ab 1 angezeigt
                 if (wagenCounter >= 0) {
                     document.getElementById("counterBlase")?.appendChild(wagenBubble);
                 }
