@@ -31,7 +31,7 @@
         button.type = "button";
         button.value = "Kaufen";
         candyPreis.appendChild(button);
-        button.addEventListener("click", addArtikel);
+        button.addEventListener("click", handleaddArticle);
        
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
@@ -64,7 +64,7 @@
  
      //Werte Variable
         let gesammtWert: number = 0;
-        function addArtikel(_event: Event): void {
+        function handleaddArticle(_event: Event): void {
         
          //Zähler wird ab 1 angezeigt
          if (wagenCounter >= 0) {

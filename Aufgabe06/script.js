@@ -25,7 +25,7 @@ var Aufgabe06;
             button.type = "button";
             button.value = "Kaufen";
             candyPreis.appendChild(button);
-            button.addEventListener("click", addArtikel);
+            button.addEventListener("click", handleaddArticle);
             // Alle Tags zu div Container
             divCandy.appendChild(imgCandy);
             divCandy.appendChild(candyName);
@@ -52,7 +52,7 @@ var Aufgabe06;
             wagenBubble.id = "wagenBubble";
             //Werte Variable
             let gesammtWert = 0;
-            function addArtikel(_event) {
+            function handleaddArticle(_event) {
                 //Zähler wird ab 1 angezeigt
                 if (wagenCounter >= 0) {
                     document.getElementById("counterBlase")?.appendChild(wagenBubble);
