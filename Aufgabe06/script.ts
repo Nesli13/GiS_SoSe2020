@@ -91,12 +91,12 @@
         scharfes.addEventListener("click", handleKatScharf);
 
         function handleKatCandys(_event: Event): void {
-        document.getElementById("#Süßwaren")?.setAttribute("style", "display: normal");
-        document.getElementById("#ExtraScharf")?.setAttribute("style", "display: none");
+        document.getElementById("süßwaren")?.setAttribute("style", "display: normal");
+        document.getElementById("extraScharf")?.setAttribute("style", "display: none");
      }
         function handleKatScharf(_evet: Event): void {
-            document.getElementById("#Süßwaren")?.setAttribute("style", "display: none");
-            document.getElementById("#ExtraScharf")?.setAttribute("style", "display: normal");     
+            document.getElementById("süßwaren")?.setAttribute("style", "display: none");
+            document.getElementById("extraScharf")?.setAttribute("style", "display: normal");     
            }
 }
 }
