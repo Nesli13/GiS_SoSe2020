@@ -25,7 +25,9 @@ var Aufgabe06;
             button.type = "button";
             button.value = "Kaufen";
             candyPreis.appendChild(button);
-            button.addEventListener("click", handleAdd);
+            //button.addEventListener("click", handleAdd);
+            button.addEventListener("click", kaufenButton);
+            button.setAttribute("preis", Aufgabe06.süßigkeiten[i].preis.toString());
             // Alle Tags zu div Container
             divCandy.appendChild(imgCandy);
             divCandy.appendChild(candyName);
@@ -45,27 +47,47 @@ var Aufgabe06;
                     break;
             }
             //Teilaufgabe 1:
-            let wagenCounter = 0;
-            let zählerAnzeigen = document.createElement("p");
-            //wagenBubbleDiv erstellen
-            let wagenBubble = document.createElement("div");
-            wagenBubble.id = "wagenBubble";
-            //Werte Variable
-            let gesammtWert = 0;
-            function handleAdd(_event) {
-                if (wagenCounter >= 0) {
-                    document.getElementById("counterBlase")?.appendChild(wagenBubble);
+            let produktZähler = 0;
+            let preis = 0;
+            let zahlAnzeigen = document.createElement("p");
+            let anzahlAnzeigen = document.createElement("div");
+            anzahlAnzeigen.id = "anzahlAnzeigen";
+            function kaufenButton(_event) {
+                produktZähler++;
+                console.log(produktZähler);
+                preis += parseFloat(_event.target?.getAttribute("preis"));
+                console.log(preis);
+                if (produktZähler >= 0) {
+                    document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
                 }
-                //Zähler anzeigen
-                wagenCounter++;
-                zählerAnzeigen.innerHTML = "" + wagenCounter;
-                document.getElementById("wagenBubble")?.appendChild(zählerAnzeigen);
-                //Gesammtwert
-                let indexBtn = _event.currentTarget.parentElement.getAttribute("i");
-                let i = parseInt(indexBtn);
-                gesammtWert = gesammtWert + Aufgabe06.süßigkeiten[i].preis;
-                console.log(gesammtWert);
+                anzahlAnzeigen.innerHTML = "" + produktZähler;
+                document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
             }
+            /*let wagenCounter: number = 0;
+            let zählerAnzeigen: HTMLParagraphElement = document.createElement("p");
+     
+            //wagenBubbleDiv erstellen
+            let wagenBubble: HTMLDivElement = document.createElement("div");
+            wagenBubble.id = "wagenBubble";
+     
+            //Werte Variable
+            let gesammtWert: number = 0;
+            function handleAdd(_event: Event): void {
+             if (wagenCounter >= 0) {
+                document.getElementById("counterBlase")?.appendChild(wagenBubble);
+             }
+     
+             //Zähler anzeigen
+             wagenCounter++;
+             zählerAnzeigen.innerHTML = "" + wagenCounter;
+             document.getElementById("wagenBubble")?.appendChild(zählerAnzeigen);
+     
+             //Gesammtwert
+             let indexBtn: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("i")!;
+             let i: number = parseInt(indexBtn);
+             gesammtWert = gesammtWert + süßigkeiten[i].preis;
+             console.log(gesammtWert);
+         }*/
             //Ein-/Ausblenden der Produkte
             function handleCategoryClick(_click) {
                 switch (this.getAttribute("id")) {

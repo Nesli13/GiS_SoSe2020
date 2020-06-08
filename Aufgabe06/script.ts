@@ -1,4 +1,4 @@
-namespace Aufgabe06 {
+ namespace Aufgabe06 {
     artikelErzeugen();
     
     function artikelErzeugen(): void {
@@ -31,7 +31,9 @@ namespace Aufgabe06 {
         button.type = "button";
         button.value = "Kaufen";
         candyPreis.appendChild(button);
-        button.addEventListener("click", handleAdd);
+        //button.addEventListener("click", handleAdd);
+        button.addEventListener("click", kaufenButton);
+        button.setAttribute("preis", süßigkeiten[i].preis.toString());
 
         // Alle Tags zu div Container
         divCandy.appendChild(imgCandy);
@@ -54,7 +56,28 @@ namespace Aufgabe06 {
         }
         //Teilaufgabe 1:
         
-        let wagenCounter: number = 0;
+        let produktZähler: number = 0;
+        let preis: number = 0;
+
+        let zahlAnzeigen: HTMLParagraphElement = document.createElement("p");
+        let anzahlAnzeigen: HTMLDivElement = document.createElement("div");
+        anzahlAnzeigen.id = "anzahlAnzeigen";
+
+        function kaufenButton (_event: Event): void {
+            produktZähler++;
+            console.log(produktZähler);
+
+            preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("preis")!);
+            console.log(preis);
+
+            if (produktZähler >= 0) {
+                document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
+            }
+            anzahlAnzeigen.innerHTML = "" + produktZähler;
+            document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+
+        }
+        /*let wagenCounter: number = 0;
         let zählerAnzeigen: HTMLParagraphElement = document.createElement("p");
  
         //wagenBubbleDiv erstellen
@@ -78,7 +101,7 @@ namespace Aufgabe06 {
          let i: number = parseInt(indexBtn);
          gesammtWert = gesammtWert + süßigkeiten[i].preis;
          console.log(gesammtWert);
-     }
+     }*/
       
      //Ein-/Ausblenden der Produkte
         function handleCategoryClick(this: HTMLDivElement, _click: MouseEvent): void {
