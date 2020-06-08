@@ -1,6 +1,4 @@
 "use strict";
-
-var count=0;
 var Aufgabe06;
 (function (Aufgabe06) {
     artikelErzeugen();
@@ -40,7 +38,6 @@ var Aufgabe06;
                 case 1:
                     let getContainer1 = document.getElementById("kategorie1");
                     getContainer1.appendChild(divCandy);
-                    //document.getElementById("kategorie2").style.color = "";
                     break;
                 case 2:
                     let getContainer2 = document.getElementById("kategorie2");
@@ -56,60 +53,16 @@ var Aufgabe06;
             let anzahlAnzeigen = document.createElement("div");
             anzahlAnzeigen.id = "anzahlAnzeigen";
             function kaufenButton(_event) {
-                
-                count++;
-
-                //produktZähler++;
-                //console.log(produktZähler);
+                produktZähler++;
+                console.log(produktZähler);
                 preis += parseFloat(_event.target?.getAttribute("preis"));
                 console.log(preis);
                 if (produktZähler >= 0) {
                     document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
                 }
-
-                // HK
-                anzahlAnzeigen.innerHTML = "" + count;  //+ produktZähler;
-
-                // HK
-                var list = document.getElementById("counterBlase");
-                if(list.childNodes.length > 1)
-                {
-                    list.removeChild(list.childNodes[0]);
-                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-                }
-                else
-                {
-                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-                }
-                
-
-
+                anzahlAnzeigen.innerHTML = "" + produktZähler;
+                document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
             }
-            /*let wagenCounter: number = 0;
-            let zählerAnzeigen: HTMLParagraphElement = document.createElement("p");
-     
-            //wagenBubbleDiv erstellen
-            let wagenBubble: HTMLDivElement = document.createElement("div");
-            wagenBubble.id = "wagenBubble";
-     
-            //Werte Variable
-            let gesammtWert: number = 0;
-            function handleAdd(_event: Event): void {
-             if (wagenCounter >= 0) {
-                document.getElementById("counterBlase")?.appendChild(wagenBubble);
-             }
-     
-             //Zähler anzeigen
-             wagenCounter++;
-             zählerAnzeigen.innerHTML = "" + wagenCounter;
-             document.getElementById("wagenBubble")?.appendChild(zählerAnzeigen);
-     
-             //Gesammtwert
-             let indexBtn: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("i")!;
-             let i: number = parseInt(indexBtn);
-             gesammtWert = gesammtWert + süßigkeiten[i].preis;
-             console.log(gesammtWert);
-         }*/
             //Ein-/Ausblenden der Produkte
             function handleCategoryClick(_click) {
                 switch (this.getAttribute("id")) {

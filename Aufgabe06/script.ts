@@ -77,31 +77,7 @@
             document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
 
         }
-        /*let wagenCounter: number = 0;
-        let zählerAnzeigen: HTMLParagraphElement = document.createElement("p");
- 
-        //wagenBubbleDiv erstellen
-        let wagenBubble: HTMLDivElement = document.createElement("div");
-        wagenBubble.id = "wagenBubble";
- 
-        //Werte Variable
-        let gesammtWert: number = 0;
-        function handleAdd(_event: Event): void {
-         if (wagenCounter >= 0) {
-            document.getElementById("counterBlase")?.appendChild(wagenBubble);
-         }
- 
-         //Zähler anzeigen
-         wagenCounter++;
-         zählerAnzeigen.innerHTML = "" + wagenCounter;
-         document.getElementById("wagenBubble")?.appendChild(zählerAnzeigen);
- 
-         //Gesammtwert
-         let indexBtn: string = (<HTMLDivElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("i")!;
-         let i: number = parseInt(indexBtn);
-         gesammtWert = gesammtWert + süßigkeiten[i].preis;
-         console.log(gesammtWert);
-     }*/
+        
       
      //Ein-/Ausblenden der Produkte
         function handleCategoryClick(this: HTMLDivElement, _click: MouseEvent): void {
