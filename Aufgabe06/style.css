@@ -60,7 +60,7 @@ input:focus{
     height: 140px;
     text-align: center;
 }
-#wagenBubble{
+#anzahlAnzeigen{
     background-color: rgb(213, 194, 194);
     border-radius: 60%;
     margin-top: 10px;
@@ -69,7 +69,7 @@ input:focus{
     margin-left: -25px;
 }
 
-#wagenBubble>p{
+#anzahlAnzeigen>p{
     color: rgb(177, 51, 153);
     text-align: center;
     font-size: unset;
