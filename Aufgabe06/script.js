@@ -1,6 +1,4 @@
 "use strict";
-
-var count=0;
 var Aufgabe06;
 (function (Aufgabe06) {
     artikelErzeugen();
@@ -28,7 +26,7 @@ var Aufgabe06;
             button.value = "Kaufen";
             candyPreis.appendChild(button);
             //button.addEventListener("click", handleAdd);
-            button.addEventListener("click", kaufenButton);
+            // button.addEventListener("click", kaufenButton);
             button.setAttribute("preis", Aufgabe06.süßigkeiten[i].preis.toString());
             // Alle Tags zu div Container
             divCandy.appendChild(imgCandy);
@@ -40,7 +38,6 @@ var Aufgabe06;
                 case 1:
                     let getContainer1 = document.getElementById("kategorie1");
                     getContainer1.appendChild(divCandy);
-                    //document.getElementById("kategorie2").style.color = "";
                     break;
                 case 2:
                     let getContainer2 = document.getElementById("kategorie2");
@@ -50,42 +47,27 @@ var Aufgabe06;
                     break;
             }
             //Teilaufgabe 1:
-            let produktZähler = 0;
-            let preis = 0;
-            let zahlAnzeigen = document.createElement("p");
-            let anzahlAnzeigen = document.createElement("div");
-            anzahlAnzeigen.id = "anzahlAnzeigen";
-            function kaufenButton(_event) {
-                
-                count++;
-
-                //produktZähler++;
-                //console.log(produktZähler);
-                preis += parseFloat(_event.target?.getAttribute("preis"));
-                console.log(preis);
-                if (produktZähler >= 0) {
-                    document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
-                }
-
-                
-                anzahlAnzeigen.innerHTML = "" + count;  //+ produktZähler;
-
-                
-                var list = document.getElementById("counterBlase");
-                if(list.childNodes.length > 1)
-                {
-                    list.removeChild(list.childNodes[0]);
-                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-                }
-                else
-                {
-                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-                }
-                
-
-
-            }
-           
+            /* let produktZähler: number = 0;
+             let preis: number = 0;
+     
+             let zahlAnzeigen: HTMLParagraphElement = document.createElement("p");
+             let anzahlAnzeigen: HTMLDivElement = document.createElement("div");
+             anzahlAnzeigen.id = "anzahlAnzeigen";
+     
+             function kaufenButton (_event: Event): void {
+                 produktZähler++;
+                 console.log(produktZähler);
+     
+                 preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("preis")!);
+                 console.log(preis);
+     
+                 if (produktZähler >= 0) {
+                     document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
+                 }
+                 anzahlAnzeigen.innerHTML = "" + produktZähler;
+                 document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+     
+             }*/
             //Ein-/Ausblenden der Produkte
             function handleCategoryClick(_click) {
                 switch (this.getAttribute("id")) {
