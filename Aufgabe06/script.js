@@ -1,4 +1,6 @@
 "use strict";
+
+var count=0;
 var Aufgabe06;
 (function (Aufgabe06) {
     artikelErzeugen();
@@ -38,6 +40,7 @@ var Aufgabe06;
                 case 1:
                     let getContainer1 = document.getElementById("kategorie1");
                     getContainer1.appendChild(divCandy);
+                    //document.getElementById("kategorie2").style.color = "";
                     break;
                 case 2:
                     let getContainer2 = document.getElementById("kategorie2");
@@ -67,6 +70,7 @@ var Aufgabe06;
                 
                 anzahlAnzeigen.innerHTML = "" + count;  //+ produktZähler;
 
+                
                 var list = document.getElementById("counterBlase");
                 if(list.childNodes.length > 1)
                 {
@@ -81,6 +85,7 @@ var Aufgabe06;
 
 
             }
+            
             //Ein-/Ausblenden der Produkte
             function handleCategoryClick(_click) {
                 switch (this.getAttribute("id")) {
