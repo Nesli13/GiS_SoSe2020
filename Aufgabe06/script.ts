@@ -1,4 +1,9 @@
- namespace Aufgabe06 {
+
+
+var count=0;
+
+namespace Aufgabe06 {
+    
     artikelErzeugen();
     
     function artikelErzeugen(): void {
@@ -64,7 +69,9 @@
         anzahlAnzeigen.id = "anzahlAnzeigen";
 
         function kaufenButton (_event: Event): void {
+count++;
             produktZähler++;
+
             console.log(produktZähler);
 
             preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("preis")!);
@@ -73,7 +80,7 @@
             if (produktZähler >= 0) {
                 document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
             }
-            anzahlAnzeigen.innerHTML = "" + produktZähler;
+            anzahlAnzeigen.innerHTML = "" + count;//produktZähler;
             document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
 
         }

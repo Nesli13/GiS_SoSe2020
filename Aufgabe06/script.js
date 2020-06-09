@@ -1,6 +1,5 @@
 "use strict";
-
-var count=0;
+var count = 0;
 var Aufgabe06;
 (function (Aufgabe06) {
     artikelErzeugen();
@@ -40,7 +39,6 @@ var Aufgabe06;
                 case 1:
                     let getContainer1 = document.getElementById("kategorie1");
                     getContainer1.appendChild(divCandy);
-                    //document.getElementById("kategorie2").style.color = "";
                     break;
                 case 2:
                     let getContainer2 = document.getElementById("kategorie2");
@@ -56,36 +54,17 @@ var Aufgabe06;
             let anzahlAnzeigen = document.createElement("div");
             anzahlAnzeigen.id = "anzahlAnzeigen";
             function kaufenButton(_event) {
-                
                 count++;
-
-                //produktZähler++;
-                //console.log(produktZähler);
+                produktZähler++;
+                console.log(produktZähler);
                 preis += parseFloat(_event.target?.getAttribute("preis"));
                 console.log(preis);
                 if (produktZähler >= 0) {
                     document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
                 }
-
-                
-                anzahlAnzeigen.innerHTML = "" + count;  //+ produktZähler;
-
-                
-                var list = document.getElementById("counterBlase");
-                if(list.childNodes.length > 1)
-                {
-                    list.removeChild(list.childNodes[0]);
-                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-                }
-                else
-                {
-                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-                }
-                
-
-
+                anzahlAnzeigen.innerHTML = "" + count; //produktZähler;
+                document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
             }
-            
             //Ein-/Ausblenden der Produkte
             function handleCategoryClick(_click) {
                 switch (this.getAttribute("id")) {
