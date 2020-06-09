@@ -1,6 +1,6 @@
 
 
-var count=0;
+var count= 0;
 
 namespace Aufgabe06 {
     
@@ -61,7 +61,7 @@ namespace Aufgabe06 {
         }
         //Teilaufgabe 1:
         
-        let produktZähler: number = 0;
+        let produktZaehler: number = 0;
         let preis: number = 0;
 
         let zahlAnzeigen: HTMLParagraphElement = document.createElement("p");
@@ -69,22 +69,38 @@ namespace Aufgabe06 {
         anzahlAnzeigen.id = "anzahlAnzeigen";
 
         function kaufenButton (_event: Event): void {
-count++;
-            produktZähler++;
+            count++;
+            //produktZaehler++;
 
-            console.log(produktZähler);
+            //console.log(produktZaehler);
 
             preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("preis")!);
             console.log(preis);
 
-         if (produktZähler >= 0) {
+
+            if (produktZaehler >= 0) {
                 document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
             }
-            anzahlAnzeigen.innerHTML = "" + count;//produktZähler;
-            document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+            
+            //anzahlAnzeigen.innerHTML = "" + count;  //produktZaehler;
+            //document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+            // HK
+            anzahlAnzeigen.innerHTML = "" + count;  //+ produktZaehler;
+
+            // HK
+            var list  = document.getElementById("counterBlase");
+            if(list.childNodes.length > 1)
+            {
+                list.removeChild(list.childNodes[0]);
+                document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+            }
+            else
+            {
+                document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+            }
 
         }
-        
+    
       
      //Ein-/Ausblenden der Produkte
         function handleCategoryClick(this: HTMLDivElement, _click: MouseEvent): void {

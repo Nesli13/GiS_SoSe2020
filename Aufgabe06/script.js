@@ -48,22 +48,33 @@ var Aufgabe06;
                     break;
             }
             //Teilaufgabe 1:
-            let produktZähler = 0;
+            let produktZaehler = 0;
             let preis = 0;
             let zahlAnzeigen = document.createElement("p");
             let anzahlAnzeigen = document.createElement("div");
             anzahlAnzeigen.id = "anzahlAnzeigen";
             function kaufenButton(_event) {
                 count++;
-                produktZähler++;
-                console.log(produktZähler);
+                //produktZaehler++;
+                //console.log(produktZaehler);
                 preis += parseFloat(_event.target?.getAttribute("preis"));
                 console.log(preis);
-                if (produktZähler >= 0) {
+                if (produktZaehler >= 0) {
                     document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
                 }
-                anzahlAnzeigen.innerHTML = "" + count; //produktZähler;
-                document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+                //anzahlAnzeigen.innerHTML = "" + count;  //produktZaehler;
+                //document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+                // HK
+                anzahlAnzeigen.innerHTML = "" + count; //+ produktZaehler;
+                // HK
+                var list = document.getElementById("counterBlase");
+                if (list.childNodes.length > 1) {
+                    list.removeChild(list.childNodes[0]);
+                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+                }
+                else {
+                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+                }
             }
             //Ein-/Ausblenden der Produkte
             function handleCategoryClick(_click) {
