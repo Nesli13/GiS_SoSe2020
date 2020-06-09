@@ -70,9 +70,9 @@ namespace Aufgabe06 {
 
         function kaufenButton (_event: Event): void {
         count++;
-        produktZähler++;
+        //produktZähler++;
 
-        console.log(produktZähler);
+        //console.log(produktZähler);
 
         preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("preis")!);
         console.log(preis);

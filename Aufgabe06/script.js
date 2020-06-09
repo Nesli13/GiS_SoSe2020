@@ -55,8 +55,8 @@ var Aufgabe06;
             anzahlAnzeigen.id = "anzahlAnzeigen";
             function kaufenButton(_event) {
                 count++;
-                produktZähler++;
-                console.log(produktZähler);
+                //produktZähler++;
+                //console.log(produktZähler);
                 preis += parseFloat(_event.target?.getAttribute("preis"));
                 console.log(preis);
                 if (produktZähler >= 0) {
