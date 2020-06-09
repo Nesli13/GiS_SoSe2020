@@ -55,26 +55,15 @@ var Aufgabe06;
             anzahlAnzeigen.id = "anzahlAnzeigen";
             function kaufenButton(_event) {
                 count++;
-                //produktZaehler++;
-                //console.log(produktZaehler);
+                produktZaehler++;
+                console.log(produktZaehler);
                 preis += parseFloat(_event.target?.getAttribute("preis"));
                 console.log(preis);
                 if (produktZaehler >= 0) {
                     document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
                 }
-                //anzahlAnzeigen.innerHTML = "" + count;  //produktZaehler;
-                //document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-                // HK
-                anzahlAnzeigen.innerHTML = "" + count; //+ produktZaehler;
-                // HK
-                var list = document.getElementById("counterBlase");
-                if (list.childNodes.length > 1) {
-                    list.removeChild(list.childNodes[0]);
-                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-                }
-                else {
-                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-                }
+                anzahlAnzeigen.innerHTML = "" + count; //produktZaehler;
+                document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
             }
             //Ein-/Ausblenden der Produkte
             function handleCategoryClick(_click) {
