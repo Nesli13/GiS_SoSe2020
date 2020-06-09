@@ -77,10 +77,10 @@ count++;
             preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("preis")!);
             console.log(preis);
 
-            if (produktZähler >= 0) {
+         if (produktZähler >= 0) {
                 document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
             }
-            anzahlAnzeigen.innerHTML = "" + //produktZähler;
+            anzahlAnzeigen.innerHTML = "" + count;//produktZähler;
             document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
 
         }

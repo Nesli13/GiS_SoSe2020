@@ -62,8 +62,8 @@ var Aufgabe06;
                 if (produktZähler >= 0) {
                     document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
                 }
-                anzahlAnzeigen.innerHTML = "" + //produktZähler;
-                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+                anzahlAnzeigen.innerHTML = "" + count; //produktZähler;
+                document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
             }
             //Ein-/Ausblenden der Produkte
             function handleCategoryClick(_click) {
