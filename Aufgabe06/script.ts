@@ -80,7 +80,7 @@ namespace Aufgabe06 {
         if (produktZähler >= 0) {
                 document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
             }
-        anzahlAnzeigen.innerHTML = "" + count;//produktZähler;
+        anzahlAnzeigen.innerHTML = "" + count; //produktZähler;
         document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
 
         }
