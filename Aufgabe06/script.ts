@@ -78,8 +78,14 @@ namespace Aufgabe06 {
             console.log(preis);
 
 
-            if (produktZaehler >= 0) {
-                document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
+            if (produktZaehler == 0) {
+                document.getElementById("counterBlase").appendChild(anzahlAnzeigen);
+            }
+            else
+            {
+                document.getElementById("counterBlase").removeChild(document.getElementById("counterBlase").childNodes[0]);
+            
+
             }
             
             anzahlAnzeigen.innerHTML = "" + count;  //produktZaehler;
