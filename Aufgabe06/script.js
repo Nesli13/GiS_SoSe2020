@@ -55,15 +55,15 @@ var Aufgabe06;
             anzahlAnzeigen.id = "anzahlAnzeigen";
             function kaufenButton(_event) {
                 count++;
-                //produktZähler++;
-                //console.log(produktZähler);
+                produktZähler++;
+                console.log(produktZähler);
                 preis += parseFloat(_event.target?.getAttribute("preis"));
                 console.log(preis);
                 if (produktZähler >= 0) {
                     document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
                 }
-                anzahlAnzeigen.innerHTML = "" + count; //produktZähler;
-                document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+                anzahlAnzeigen.innerHTML = "" + //produktZähler;
+                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
             }
             //Ein-/Ausblenden der Produkte
             function handleCategoryClick(_click) {

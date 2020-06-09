@@ -1,6 +1,6 @@
 
 
-var count= 0;
+var count=0;
 
 namespace Aufgabe06 {
     
@@ -69,19 +69,19 @@ namespace Aufgabe06 {
         anzahlAnzeigen.id = "anzahlAnzeigen";
 
         function kaufenButton (_event: Event): void {
-        count++;
-        //produktZähler++;
+count++;
+            produktZähler++;
 
-        //console.log(produktZähler);
+            console.log(produktZähler);
 
-        preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("preis")!);
-        console.log(preis);
+            preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("preis")!);
+            console.log(preis);
 
-        if (produktZähler >= 0) {
+            if (produktZähler >= 0) {
                 document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
             }
-        anzahlAnzeigen.innerHTML = "" + count; //produktZähler;
-        document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+            anzahlAnzeigen.innerHTML = "" + //produktZähler;
+            document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
 
         }
         
