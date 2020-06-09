@@ -32,7 +32,7 @@
         button.value = "Kaufen";
         candyPreis.appendChild(button);
         //button.addEventListener("click", handleAdd);
-       // button.addEventListener("click", kaufenButton);
+        button.addEventListener("click", kaufenButton);
         button.setAttribute("preis", süßigkeiten[i].preis.toString());
 
         // Alle Tags zu div Container
@@ -56,7 +56,7 @@
         }
         //Teilaufgabe 1:
         
-       /* let produktZähler: number = 0;
+        let produktZähler: number = 0;
         let preis: number = 0;
 
         let zahlAnzeigen: HTMLParagraphElement = document.createElement("p");
@@ -76,7 +76,7 @@
             anzahlAnzeigen.innerHTML = "" + produktZähler;
             document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
 
-        }*/
+        }
         
       
      //Ein-/Ausblenden der Produkte
