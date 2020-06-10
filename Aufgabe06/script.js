@@ -46,48 +46,48 @@ var Aufgabe06;
                 default:
                     break;
             }
-            //Teilaufgabe 1:
-            let produktZähler = 0;
-            let preis = 0;
-            let zahlAnzeigen = document.createElement("p");
-            let anzahlAnzeigen = document.createElement("div");
-            anzahlAnzeigen.id = "anzahlAnzeigen";
-            function kaufenButton(_event) {
-                produktZähler++;
-                console.log(produktZähler);
-                preis += parseFloat(_event.target?.getAttribute("preis"));
-                console.log(preis);
-                if (produktZähler == 1) {
-                    document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
-                }
-                anzahlAnzeigen.innerHTML = "" + produktZähler;
-                document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-            }
-            //Ein-/Ausblenden der Produkte
-            function handleCategoryClick(_click) {
-                switch (this.getAttribute("id")) {
-                    case "süßwarenB":
-                        süßwaren();
-                        break;
-                    case "extraScharfB":
-                        extraScharff();
-                        break;
-                }
-                function süßwaren() {
-                    document.getElementById("kategorie1").style.display = "inline-grid";
-                    document.getElementById("kategorie2").style.display = "none";
-                }
-                function extraScharff() {
-                    document.getElementById("kategorie2").style.display = "inline-grid";
-                    document.getElementById("kategorie1").style.display = "none";
-                }
-            }
-            //neue Varialbe + Verlinkung zu den Button
-            let süßwarenAnzeigen = document.querySelector("#süßwarenB");
-            süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
-            let extraScharfAnzeigen = document.querySelector("#extraScharfB");
-            extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
         }
+        //Teilaufgabe 1:
+        let produktZähler = 0;
+        let preis = 0;
+        let zahlAnzeigen = document.createElement("p");
+        let anzahlAnzeigen = document.createElement("div");
+        anzahlAnzeigen.id = "anzahlAnzeigen";
+        function kaufenButton(_event) {
+            produktZähler++;
+            console.log(produktZähler);
+            preis += parseFloat(_event.target?.getAttribute("preis"));
+            console.log(preis);
+            if (produktZähler == 1) {
+                document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
+            }
+            anzahlAnzeigen.innerHTML = "" + produktZähler;
+            document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+        }
+        //Ein-/Ausblenden der Produkte
+        function handleCategoryClick(_click) {
+            switch (this.getAttribute("id")) {
+                case "süßwarenB":
+                    süßwaren();
+                    break;
+                case "extraScharfB":
+                    extraScharff();
+                    break;
+            }
+            function süßwaren() {
+                document.getElementById("kategorie1").style.display = "inline-grid";
+                document.getElementById("kategorie2").style.display = "none";
+            }
+            function extraScharff() {
+                document.getElementById("kategorie2").style.display = "inline-grid";
+                document.getElementById("kategorie1").style.display = "none";
+            }
+        }
+        //neue Varialbe + Verlinkung zu den Button
+        let süßwarenAnzeigen = document.querySelector("#süßwarenB");
+        süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
+        let extraScharfAnzeigen = document.querySelector("#extraScharfB");
+        extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
     }
 })(Aufgabe06 || (Aufgabe06 = {}));
 //# sourceMappingURL=script.js.map
