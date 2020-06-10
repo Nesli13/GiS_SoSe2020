@@ -1,7 +1,4 @@
 
-
-var count= 0;
-
 namespace Aufgabe06 {
     
     artikelErzeugen();
@@ -75,7 +72,7 @@ namespace Aufgabe06 {
             preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("preis")!);
             console.log(preis);
 
-            if (produktZähler >= 0) {
+            if (produktZähler == 1) {
                 document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
             }
             anzahlAnzeigen.innerHTML = "" + produktZähler;
