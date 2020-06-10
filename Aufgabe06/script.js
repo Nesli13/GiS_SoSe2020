@@ -48,25 +48,40 @@ var Aufgabe06;
                     break;
             }
             //Teilaufgabe 1:
-            let produktZaehler = 0;
+            let produktZähler = 0;
             let preis = 0;
             let zahlAnzeigen = document.createElement("p");
             let anzahlAnzeigen = document.createElement("div");
             anzahlAnzeigen.id = "anzahlAnzeigen";
             function kaufenButton(_event) {
+                
                 count++;
-                produktZaehler++;
-                console.log(produktZaehler);
+
+                //produktZähler++;
+                //console.log(produktZähler);
                 preis += parseFloat(_event.target?.getAttribute("preis"));
                 console.log(preis);
-                if (produktZaehler == 0) {
-                    document.getElementById("counterBlase").appendChild(anzahlAnzeigen);
+                if (produktZähler >= 0) {
+                    document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
                 }
-                else {
-                    document.getElementById("counterBlase").removeChild(document.getElementById("counterBlase").childNodes[0]);
+
+            
+                anzahlAnzeigen.innerHTML = "" + count;  //+ produktZähler;
+
+                
+                var list = document.getElementById("counterBlase");
+                if(list.childNodes.length > 1)
+                {
+                    list.removeChild(list.childNodes[0]);
+                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
                 }
-                anzahlAnzeigen.innerHTML = "" + count; //produktZaehler;
-                document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+                else
+                {
+                    document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+                }
+                
+
+
             }
             //Ein-/Ausblenden der Produkte
             function handleCategoryClick(_click) {

@@ -59,9 +59,9 @@ namespace Aufgabe06 {
                     default:
                         break;
         }
-        //Teilaufgabe 1:
-        
-        let produktZaehler: number = 0;
+      //Teilaufgabe 1:
+            
+        let produktZähler: number = 0;
         let preis: number = 0;
 
         let zahlAnzeigen: HTMLParagraphElement = document.createElement("p");
@@ -69,30 +69,20 @@ namespace Aufgabe06 {
         anzahlAnzeigen.id = "anzahlAnzeigen";
 
         function kaufenButton (_event: Event): void {
-            count++;
-            produktZaehler++;
-
-            console.log(produktZaehler);
+            produktZähler++;
+            console.log(produktZähler);
 
             preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("preis")!);
             console.log(preis);
 
-
-            if (produktZaehler == 0) {
-                document.getElementById("counterBlase").appendChild(anzahlAnzeigen);
+            if (produktZähler >= 0) {
+                document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
             }
-            else
-            {
-                document.getElementById("counterBlase").removeChild(document.getElementById("counterBlase").childNodes[0]);
-            
-
-            }
-            
-            anzahlAnzeigen.innerHTML = "" + count;  //produktZaehler;
+            anzahlAnzeigen.innerHTML = "" + produktZähler;
             document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-           
+
         }
-    
+        
       
      //Ein-/Ausblenden der Produkte
         function handleCategoryClick(this: HTMLDivElement, _click: MouseEvent): void {
