@@ -23,11 +23,9 @@ namespace Aufgabe07 {
 
         console.log("Response", response);
     }
-
-
+    
     function artikelErzeugen(_süßigkeiten: Süßigkeiten[]): void {
         for (let i: number = 0; i < _süßigkeiten.length; i++) {
-
 
             //Div
             let divCandy: HTMLElement = document.createElement("div");
