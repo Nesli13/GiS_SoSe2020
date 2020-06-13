@@ -1,51 +1,72 @@
 "use strict";
 var Aufgabe07;
 (function (Aufgabe07) {
-    window.addEventListener("load", init);
+    let produktZähler = 0;
+    let preisBerechnen = 0;
+    let zahlAnzeigen = document.createElement("p");
+    let anzahlAnzeigen = document.createElement("div");
+    anzahlAnzeigen.id = "anzahlAnzeigen";
     let süßigkeiten = [];
-    function init(_event) {
-        communicate("articles.json");
-        buildNavListener();
+    window.addEventListener("load", init);
+    //Json daten werden vom Server gezogen
+    function init() {
+        let url = "articles.json";
+        communicate(url);
     }
     async function communicate(_url) {
         let response = await fetch(_url);
-        süßigkeiten = await response.json();
-        artikelErzeugen(süßigkeiten);
         console.log("Response", response);
+        süßigkeiten = await response.json();
+        artikelErzeugen();
     }
-    function artikelErzeugen(_süßigkeiten) {
-        for (let i = 0; i < _süßigkeiten.length; i++) {
+    function saveInLocalStorage(_inputArticle) {
+        let itemString = JSON.stringify(_inputArticle);
+        let key = "" + _inputArticle.name;
+        localStorage.setItem(key, itemString);
+        console.log(localStorage);
+    }
+    //Produkte einschleifen
+    function artikelErzeugen() {
+        for (let i = 0; i < süßigkeiten.length; i++) {
             //Div
             let divCandy = document.createElement("div");
             divCandy.setAttribute("class", "Produkte");
             //Bild
             let imgCandy = document.createElement("img");
-            imgCandy.setAttribute("src", _süßigkeiten[i].img);
-            imgCandy.setAttribute("alt", _süßigkeiten[i].alt);
+            imgCandy.setAttribute("src", süßigkeiten[i].img);
+            imgCandy.setAttribute("alt", süßigkeiten[i].alt);
             //Name
             let candyName = document.createElement("h2");
-            candyName.innerHTML = _süßigkeiten[i].name;
+            candyName.innerHTML = süßigkeiten[i].name;
             //Preis
             let candyPreis = document.createElement("h3");
-            candyPreis.innerHTML = _süßigkeiten[i].preis + "€";
+            candyPreis.innerHTML = süßigkeiten[i].preis + "€";
             //Beschreibung
             let candybeschreibung = document.createElement("p");
-            candybeschreibung.innerHTML = _süßigkeiten[i].beschreibung;
+            candybeschreibung.innerHTML = süßigkeiten[i].beschreibung;
             //Button
             let button = document.createElement("input");
+            button.innerHTML = "Jetzt kaufen";
             button.type = "button";
             button.value = "Kaufen";
             candyPreis.appendChild(button);
             //button.addEventListener("click", handleAdd);
             button.addEventListener("click", kaufenButton);
-            button.setAttribute("preis", _süßigkeiten[i].preis.toString());
+            button.setAttribute("preis", süßigkeiten[i].preis.toString());
+            //"Button" in Warenkorb
+            button.setAttribute("name", süßigkeiten[i].name);
+            button.setAttribute("img", süßigkeiten[i].img);
+            button.setAttribute("beschreibung", süßigkeiten[i].beschreibung);
+            //button.setAttribute("kategorien", _süßigkeiten[i].kategorien);
+            document.getElementById("_süßigkeiten" + i)?.appendChild(button);
+            document.getElementById("_süßigkeiten" + i)?.appendChild(button);
             // Alle Tags zu div Container
             divCandy.appendChild(imgCandy);
             divCandy.appendChild(candyName);
             divCandy.appendChild(candyPreis);
             divCandy.appendChild(candybeschreibung);
             divCandy.appendChild(button);
-            switch (_süßigkeiten[i].kategorien) {
+            switch (süßigkeiten[i].kategorien) {
                 case 1:
                     let getContainer1 = document.getElementById("kategorie1");
                     getContainer1.appendChild(divCandy);
@@ -60,16 +81,12 @@ var Aufgabe07;
         }
     }
     //Teilaufgabe 1:
-    let produktZähler = 0;
-    let preis = 0;
-    let zahlAnzeigen = document.createElement("p");
-    let anzahlAnzeigen = document.createElement("div");
-    anzahlAnzeigen.id = "anzahlAnzeigen";
     function kaufenButton(_event) {
         produktZähler++;
         console.log(produktZähler);
-        preis += parseFloat(_event.target?.getAttribute("preis"));
-        console.log(preis);
+        saveInLocalStorage(this);
+        preisBerechnen += this.preis;
+        console.log(preisBerechnen.toFixed(2));
         if (produktZähler == 1) {
             document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
         }
@@ -86,21 +103,18 @@ var Aufgabe07;
                 extraScharff();
                 break;
         }
-        function süßwaren() {
-            document.getElementById("kategorie1").style.display = "inline-grid";
-            document.getElementById("kategorie2").style.display = "none";
-        }
-        function extraScharff() {
-            document.getElementById("kategorie2").style.display = "inline-grid";
-            document.getElementById("kategorie1").style.display = "none";
-        }
     }
-    function buildNavListener() {
-        //neue Varialbe + Verlinkung zu den Button
-        let süßwarenAnzeigen = document.querySelector("#süßwarenB");
-        süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
-        let extraScharfAnzeigen = document.querySelector("#extraScharfB");
-        extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
+    function süßwaren() {
+        document.getElementById("kategorie1").style.display = "inline-grid";
+        document.getElementById("kategorie2").style.display = "none";
     }
+    function extraScharff() {
+        document.getElementById("kategorie2").style.display = "inline-grid";
+        document.getElementById("kategorie1").style.display = "none";
+    }
+    let süßwarenAnzeigen = document.querySelector("#süßwarenB");
+    süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
+    let extraScharfAnzeigen = document.querySelector("#extraScharfB");
+    extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
 })(Aufgabe07 || (Aufgabe07 = {}));
 //# sourceMappingURL=script.js.map

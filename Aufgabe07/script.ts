@@ -1,8 +1,20 @@
 
 namespace Aufgabe07 {
 
+
+    let produktZähler: number = 0;
+    let preisBerechnen: number = 0;
+
+
+
+    let zahlAnzeigen: HTMLParagraphElement = document.createElement("p");
+    let anzahlAnzeigen: HTMLDivElement = document.createElement("div");
+    anzahlAnzeigen.id = "anzahlAnzeigen";
+
+    let süßigkeiten: Süßigkeiten[] = [];
     window.addEventListener("load", init);
-    interface Süßigkeiten {
+
+    export interface Süßigkeiten {
         img: string;
         name: string;
         preis: number;
@@ -10,22 +22,32 @@ namespace Aufgabe07 {
         alt: string;
         kategorien: number;
     }
-    let süßigkeiten: Süßigkeiten[] = [];
-
-    function init(_event: Event): void {
-        communicate("articles.json");
-        buildNavListener();
+    //Json daten werden vom Server gezogen
+    function init(): void {
+        let url: string = "articles.json";
+        communicate(url);
     }
+
     async function communicate(_url: RequestInfo): Promise<void> {
+        
         let response: Response = await fetch(_url);
-        süßigkeiten = <Süßigkeiten[]>await response.json();
-        artikelErzeugen(süßigkeiten);
-
         console.log("Response", response);
+        süßigkeiten = await response.json();
+       
+        artikelErzeugen();
     }
-    
-    function artikelErzeugen(_süßigkeiten: Süßigkeiten[]): void {
-        for (let i: number = 0; i < _süßigkeiten.length; i++) {
+
+    function saveInLocalStorage(_inputArticle: Süßigkeiten): void {
+        let itemString: string = JSON.stringify(_inputArticle);
+        let key: string = "" + _inputArticle.name;
+
+        localStorage.setItem(key, itemString);
+        console.log(localStorage);
+    }
+
+    //Produkte einschleifen
+    function artikelErzeugen(): void {
+        for (let i: number = 0; i < süßigkeiten.length; i++) {
 
             //Div
             let divCandy: HTMLElement = document.createElement("div");
@@ -33,29 +55,39 @@ namespace Aufgabe07 {
 
             //Bild
             let imgCandy: HTMLElement = document.createElement("img");
-            imgCandy.setAttribute("src", _süßigkeiten[i].img);
-            imgCandy.setAttribute("alt", _süßigkeiten[i].alt);
+            imgCandy.setAttribute("src", süßigkeiten[i].img);
+            imgCandy.setAttribute("alt", süßigkeiten[i].alt);
 
             //Name
             let candyName: HTMLElement = document.createElement("h2");
-            candyName.innerHTML = _süßigkeiten[i].name;
+            candyName.innerHTML = süßigkeiten[i].name;
 
             //Preis
             let candyPreis: HTMLElement = document.createElement("h3");
-            candyPreis.innerHTML = _süßigkeiten[i].preis + "€";
+            candyPreis.innerHTML = süßigkeiten[i].preis + "€";
 
             //Beschreibung
             let candybeschreibung: HTMLElement = document.createElement("p");
-            candybeschreibung.innerHTML = _süßigkeiten[i].beschreibung;
+            candybeschreibung.innerHTML = süßigkeiten[i].beschreibung;
 
             //Button
             let button: HTMLInputElement = document.createElement("input");
+            button.innerHTML = "Jetzt kaufen";
             button.type = "button";
             button.value = "Kaufen";
             candyPreis.appendChild(button);
             //button.addEventListener("click", handleAdd);
             button.addEventListener("click", kaufenButton);
-            button.setAttribute("preis", _süßigkeiten[i].preis.toString());
+            button.setAttribute("preis", süßigkeiten[i].preis.toString());
+            //"Button" in Warenkorb
+            button.setAttribute("name", süßigkeiten[i].name);
+            button.setAttribute("img", süßigkeiten[i].img);
+            button.setAttribute("beschreibung", süßigkeiten[i].beschreibung);
+            //button.setAttribute("kategorien", _süßigkeiten[i].kategorien);
+
+            document.getElementById("_süßigkeiten" + i)?.appendChild(button);
+            document.getElementById("_süßigkeiten" + i)?.appendChild(button);
+
 
             // Alle Tags zu div Container
             divCandy.appendChild(imgCandy);
@@ -64,7 +96,7 @@ namespace Aufgabe07 {
             divCandy.appendChild(candybeschreibung);
             divCandy.appendChild(button);
 
-            switch (_süßigkeiten[i].kategorien) {
+            switch (süßigkeiten[i].kategorien) {
                 case 1:
                     let getContainer1: HTMLElement = document.getElementById("kategorie1")!;
                     getContainer1.appendChild(divCandy);
@@ -80,19 +112,15 @@ namespace Aufgabe07 {
     }
     //Teilaufgabe 1:
 
-    let produktZähler: number = 0;
-    let preis: number = 0;
 
-    let zahlAnzeigen: HTMLParagraphElement = document.createElement("p");
-    let anzahlAnzeigen: HTMLDivElement = document.createElement("div");
-    anzahlAnzeigen.id = "anzahlAnzeigen";
-
-    function kaufenButton(_event: Event): void {
+    function kaufenButton(this: Süßigkeiten, _event: Event): void {
         produktZähler++;
         console.log(produktZähler);
 
-        preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("preis")!);
-        console.log(preis);
+        saveInLocalStorage(this);
+        preisBerechnen += this.preis;
+        console.log(preisBerechnen.toFixed(2));
+
 
         if (produktZähler == 1) {
             document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
@@ -113,31 +141,28 @@ namespace Aufgabe07 {
                 extraScharff();
                 break;
         }
-
-        function süßwaren(): void {
-            (<HTMLElement>document.getElementById("kategorie1")).style.display = "inline-grid";
-            (<HTMLElement>document.getElementById("kategorie2")).style.display = "none";
-
-        }
-
-        function extraScharff(): void {
-            (<HTMLElement>document.getElementById("kategorie2")).style.display = "inline-grid";
-            (<HTMLElement>document.getElementById("kategorie1")).style.display = "none";
-
-        }
     }
-    function buildNavListener(): void {
-        //neue Varialbe + Verlinkung zu den Button
-        let süßwarenAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#süßwarenB");
-        süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
 
-        let extraScharfAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#extraScharfB");
-        extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
+
+    function süßwaren(): void {
+        (<HTMLElement>document.getElementById("kategorie1")).style.display = "inline-grid";
+        (<HTMLElement>document.getElementById("kategorie2")).style.display = "none";
+
+    }
+
+    function extraScharff(): void {
+        (<HTMLElement>document.getElementById("kategorie2")).style.display = "inline-grid";
+        (<HTMLElement>document.getElementById("kategorie1")).style.display = "none";
 
 
     }
+
+
+    let süßwarenAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#süßwarenB");
+    süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
+
+    let extraScharfAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#extraScharfB");
+    extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
+
 
 }
-
-
-
