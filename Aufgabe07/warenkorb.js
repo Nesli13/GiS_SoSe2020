@@ -41,14 +41,14 @@ var Aufgabe07;
         candyName.innerHTML = _inputArticle.name;
         divCandy.appendChild(candyName);
         //PREIS
-        let price = document.createElement("p");
-        price.innerHTML = "" + _inputArticle.preis;
-        divCandy.setAttribute("preis", price.innerHTML);
-        divCandy.appendChild(price);
+        let candyPreis = document.createElement("p");
+        candyPreis.innerHTML = "" + _inputArticle.preis;
+        divCandy.setAttribute("preis", candyPreis.innerHTML);
+        divCandy.appendChild(candyPreis);
         //BESCHREIBUNG
-        let desc = document.createElement("p");
-        desc.innerHTML = _inputArticle.beschreibung;
-        divCandy.appendChild(desc);
+        let candybeschreibung = document.createElement("p");
+        candybeschreibung.innerHTML = _inputArticle.beschreibung;
+        divCandy.appendChild(candybeschreibung);
         //BUTTON
         let kaufen = document.createElement("button");
         kaufen.innerHTML = "Löschen";

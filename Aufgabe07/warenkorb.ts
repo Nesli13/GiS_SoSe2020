@@ -53,15 +53,15 @@ namespace Aufgabe07 {
         divCandy.appendChild(candyName);
 
         //PREIS
-        let price: HTMLParagraphElement = document.createElement("p");
-        price.innerHTML = "" + _inputArticle.preis;
-        divCandy.setAttribute("preis", price.innerHTML);
-        divCandy.appendChild(price);
+        let candyPreis: HTMLParagraphElement = document.createElement("p");
+        candyPreis.innerHTML = "" + _inputArticle.preis;
+        divCandy.setAttribute("preis", candyPreis.innerHTML);
+        divCandy.appendChild(candyPreis);
 
         //BESCHREIBUNG
-        let desc: HTMLParagraphElement = document.createElement("p");
-        desc.innerHTML = _inputArticle.beschreibung;
-        divCandy.appendChild(desc);
+        let candybeschreibung: HTMLParagraphElement = document.createElement("p");
+        candybeschreibung.innerHTML = _inputArticle.beschreibung;
+        divCandy.appendChild(candybeschreibung);
 
         //BUTTON
         let kaufen: HTMLButtonElement = document.createElement("button");
