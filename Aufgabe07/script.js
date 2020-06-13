@@ -79,42 +79,42 @@ var Aufgabe07;
                     break;
             }
         }
-    }
-    //Teilaufgabe 1:
-    function kaufenButton(_event) {
-        produktZähler++;
-        console.log(produktZähler);
-        saveInLocalStorage(this);
-        preisBerechnen += this.preis;
-        console.log(preisBerechnen.toFixed(2));
-        if (produktZähler == 1) {
-            document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
+        //Teilaufgabe 1:
+        function kaufenButton(_event) {
+            produktZähler++;
+            console.log(produktZähler);
+            saveInLocalStorage(this);
+            preisBerechnen += this.preis;
+            console.log(preisBerechnen.toFixed(2));
+            if (produktZähler == 1) {
+                document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
+            }
+            anzahlAnzeigen.innerHTML = "" + produktZähler;
+            document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
         }
-        anzahlAnzeigen.innerHTML = "" + produktZähler;
-        document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-    }
-    //Ein-/Ausblenden der Produkte
-    function handleCategoryClick(_click) {
-        switch (this.getAttribute("id")) {
-            case "süßwarenB":
-                süßwaren();
-                break;
-            case "extraScharfB":
-                extraScharff();
-                break;
+        //Ein-/Ausblenden der Produkte
+        function handleCategoryClick(_click) {
+            switch (this.getAttribute("id")) {
+                case "süßwarenB":
+                    süßwaren();
+                    break;
+                case "extraScharfB":
+                    extraScharff();
+                    break;
+            }
+            function süßwaren() {
+                document.getElementById("kategorie1").style.display = "inline-grid";
+                document.getElementById("kategorie2").style.display = "none";
+            }
+            function extraScharff() {
+                document.getElementById("kategorie2").style.display = "inline-grid";
+                document.getElementById("kategorie1").style.display = "none";
+            }
         }
+        let süßwarenAnzeigen = document.querySelector("#süßwarenB");
+        süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
+        let extraScharfAnzeigen = document.querySelector("#extraScharfB");
+        extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
     }
-    function süßwaren() {
-        document.getElementById("kategorie1").style.display = "inline-grid";
-        document.getElementById("kategorie2").style.display = "none";
-    }
-    function extraScharff() {
-        document.getElementById("kategorie2").style.display = "inline-grid";
-        document.getElementById("kategorie1").style.display = "none";
-    }
-    let süßwarenAnzeigen = document.querySelector("#süßwarenB");
-    süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
-    let extraScharfAnzeigen = document.querySelector("#extraScharfB");
-    extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
 })(Aufgabe07 || (Aufgabe07 = {}));
 //# sourceMappingURL=script.js.map

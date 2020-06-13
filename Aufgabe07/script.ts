@@ -29,11 +29,11 @@ namespace Aufgabe07 {
     }
 
     async function communicate(_url: RequestInfo): Promise<void> {
-        
+
         let response: Response = await fetch(_url);
         console.log("Response", response);
         süßigkeiten = await response.json();
-       
+
         artikelErzeugen();
     }
 
@@ -109,60 +109,61 @@ namespace Aufgabe07 {
                     break;
             }
         }
-    }
-    //Teilaufgabe 1:
+
+        //Teilaufgabe 1:
 
 
-    function kaufenButton(this: Süßigkeiten, _event: Event): void {
-        produktZähler++;
-        console.log(produktZähler);
+        function kaufenButton(this: Süßigkeiten, _event: Event): void {
+            produktZähler++;
+            console.log(produktZähler);
 
-        saveInLocalStorage(this);
-        preisBerechnen += this.preis;
-        console.log(preisBerechnen.toFixed(2));
+            saveInLocalStorage(this);
+            preisBerechnen += this.preis;
+            console.log(preisBerechnen.toFixed(2));
 
 
-        if (produktZähler == 1) {
-            document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
+            if (produktZähler == 1) {
+                document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
+            }
+            anzahlAnzeigen.innerHTML = "" + produktZähler;
+            document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
+
         }
-        anzahlAnzeigen.innerHTML = "" + produktZähler;
-        document.getElementById("anzahlAnzeigen")?.appendChild(zahlAnzeigen);
-
-    }
 
 
-    //Ein-/Ausblenden der Produkte
-    function handleCategoryClick(this: HTMLDivElement, _click: MouseEvent): void {
-        switch (this.getAttribute("id")) {
-            case "süßwarenB":
-                süßwaren();
-                break;
-            case "extraScharfB":
-                extraScharff();
-                break;
+        //Ein-/Ausblenden der Produkte
+        function handleCategoryClick(this: HTMLDivElement, _click: MouseEvent): void {
+            switch (this.getAttribute("id")) {
+                case "süßwarenB":
+                    süßwaren();
+                    break;
+                case "extraScharfB":
+                    extraScharff();
+                    break;
+            }
+
+
+
+            function süßwaren(): void {
+                (<HTMLElement>document.getElementById("kategorie1")).style.display = "inline-grid";
+                (<HTMLElement>document.getElementById("kategorie2")).style.display = "none";
+
+            }
+
+            function extraScharff(): void {
+                (<HTMLElement>document.getElementById("kategorie2")).style.display = "inline-grid";
+                (<HTMLElement>document.getElementById("kategorie1")).style.display = "none";
+
+
+            }
+
         }
-    }
+        let süßwarenAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#süßwarenB");
+        süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
 
-
-    function süßwaren(): void {
-        (<HTMLElement>document.getElementById("kategorie1")).style.display = "inline-grid";
-        (<HTMLElement>document.getElementById("kategorie2")).style.display = "none";
-
-    }
-
-    function extraScharff(): void {
-        (<HTMLElement>document.getElementById("kategorie2")).style.display = "inline-grid";
-        (<HTMLElement>document.getElementById("kategorie1")).style.display = "none";
+        let extraScharfAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#extraScharfB");
+        extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
 
 
     }
-
-
-    let süßwarenAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#süßwarenB");
-    süßwarenAnzeigen.addEventListener("click", handleCategoryClick.bind(süßwarenAnzeigen));
-
-    let extraScharfAnzeigen: HTMLDivElement = <HTMLDivElement>document.querySelector("#extraScharfB");
-    extraScharfAnzeigen.addEventListener("click", handleCategoryClick.bind(extraScharfAnzeigen));
-
-
 }
