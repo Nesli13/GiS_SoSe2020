@@ -39,7 +39,7 @@ namespace Aufgabe07 {
         let divCandy: HTMLDivElement = document.createElement("div");
         contentDiv.appendChild(divCandy);
         divCandy.id = _inputArticle.name;
-        console.log(divCandy.id);
+        //console.log(divCandy.id);
 
         //IMG IN DIV PACKEN
         let imgCandy: HTMLImageElement = document.createElement("img");

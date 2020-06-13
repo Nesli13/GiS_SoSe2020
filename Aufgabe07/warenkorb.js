@@ -30,7 +30,7 @@ var Aufgabe07;
         let divCandy = document.createElement("div");
         contentDiv.appendChild(divCandy);
         divCandy.id = _inputArticle.name;
-        console.log(divCandy.id);
+        //console.log(divCandy.id);
         //IMG IN DIV PACKEN
         let imgCandy = document.createElement("img");
         imgCandy.src = _inputArticle.img;
