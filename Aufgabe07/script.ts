@@ -29,11 +29,11 @@ namespace Aufgabe07 {
     }
 
     async function communicate(_url: RequestInfo): Promise<void> {
-
+        console.log("Start");
         let response: Response = await fetch(_url);
         console.log("Response", response);
         süßigkeiten = await response.json();
-
+        console.log("End");
         artikelErzeugen();
     }
 

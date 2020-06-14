@@ -4,7 +4,7 @@ var Aufgabe07;
     window.addEventListener("load", init);
     let contentDiv;
     let pGesamtpreis;
-    let gesamtPreis;
+    let gesamtpreis;
     function init(_event) {
         contentDiv = document.querySelector(".warenliste");
         pGesamtpreis = document.querySelector("#total");
@@ -15,12 +15,12 @@ var Aufgabe07;
     }
     function update() {
         contentDiv.innerHTML = "";
-        gesamtPreis = 0;
+        gesamtpreis = 0;
         for (let i = 0; i < localStorage.length; i++) {
             let key = localStorage.key(i);
             let articlesJSON = localStorage.getItem(key);
             let item = JSON.parse(articlesJSON);
-            gesamtPreis += item.preis;
+            gesamtpreis += item.preis;
             createDynamicContent(item);
         }
         setGesamtpreis();
@@ -60,7 +60,7 @@ var Aufgabe07;
         update();
     }
     function setGesamtpreis() {
-        pGesamtpreis.innerHTML = "" + gesamtPreis;
+        pGesamtpreis.innerHTML = "" + gesamtpreis.toFixed(2);
     }
     /*
         function removeAll(): void {

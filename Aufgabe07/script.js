@@ -14,9 +14,11 @@ var Aufgabe07;
         communicate(url);
     }
     async function communicate(_url) {
+        console.log("Start");
         let response = await fetch(_url);
         console.log("Response", response);
         süßigkeiten = await response.json();
+        console.log("End");
         artikelErzeugen();
     }
     function saveInLocalStorage(_inputArticle) {

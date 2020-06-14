@@ -3,7 +3,7 @@ namespace Aufgabe07 {
 
     let contentDiv: HTMLDivElement;
     let pGesamtpreis: HTMLParagraphElement;
-    let gesamtPreis: number;
+    let gesamtpreis: number;
 
 
 
@@ -21,14 +21,14 @@ namespace Aufgabe07 {
 
     function update(): void {
         contentDiv.innerHTML = "";
-        gesamtPreis = 0;
+        gesamtpreis = 0;
         for (let i: number = 0; i < localStorage.length; i++) {
             let key: string = <string>localStorage.key(i);
             let articlesJSON: string = <string>localStorage.getItem(key);
 
             let item: Süßigkeiten = <Süßigkeiten>JSON.parse(articlesJSON);
 
-            gesamtPreis += item.preis;
+            gesamtpreis += item.preis;
             createDynamicContent(item);
         }
         setGesamtpreis();
@@ -77,7 +77,7 @@ namespace Aufgabe07 {
         update();
     }
     function setGesamtpreis(): void {
-        pGesamtpreis.innerHTML = "" + gesamtPreis;
+        pGesamtpreis.innerHTML = "" + gesamtpreis.toFixed(2);
     }
 
 /*
