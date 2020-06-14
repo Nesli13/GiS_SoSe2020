@@ -3,7 +3,7 @@ namespace Aufgabe07 {
 
     let contentDiv: HTMLDivElement;
     let pGesamtpreis: HTMLParagraphElement;
-    let gesamtpreis: number;
+    let gesamtPreis: number;
 
 
 
@@ -21,14 +21,14 @@ namespace Aufgabe07 {
 
     function update(): void {
         contentDiv.innerHTML = "";
-        gesamtpreis = 0;
+        gesamtPreis = 0;
         for (let i: number = 0; i < localStorage.length; i++) {
             let key: string = <string>localStorage.key(i);
             let articlesJSON: string = <string>localStorage.getItem(key);
 
             let item: Süßigkeiten = <Süßigkeiten>JSON.parse(articlesJSON);
 
-            gesamtpreis += item.preis;
+            gesamtPreis += item.preis;
             createDynamicContent(item);
         }
         setGesamtpreis();
@@ -37,37 +37,37 @@ namespace Aufgabe07 {
     function createDynamicContent(_inputArticle: Süßigkeiten): void {
 
         //Div erstellen
-        let divCandy: HTMLDivElement = document.createElement("div");
-        contentDiv.appendChild(divCandy);
-        divCandy.id = _inputArticle.name;
-        console.log(divCandy.id);
+        let newDiv: HTMLDivElement = document.createElement("div");
+        contentDiv.appendChild(newDiv);
+        newDiv.id = _inputArticle.name;
+        console.log(newDiv.id);
 
         //IMG IN DIV PACKEN
-        let imgCandy: HTMLImageElement = document.createElement("img");
-        imgCandy.src = _inputArticle.img;
-        divCandy.appendChild(imgCandy);
-        console.log(imgCandy);
+        let imgElement: HTMLImageElement = document.createElement("img");
+        imgElement.src = _inputArticle.img;
+        newDiv.appendChild(imgElement);
+        console.log(imgElement);
 
         //NAME
-        let candyName: HTMLParagraphElement = document.createElement("p");
-        candyName.innerHTML = _inputArticle.name;
-        divCandy.appendChild(candyName);
+        let name: HTMLParagraphElement = document.createElement("p");
+        name.innerHTML = _inputArticle.name;
+        newDiv.appendChild(name);
 
         //PREIS
-        let candyPreis: HTMLParagraphElement = document.createElement("p");
-        candyPreis.innerHTML = "" + _inputArticle.preis;
-        divCandy.setAttribute("preis", candyPreis.innerHTML);
-        divCandy.appendChild(candyPreis);
+        let price: HTMLParagraphElement = document.createElement("p");
+        price.innerHTML = "" + _inputArticle.preis;
+        newDiv.setAttribute("preis", newDiv.innerHTML);
+        newDiv.appendChild(price);
 
         //BESCHREIBUNG
-        let candybeschreibung: HTMLParagraphElement = document.createElement("p");
-        candybeschreibung.innerHTML = _inputArticle.beschreibung;
-        divCandy.appendChild(candybeschreibung);
+        let beschreibung: HTMLParagraphElement = document.createElement("p");
+        beschreibung.innerHTML = _inputArticle.beschreibung;
+        newDiv.appendChild(beschreibung);
 
         //BUTTON
         let kaufen: HTMLButtonElement = document.createElement("button");
         kaufen.innerHTML = "Löschen";
-        divCandy.appendChild(kaufen);
+        newDiv.appendChild(kaufen);
         kaufen.addEventListener("click", handleRemoveArticle.bind(_inputArticle));
     }
 
@@ -77,7 +77,7 @@ namespace Aufgabe07 {
         update();
     }
     function setGesamtpreis(): void {
-        pGesamtpreis.innerHTML = "" + gesamtpreis;
+        pGesamtpreis.innerHTML = "" + gesamtPreis;
     }
 
 /*

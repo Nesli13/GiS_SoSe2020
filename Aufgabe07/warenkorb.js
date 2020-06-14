@@ -4,7 +4,7 @@ var Aufgabe07;
     window.addEventListener("load", init);
     let contentDiv;
     let pGesamtpreis;
-    let gesamtpreis;
+    let gesamtPreis;
     function init(_event) {
         contentDiv = document.querySelector(".warenliste");
         pGesamtpreis = document.querySelector("#total");
@@ -15,44 +15,44 @@ var Aufgabe07;
     }
     function update() {
         contentDiv.innerHTML = "";
-        gesamtpreis = 0;
+        gesamtPreis = 0;
         for (let i = 0; i < localStorage.length; i++) {
             let key = localStorage.key(i);
             let articlesJSON = localStorage.getItem(key);
             let item = JSON.parse(articlesJSON);
-            gesamtpreis += item.preis;
+            gesamtPreis += item.preis;
             createDynamicContent(item);
         }
         setGesamtpreis();
     }
     function createDynamicContent(_inputArticle) {
         //Div erstellen
-        let divCandy = document.createElement("div");
-        contentDiv.appendChild(divCandy);
-        divCandy.id = _inputArticle.name;
-        console.log(divCandy.id);
+        let newDiv = document.createElement("div");
+        contentDiv.appendChild(newDiv);
+        newDiv.id = _inputArticle.name;
+        console.log(newDiv.id);
         //IMG IN DIV PACKEN
-        let imgCandy = document.createElement("img");
-        imgCandy.src = _inputArticle.img;
-        divCandy.appendChild(imgCandy);
-        console.log(imgCandy);
+        let imgElement = document.createElement("img");
+        imgElement.src = _inputArticle.img;
+        newDiv.appendChild(imgElement);
+        console.log(imgElement);
         //NAME
-        let candyName = document.createElement("p");
-        candyName.innerHTML = _inputArticle.name;
-        divCandy.appendChild(candyName);
+        let name = document.createElement("p");
+        name.innerHTML = _inputArticle.name;
+        newDiv.appendChild(name);
         //PREIS
-        let candyPreis = document.createElement("p");
-        candyPreis.innerHTML = "" + _inputArticle.preis;
-        divCandy.setAttribute("preis", candyPreis.innerHTML);
-        divCandy.appendChild(candyPreis);
+        let price = document.createElement("p");
+        price.innerHTML = "" + _inputArticle.preis;
+        newDiv.setAttribute("preis", newDiv.innerHTML);
+        newDiv.appendChild(price);
         //BESCHREIBUNG
-        let candybeschreibung = document.createElement("p");
-        candybeschreibung.innerHTML = _inputArticle.beschreibung;
-        divCandy.appendChild(candybeschreibung);
+        let beschreibung = document.createElement("p");
+        beschreibung.innerHTML = _inputArticle.beschreibung;
+        newDiv.appendChild(beschreibung);
         //BUTTON
         let kaufen = document.createElement("button");
         kaufen.innerHTML = "Löschen";
-        divCandy.appendChild(kaufen);
+        newDiv.appendChild(kaufen);
         kaufen.addEventListener("click", handleRemoveArticle.bind(_inputArticle));
     }
     function handleRemoveArticle(_event) {
@@ -60,7 +60,7 @@ var Aufgabe07;
         update();
     }
     function setGesamtpreis() {
-        pGesamtpreis.innerHTML = "" + gesamtpreis;
+        pGesamtpreis.innerHTML = "" + gesamtPreis;
     }
     /*
         function removeAll(): void {
