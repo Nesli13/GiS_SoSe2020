@@ -8,7 +8,7 @@ var Aufgabe07;
     function init(_event) {
         contentDiv = document.querySelector(".warenliste");
         pGesamtpreis = document.querySelector("#total");
-        pGesamtpreis.addEventListener("click", handleRemoveAll);
+        pGesamtpreis.addEventListener("click", removeAll);
         document.getElementById("warenkorbWert")?.appendChild(pGesamtpreis);
         console.log(localStorage);
         update();
@@ -62,7 +62,7 @@ var Aufgabe07;
     function setGesamtpreis() {
         pGesamtpreis.innerHTML = "" + gesamtpreis.toFixed(2);
     }
-    function handleRemoveAll(_event) {
+    function removeAll(_event) {
         localStorage.clear();
         update();
     }

@@ -9,7 +9,7 @@ namespace Aufgabe07 {
     function init(_event: Event): void {
         contentDiv = <HTMLDivElement>document.querySelector(".warenliste");
         pGesamtpreis = <HTMLParagraphElement>document.querySelector("#total");
-        pGesamtpreis.addEventListener("click", handleRemoveAll);
+        pGesamtpreis.addEventListener("click", removeAll);
         document.getElementById("warenkorbWert")?.appendChild(pGesamtpreis);
 
         console.log(localStorage);
@@ -74,7 +74,7 @@ namespace Aufgabe07 {
         pGesamtpreis.innerHTML = "" + gesamtpreis.toFixed(2);
     }
 
-    function handleRemoveAll(_event: Event): void {
+    function removeAll(_event: Event): void {
         localStorage.clear();
         update();
         }
