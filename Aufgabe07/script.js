@@ -10,7 +10,7 @@ var Aufgabe07;
     window.addEventListener("load", init);
     //Json daten werden vom Server gezogen
     function init() {
-        let url = "articles.json";
+        let url = ("articles.json");
         communicate(url);
     }
     async function communicate(_url) {

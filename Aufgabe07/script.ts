@@ -24,7 +24,7 @@ namespace Aufgabe07 {
     }
     //Json daten werden vom Server gezogen
     function init(): void {
-        let url: string = "articles.json";
+        let url: string = ("articles.json");
         communicate(url);
     }
 
