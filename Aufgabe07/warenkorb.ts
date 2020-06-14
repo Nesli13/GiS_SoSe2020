@@ -56,7 +56,7 @@ namespace Aufgabe07 {
         //PREIS
         let price: HTMLParagraphElement = document.createElement("p");
         price.innerHTML = "" + _inputArticle.preis;
-        newDiv.setAttribute("preis", newDiv.innerHTML);
+        newDiv.setAttribute("preis", price.innerHTML);
         newDiv.appendChild(price);
 
         //BESCHREIBUNG
@@ -80,12 +80,6 @@ namespace Aufgabe07 {
         pGesamtpreis.innerHTML = "" + gesamtpreis.toFixed(2);
     }
 
-/*
-    function removeAll(): void {
-        let remButton: HTMLDListElement = (<HTMLDListElement>document.getElementById("liRemoveAll"));
-        remButton.addEventListener("click", handleRemoveAll);
-    }
-*/
     function handleRemoveAll(_event: Event): void {
         localStorage.clear();
         update();

@@ -43,7 +43,7 @@ var Aufgabe07;
         //PREIS
         let price = document.createElement("p");
         price.innerHTML = "" + _inputArticle.preis;
-        newDiv.setAttribute("preis", newDiv.innerHTML);
+        newDiv.setAttribute("preis", price.innerHTML);
         newDiv.appendChild(price);
         //BESCHREIBUNG
         let beschreibung = document.createElement("p");
@@ -62,12 +62,6 @@ var Aufgabe07;
     function setGesamtpreis() {
         pGesamtpreis.innerHTML = "" + gesamtpreis.toFixed(2);
     }
-    /*
-        function removeAll(): void {
-            let remButton: HTMLDListElement = (<HTMLDListElement>document.getElementById("liRemoveAll"));
-            remButton.addEventListener("click", handleRemoveAll);
-        }
-    */
     function handleRemoveAll(_event) {
         localStorage.clear();
         update();
