@@ -1,12 +1,10 @@
 namespace Aufgabe07 {
+
     window.addEventListener("load", init);
 
     let contentDiv: HTMLDivElement;
     let pGesamtpreis: HTMLParagraphElement;
     let gesamtpreis: number;
-
-
-
 
     function init(_event: Event): void {
         contentDiv = <HTMLDivElement>document.querySelector(".warenliste");
@@ -16,7 +14,6 @@ namespace Aufgabe07 {
 
         console.log(localStorage);
         update();
-
     }
 
     function update(): void {
@@ -35,7 +32,6 @@ namespace Aufgabe07 {
     }
 
     function createDynamicContent(_inputArticle: Süßigkeiten): void {
-
         //Div erstellen
         let divCandy: HTMLDivElement = document.createElement("div");
         contentDiv.appendChild(divCandy);
@@ -70,8 +66,6 @@ namespace Aufgabe07 {
         divCandy.appendChild(kaufen);
         kaufen.addEventListener("click", handleRemoveArticle.bind(_inputArticle));
     }
-
-
     function handleRemoveArticle(this: Süßigkeiten, _event: Event): void {
         localStorage.removeItem(this.name);
         update();
@@ -84,6 +78,4 @@ namespace Aufgabe07 {
         localStorage.clear();
         update();
         }
-
-
 }

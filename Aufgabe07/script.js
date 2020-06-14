@@ -53,7 +53,7 @@ var Aufgabe07;
             button.value = "Kaufen";
             candyPreis.appendChild(button);
             //button.addEventListener("click", handleAdd);
-            button.addEventListener("click", kaufenButton);
+            button.addEventListener("click", kaufenButton.bind(süßigkeiten[i]));
             button.setAttribute("preis", süßigkeiten[i].preis.toString());
             //"Button" in Warenkorb
             button.setAttribute("name", süßigkeiten[i].name);
