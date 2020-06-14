@@ -2,8 +2,9 @@ namespace Aufgabe07 {
     window.addEventListener("load", init);
 
     let contentDiv: HTMLDivElement;
-    let gesamtpreis: number;
     let pGesamtpreis: HTMLParagraphElement;
+    let gesamtpreis: number;
+
 
 
 
@@ -23,9 +24,9 @@ namespace Aufgabe07 {
         gesamtpreis = 0;
         for (let i: number = 0; i < localStorage.length; i++) {
             let key: string = <string>localStorage.key(i);
-            let artikelJSON: string = <string>localStorage.getItem(key);
+            let articlesJSON: string = <string>localStorage.getItem(key);
 
-            let item: Süßigkeiten = <Süßigkeiten>JSON.parse(artikelJSON);
+            let item: Süßigkeiten = <Süßigkeiten>JSON.parse(articlesJSON);
 
             gesamtpreis += item.preis;
             createDynamicContent(item);
@@ -48,7 +49,7 @@ namespace Aufgabe07 {
         console.log(imgCandy);
 
         //NAME
-        let candyName: HTMLParagraphElement = document.createElement("h1");
+        let candyName: HTMLParagraphElement = document.createElement("p");
         candyName.innerHTML = _inputArticle.name;
         divCandy.appendChild(candyName);
 

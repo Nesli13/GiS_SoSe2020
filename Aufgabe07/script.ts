@@ -24,7 +24,7 @@ namespace Aufgabe07 {
     }
     //Json daten werden vom Server gezogen
     function init(): void {
-        let url: string = ("articles.json");
+        let url: string = "articles.json";
         communicate(url);
     }
 
@@ -83,7 +83,7 @@ namespace Aufgabe07 {
             button.setAttribute("name", süßigkeiten[i].name);
             button.setAttribute("img", süßigkeiten[i].img);
             button.setAttribute("beschreibung", süßigkeiten[i].beschreibung);
-            //button.setAttribute("kategorien", _süßigkeiten[i].kategorien);
+            button.setAttribute("kategorien", süßigkeiten[i].kategorien.toString());
 
             document.getElementById("_süßigkeiten" + i)?.appendChild(button);
             document.getElementById("_süßigkeiten" + i)?.appendChild(button);
@@ -118,7 +118,7 @@ namespace Aufgabe07 {
             console.log(produktZähler);
 
             saveInLocalStorage(this);
-            preisBerechnen += this.preis;
+            preisBerechnen += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("preis")!);
             console.log(preisBerechnen.toFixed(2));
 
 

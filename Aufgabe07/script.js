@@ -10,7 +10,7 @@ var Aufgabe07;
     window.addEventListener("load", init);
     //Json daten werden vom Server gezogen
     function init() {
-        let url = ("articles.json");
+        let url = "articles.json";
         communicate(url);
     }
     async function communicate(_url) {
@@ -57,7 +57,7 @@ var Aufgabe07;
             button.setAttribute("name", süßigkeiten[i].name);
             button.setAttribute("img", süßigkeiten[i].img);
             button.setAttribute("beschreibung", süßigkeiten[i].beschreibung);
-            //button.setAttribute("kategorien", _süßigkeiten[i].kategorien);
+            button.setAttribute("kategorien", süßigkeiten[i].kategorien.toString());
             document.getElementById("_süßigkeiten" + i)?.appendChild(button);
             document.getElementById("_süßigkeiten" + i)?.appendChild(button);
             // Alle Tags zu div Container
@@ -84,7 +84,7 @@ var Aufgabe07;
             produktZähler++;
             console.log(produktZähler);
             saveInLocalStorage(this);
-            preisBerechnen += this.preis;
+            preisBerechnen += parseFloat(_event.target?.getAttribute("preis"));
             console.log(preisBerechnen.toFixed(2));
             if (produktZähler == 1) {
                 document.getElementById("counterBlase")?.appendChild(anzahlAnzeigen);
