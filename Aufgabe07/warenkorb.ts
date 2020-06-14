@@ -37,37 +37,37 @@ namespace Aufgabe07 {
     function createDynamicContent(_inputArticle: Süßigkeiten): void {
 
         //Div erstellen
-        let newDiv: HTMLDivElement = document.createElement("div");
-        contentDiv.appendChild(newDiv);
-        newDiv.id = _inputArticle.name;
-        console.log(newDiv.id);
+        let divCandy: HTMLDivElement = document.createElement("div");
+        contentDiv.appendChild(divCandy);
+        divCandy.id = _inputArticle.name;
+        console.log(divCandy.id);
 
         //IMG IN DIV PACKEN
-        let imgElement: HTMLImageElement = document.createElement("img");
-        imgElement.src = _inputArticle.img;
-        newDiv.appendChild(imgElement);
-        console.log(imgElement);
+        let imgCandy: HTMLImageElement = document.createElement("img");
+        imgCandy.src =  _inputArticle.img;
+        divCandy.appendChild(imgCandy);
+        console.log(imgCandy);
 
         //NAME
         let name: HTMLParagraphElement = document.createElement("p");
         name.innerHTML = _inputArticle.name;
-        newDiv.appendChild(name);
+        divCandy.appendChild(name);
 
         //PREIS
         let price: HTMLParagraphElement = document.createElement("p");
         price.innerHTML = "" + _inputArticle.preis;
-        newDiv.setAttribute("preis", price.innerHTML);
-        newDiv.appendChild(price);
+        divCandy.setAttribute("preis", price.innerHTML);
+        divCandy.appendChild(price);
 
         //BESCHREIBUNG
         let beschreibung: HTMLParagraphElement = document.createElement("p");
         beschreibung.innerHTML = _inputArticle.beschreibung;
-        newDiv.appendChild(beschreibung);
+        divCandy.appendChild(beschreibung);
 
         //BUTTON
         let kaufen: HTMLButtonElement = document.createElement("button");
         kaufen.innerHTML = "Löschen";
-        newDiv.appendChild(kaufen);
+        divCandy.appendChild(kaufen);
         kaufen.addEventListener("click", handleRemoveArticle.bind(_inputArticle));
     }
 

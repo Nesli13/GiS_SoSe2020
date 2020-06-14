@@ -27,32 +27,32 @@ var Aufgabe07;
     }
     function createDynamicContent(_inputArticle) {
         //Div erstellen
-        let newDiv = document.createElement("div");
-        contentDiv.appendChild(newDiv);
-        newDiv.id = _inputArticle.name;
-        console.log(newDiv.id);
+        let divCandy = document.createElement("div");
+        contentDiv.appendChild(divCandy);
+        divCandy.id = _inputArticle.name;
+        console.log(divCandy.id);
         //IMG IN DIV PACKEN
-        let imgElement = document.createElement("img");
-        imgElement.src = _inputArticle.img;
-        newDiv.appendChild(imgElement);
-        console.log(imgElement);
+        let imgCandy = document.createElement("img");
+        imgCandy.src = _inputArticle.img;
+        divCandy.appendChild(imgCandy);
+        console.log(imgCandy);
         //NAME
         let name = document.createElement("p");
         name.innerHTML = _inputArticle.name;
-        newDiv.appendChild(name);
+        divCandy.appendChild(name);
         //PREIS
         let price = document.createElement("p");
         price.innerHTML = "" + _inputArticle.preis;
-        newDiv.setAttribute("preis", price.innerHTML);
-        newDiv.appendChild(price);
+        divCandy.setAttribute("preis", price.innerHTML);
+        divCandy.appendChild(price);
         //BESCHREIBUNG
         let beschreibung = document.createElement("p");
         beschreibung.innerHTML = _inputArticle.beschreibung;
-        newDiv.appendChild(beschreibung);
+        divCandy.appendChild(beschreibung);
         //BUTTON
         let kaufen = document.createElement("button");
         kaufen.innerHTML = "Löschen";
-        newDiv.appendChild(kaufen);
+        divCandy.appendChild(kaufen);
         kaufen.addEventListener("click", handleRemoveArticle.bind(_inputArticle));
     }
     function handleRemoveArticle(_event) {
