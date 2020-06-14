@@ -11,6 +11,10 @@ body{
     box-shadow: 0px 0px 10px rgb(179, 214, 238);
 }
 
+#total{
+    font-size: 20px;
+    font-weight: bold;
+}
 /*Überschriften*/
 h1{
     font-family: 'Times New Roman', Times, serif;
@@ -115,6 +119,19 @@ input:focus{
     text-align: center;
 
 }
+.warenliste div{
+    border: 2px solid rgb(139, 43, 176);
+    box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
+    max-width: 450px;
+    max-height: 450px;
+    display: inline-block;
+    background: transparent;
+    padding: 40px 150px 40px 150px;
+    margin: 0px 30px 30px 40px;
+    text-align: center;
+
+
+}
 .Container{
     display: flex;
     flex-direction: row;
@@ -186,6 +203,17 @@ li a{
     margin: 0px 30px 30px 30px;
     text-align: center;
 
+}
+.warenliste {
+    border: 2px solid rgb(139, 43, 176);
+    box-shadow: 0pt 2px 5px rgba(62, 163, 199, 0.7);
+    max-width: 250px;
+    max-height: 350px;
+    display: inline-block;
+    background: transparent;
+    padding: 20px 60px 20px 20px;
+    margin: 0px 30px 30px 30px;
+    text-align: center;
 }
     .Container{
         display: flex;
