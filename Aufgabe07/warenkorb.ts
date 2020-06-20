@@ -74,7 +74,7 @@ namespace Aufgabe07 {
         update();
     }
     function setGesamtpreis(): void {
-        pGesamtpreis.innerHTML = "" + gesamtpreis.toFixed(2) + " € ";
+        pGesamtpreis.innerHTML = "Gesamtpreis: " + gesamtpreis.toFixed(2) + " € ";
     }
 
     function removeAll(_event: Event): void {

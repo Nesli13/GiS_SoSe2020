@@ -63,7 +63,7 @@ var Aufgabe07;
         update();
     }
     function setGesamtpreis() {
-        pGesamtpreis.innerHTML = "" + gesamtpreis.toFixed(2) + " € ";
+        pGesamtpreis.innerHTML = "Gesamtpreis: " + gesamtpreis.toFixed(2) + " € ";
     }
     function removeAll(_event) {
         localStorage.clear();
