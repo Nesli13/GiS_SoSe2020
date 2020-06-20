@@ -5,7 +5,6 @@ var Aufgabe07;
     let contentDiv;
     let pGesamtpreis;
     let gesamtpreis;
-    //neu
     let allesLöschen;
     function init(_event) {
         contentDiv = document.querySelector(".warenliste");

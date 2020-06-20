@@ -5,7 +5,6 @@ namespace Aufgabe07 {
     let contentDiv: HTMLDivElement;
     let pGesamtpreis: HTMLParagraphElement;
     let gesamtpreis: number;
-    //neu
     let allesLöschen: HTMLParagraphElement;
 
     function init(_event: Event): void {
