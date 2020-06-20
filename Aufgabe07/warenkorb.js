@@ -5,10 +5,14 @@ var Aufgabe07;
     let contentDiv;
     let pGesamtpreis;
     let gesamtpreis;
+    //neu
+    let allesLöschen;
     function init(_event) {
         contentDiv = document.querySelector(".warenliste");
         pGesamtpreis = document.querySelector("#total");
-        pGesamtpreis.addEventListener("click", removeAll);
+        allesLöschen = document.querySelector("#allesLöschen");
+        allesLöschen.addEventListener("click", removeAll);
+        //pGesamtpreis.addEventListener("click", removeAll);
         document.getElementById("warenkorbWert")?.appendChild(pGesamtpreis);
         console.log(localStorage);
         update();

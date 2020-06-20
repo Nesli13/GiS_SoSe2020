@@ -5,11 +5,15 @@ namespace Aufgabe07 {
     let contentDiv: HTMLDivElement;
     let pGesamtpreis: HTMLParagraphElement;
     let gesamtpreis: number;
+    //neu
+    let allesLöschen: HTMLParagraphElement;
 
     function init(_event: Event): void {
         contentDiv = <HTMLDivElement>document.querySelector(".warenliste");
         pGesamtpreis = <HTMLParagraphElement>document.querySelector("#total");
-        pGesamtpreis.addEventListener("click", removeAll);
+        allesLöschen = <HTMLParagraphElement>document.querySelector("#allesLöschen");
+        allesLöschen.addEventListener("click", removeAll);
+        //pGesamtpreis.addEventListener("click", removeAll);
         document.getElementById("warenkorbWert")?.appendChild(pGesamtpreis);
 
         console.log(localStorage);
