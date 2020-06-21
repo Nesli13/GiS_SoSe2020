@@ -15,9 +15,13 @@ body{
     font-size: 20px;
     font-weight: bold;
 }
-#allesLöschen{
+button, #allesLöschen{
     border-radius: 100px;
     color: rgba(224, 133, 212, 0.719);
+    background-color: white ;
+    border-width: 1px;
+    border-color: rgba(6, 2, 2, 1);
+    
 }
 /*Überschriften*/
 h1{
