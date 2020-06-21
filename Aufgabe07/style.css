@@ -15,6 +15,10 @@ body{
     font-size: 20px;
     font-weight: bold;
 }
+#allesLöschen{
+    border-radius: 100px;
+    color: rgba(224, 133, 212, 0.719);
+}
 /*Überschriften*/
 h1{
     font-family: 'Times New Roman', Times, serif;
