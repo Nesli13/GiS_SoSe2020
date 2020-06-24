@@ -22,15 +22,22 @@ export namespace A09Server {
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
 
+
         if (_request.url) {
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
-            for (let key in url.query) {
-                _response.write(key + ":" + url.query[key] + "<br/>");
+            let pathname: string = <string>url.pathname;
+            if (pathname == "/json") {
+                let jsonString: string = JSON.stringify(url.query);
+                console.log(jsonString);
+                _response.write(jsonString);
             }
-            let jsonString: string = JSON.stringify(url.query);
-            _response.write(jsonString);
-        }
+            if (pathname == "/html") {
+                for (let key in url.query) {
+                    _response.write(key + ":" + url.query[key] + "<br/>");
+                }
 
+            }
+        }
 
         _response.end();
     }
