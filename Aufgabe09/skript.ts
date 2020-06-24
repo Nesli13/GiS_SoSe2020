@@ -11,7 +11,7 @@ namespace Aufgabe09 {
 
     async function clickHtml(): Promise<void> {
         let formData: FormData = new FormData(document.forms[0]);
-        let url: string = "http://localhost:8100";
+        let url: string = "https://gis2020nk.herokuapp.com";
         url += "/html";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "?" + query.toString();
@@ -27,7 +27,7 @@ namespace Aufgabe09 {
     }
     async function clickJson(): Promise<void> {
         let formData: FormData = new FormData(document.forms[0]);
-        let url: string = "http://localhost:8100";
+        let url: string = "https://gis2020nk.herokuapp.com";
         url += "/json";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "?" + query.toString();
