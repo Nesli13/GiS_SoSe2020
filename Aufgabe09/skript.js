@@ -8,7 +8,7 @@ var Aufgabe09;
     let server = document.getElementById("server");
     async function clickHtml() {
         let formData = new FormData(document.forms[0]);
-        let url = "http://localhost:8100";
+        let url = "https://gis2020nk.herokuapp.com";
         url += "/html";
         let query = new URLSearchParams(formData);
         url = url + "?" + query.toString();
@@ -18,7 +18,7 @@ var Aufgabe09;
     }
     async function clickJson() {
         let formData = new FormData(document.forms[0]);
-        let url = "http://localhost:8100";
+        let url = "https://gis2020nk.herokuapp.com";
         url += "/json";
         let query = new URLSearchParams(formData);
         url = url + "?" + query.toString();
