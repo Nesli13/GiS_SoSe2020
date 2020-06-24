@@ -1,43 +1,35 @@
-import * as Http from "http";
-import * as Url from "url";
-export namespace A08Server {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.A09Server = void 0;
+const Http = require("http");
+const Url = require("url");
+var A09Server;
+(function (A09Server) {
     console.log("Starting server");
-    let port: number = Number(process.env.PORT);
+    let port = Number(process.env.PORT);
     if (!port)
         port = 8100;
-
-    console.log("Server starting on port: " + port);
-
-    let server: Http.Server = Http.createServer();
+    let server = Http.createServer();
     server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
     server.listen(port);
-
-    function handleListen(): void {
+    function handleListen() {
         console.log("Listening");
-
     }
-
-    function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
+    function handleRequest(_request, _response) {
         console.log("I hear voices!");
-
-        //console.log(_request);
-
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
-
         if (_request.url) {
-            let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
+            let url = Url.parse(_request.url, true);
             for (let key in url.query) {
                 _response.write(key + ":" + url.query[key] + "<br/>");
             }
-            let jsonString: string = JSON.stringify(url.query);
+            let jsonString = JSON.stringify(url.query);
             _response.write(jsonString);
         }
-
-
         _response.write("This is my response");
-
         _response.end();
     }
-}
+})(A09Server = exports.A09Server || (exports.A09Server = {}));
+//# sourceMappingURL=Main.js.map
