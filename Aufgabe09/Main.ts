@@ -31,7 +31,6 @@ export namespace A09Server {
             _response.write(jsonString);
         }
 
-        //_response.write("This is my response");
 
         _response.end();
     }

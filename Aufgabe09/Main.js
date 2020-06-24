@@ -28,7 +28,6 @@ var A09Server;
             let jsonString = JSON.stringify(url.query);
             _response.write(jsonString);
         }
-        //_response.write("This is my response");
         _response.end();
     }
 })(A09Server = exports.A09Server || (exports.A09Server = {}));
